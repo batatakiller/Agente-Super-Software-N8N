@@ -2,7 +2,7 @@
   "updatedAt": "2026-01-27T21:04:24.974Z",
   "createdAt": "2026-01-27T03:17:50.455Z",
   "id": "H5Ti5RcPjjoWFUZS",
-  "name": "Secretaria",
+  "name": "Agente Super Software",
   "description": null,
   "active": true,
   "isArchived": false,
@@ -429,7 +429,7 @@
         -16
       ],
       "id": "f0de20ef-63cf-4ce1-8425-2b58111c01c3",
-      "name": "Secretária",
+      "name": "Agente Super Software",
       "retryOnFail": true
     },
     {
@@ -481,7 +481,7 @@
     {
       "parameters": {
         "promptType": "define",
-        "text": "={{ $('Secretária').item.json.output }}",
+        "text": "={{ $('Agente Super Software').item.json.output }}",
         "messages": {
           "messageValues": [
             {
@@ -569,7 +569,7 @@
     {
       "parameters": {
         "promptType": "define",
-        "text": "={{ $('Secretária').item.json.output }}",
+        "text": "={{ $('Agente Super Software').item.json.output }}",
         "messages": {
           "messageValues": [
             {
@@ -801,7 +801,7 @@
     },
     {
       "parameters": {
-        "content": "## Notas sobre a ferramenta \"Salvar memoria\"\n\nPor padrão, no N8N não existe uma forma direta de compartilhar memória entre agentes diferentes.\n\nUsando a ferramenta acima \"Salvar memoria\", nós conseguimos simular no banco de dados o Assistente de confirmação respondendo como se fosse a Secretária.\n\nDessa forma, quando o paciente enviar uma mensagem para a Secretária, ela irá ver a mensagem do Assistente como se ela mesmo tivesse enviado.\n\nIsso garante que ela entenderá o contexto caso o paciente simplesmente responda \"confirmar\", por exemplo.",
+        "content": "## Notas sobre a ferramenta \"Salvar memoria\"\n\nPor padrão, no N8N não existe uma forma direta de compartilhar memória entre agentes diferentes.\n\nUsando a ferramenta acima \"Salvar memoria\", nós conseguimos simular no banco de dados o Assistente de confirmação respondendo como se fosse a Agente Super Software.\n\nDessa forma, quando o paciente enviar uma mensagem para a Agente Super Software, ela irá ver a mensagem do Assistente como se ela mesmo tivesse enviado.\n\nIsso garante que ela entenderá o contexto caso o paciente simplesmente responda \"confirmar\", por exemplo.",
         "height": 240,
         "width": 1060,
         "color": 6
@@ -1950,7 +1950,7 @@
         ]
       ]
     },
-    "Secretária": {
+    "Agente Super Software": {
       "main": [
         [
           {
@@ -2027,7 +2027,7 @@
       "ai_languageModel": [
         [
           {
-            "node": "Secretária",
+            "node": "Agente Super Software",
             "type": "ai_languageModel",
             "index": 0
           }
@@ -2038,7 +2038,7 @@
       "ai_memory": [
         [
           {
-            "node": "Secretária",
+            "node": "Agente Super Software",
             "type": "ai_memory",
             "index": 0
           }
@@ -2049,7 +2049,7 @@
       "ai_tool": [
         [
           {
-            "node": "Secretária",
+            "node": "Agente Super Software",
             "type": "ai_tool",
             "index": 0
           }
@@ -2093,7 +2093,7 @@
       "ai_tool": [
         [
           {
-            "node": "Secretária",
+            "node": "Agente Super Software",
             "type": "ai_tool",
             "index": 0
           }
@@ -2230,7 +2230,7 @@
       "ai_tool": [
         [
           {
-            "node": "Secretária",
+            "node": "Agente Super Software",
             "type": "ai_tool",
             "index": 0
           }
@@ -2285,7 +2285,7 @@
       "ai_tool": [
         [
           {
-            "node": "Secretária",
+            "node": "Agente Super Software",
             "type": "ai_tool",
             "index": 0
           }
@@ -2377,7 +2377,7 @@
       "main": [
         [
           {
-            "node": "Secretária",
+            "node": "Agente Super Software",
             "type": "main",
             "index": 0
           }
@@ -2410,7 +2410,7 @@
       "ai_tool": [
         [
           {
-            "node": "Secretária",
+            "node": "Agente Super Software",
             "type": "ai_tool",
             "index": 0
           }
@@ -3044,7 +3044,7 @@
           -16
         ],
         "id": "f0de20ef-63cf-4ce1-8425-2b58111c01c3",
-        "name": "Secretária",
+        "name": "Agente Super Software",
         "retryOnFail": true
       },
       {
@@ -3096,7 +3096,7 @@
       {
         "parameters": {
           "promptType": "define",
-          "text": "={{ $('Secretária').item.json.output }}",
+          "text": "={{ $('Agente Super Software').item.json.output }}",
           "messages": {
             "messageValues": [
               {
@@ -3184,7 +3184,7 @@
       {
         "parameters": {
           "promptType": "define",
-          "text": "={{ $('Secretária').item.json.output }}",
+          "text": "={{ $('Agente Super Software').item.json.output }}",
           "messages": {
             "messageValues": [
               {
@@ -3416,7 +3416,7 @@
       },
       {
         "parameters": {
-          "content": "## Notas sobre a ferramenta \"Salvar memoria\"\n\nPor padrão, no N8N não existe uma forma direta de compartilhar memória entre agentes diferentes.\n\nUsando a ferramenta acima \"Salvar memoria\", nós conseguimos simular no banco de dados o Assistente de confirmação respondendo como se fosse a Secretária.\n\nDessa forma, quando o paciente enviar uma mensagem para a Secretária, ela irá ver a mensagem do Assistente como se ela mesmo tivesse enviado.\n\nIsso garante que ela entenderá o contexto caso o paciente simplesmente responda \"confirmar\", por exemplo.",
+          "content": "## Notas sobre a ferramenta \"Salvar memoria\"\n\nPor padrão, no N8N não existe uma forma direta de compartilhar memória entre agentes diferentes.\n\nUsando a ferramenta acima \"Salvar memoria\", nós conseguimos simular no banco de dados o Assistente de confirmação respondendo como se fosse a Agente Super Software.\n\nDessa forma, quando o paciente enviar uma mensagem para a Agente Super Software, ela irá ver a mensagem do Assistente como se ela mesmo tivesse enviado.\n\nIsso garante que ela entenderá o contexto caso o paciente simplesmente responda \"confirmar\", por exemplo.",
           "height": 240,
           "width": 1060,
           "color": 6
@@ -4565,7 +4565,7 @@
           ]
         ]
       },
-      "Secretária": {
+      "Agente Super Software": {
         "main": [
           [
             {
@@ -4642,7 +4642,7 @@
         "ai_languageModel": [
           [
             {
-              "node": "Secretária",
+              "node": "Agente Super Software",
               "type": "ai_languageModel",
               "index": 0
             }
@@ -4653,7 +4653,7 @@
         "ai_memory": [
           [
             {
-              "node": "Secretária",
+              "node": "Agente Super Software",
               "type": "ai_memory",
               "index": 0
             }
@@ -4664,7 +4664,7 @@
         "ai_tool": [
           [
             {
-              "node": "Secretária",
+              "node": "Agente Super Software",
               "type": "ai_tool",
               "index": 0
             }
@@ -4708,7 +4708,7 @@
         "ai_tool": [
           [
             {
-              "node": "Secretária",
+              "node": "Agente Super Software",
               "type": "ai_tool",
               "index": 0
             }
@@ -4845,7 +4845,7 @@
         "ai_tool": [
           [
             {
-              "node": "Secretária",
+              "node": "Agente Super Software",
               "type": "ai_tool",
               "index": 0
             }
@@ -4900,7 +4900,7 @@
         "ai_tool": [
           [
             {
-              "node": "Secretária",
+              "node": "Agente Super Software",
               "type": "ai_tool",
               "index": 0
             }
@@ -4992,7 +4992,7 @@
         "main": [
           [
             {
-              "node": "Secretária",
+              "node": "Agente Super Software",
               "type": "main",
               "index": 0
             }
@@ -5025,7 +5025,7 @@
         "ai_tool": [
           [
             {
-              "node": "Secretária",
+              "node": "Agente Super Software",
               "type": "ai_tool",
               "index": 0
             }
