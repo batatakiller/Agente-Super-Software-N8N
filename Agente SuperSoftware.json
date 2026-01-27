@@ -1,5 +1,11 @@
 {
+  "updatedAt": "2026-01-27T21:04:24.974Z",
+  "createdAt": "2026-01-27T03:17:50.455Z",
+  "id": "H5Ti5RcPjjoWFUZS",
   "name": "Secretaria",
+  "description": null,
+  "active": true,
+  "isArchived": false,
   "nodes": [
     {
       "parameters": {
@@ -412,7 +418,7 @@
         "promptType": "define",
         "text": "={{ $json.input }}",
         "options": {
-          "systemMessage": "=### ⚙️ SYSTEM INSTRUCTIONS (DIRETRIZES MESTRAS)\n\n### 🕒 CONTEXTO TEMPORAL & REGRAS DE SAUDAÇÃO\n**Data e Hora Atual:** {{ $now.setZone('America/Sao_Paulo').toFormat('dd/MM/yyyy HH:mm') }}\n\n**🚨 REGRA DE OURO (ANTI-REPETIÇÃO):**\n1. **VERIFIQUE O HISTÓRICO:** Antes de responder, olhe as mensagens anteriores.\n2. **NÃO REPITA:** Se você ou o usuário já disseram \"Bom dia/tarde/noite\" no início desta conversa, **NÃO DIGA NOVAMENTE**.\n3. **SEJA DIRETO:** Se a conversa já está fluindo (meio do atendimento), responda diretamente à pergunta sem formalidades excessivas.\n   - *Errado:* \"Bom dia! Segue o boleto.\" (No meio da conversa)\n   - *Certo:* \"Certo, aqui está o boleto.\"\n4. **QUANDO USAR:** Use a saudação baseada no horário (abaixo) APENAS na **primeira mensagem** ou na **despedida final**.\n\n**Tabela de Horários (Apenas para Início ou Fim):**\n- Antes das 12:00 -> \"Bom dia\"\n- Entre 12:00 e 17:59 -> \"Boa tarde\"\n- Após as 18:00 -> \"Boa noite\"\n\n---\n\n### ⛔ REGRAS DE SEGURANÇA (RISCO CRÍTICO)\n\n1. **PROIBIDO INVENTAR SENHAS/CHAVES (CRÍTICO):**\n   - **JAMAIS** invente, crie ou gere números de licença, e-mails ou senhas.\n   - Se a tool não retornou o dado, você **NÃO TEM** o produto.\n   - Nunca dê exemplos fictícios parecendo reais.\n\n2. **⚠️ ATENÇÃO COM IMAGENS (VISÃO COMPUTACIONAL):**\n   - Se receber uma imagem, leia a classificação que o sistema visual forneceu:\n   - Se for **[TELA TÉCNICA]** ou conter números longos: Trate como ID de Instalação ou Erro. **NÃO** agradeça pagamento.\n   - Se for **[COMPROVANTE]**: Verifique o beneficiário e agradeça o pagamento.\n\n---\n\n### 🚨 PROTOCOLO DE ESCALONAMENTO (QUANDO CHAMAR O HUMANO)\n\nQuando você precisar usar a tool `Escalar_Humano` (seja por erro, falta de chave ou comprovante), escolha a frase baseada no contexto:\n\n**CASO A: COMPROVANTE BANCÁRIO / PIX**\n- **O QUE DIZER:** \"Recebi seu comprovante! 💰 Vou pedir para o financeiro validar e liberar sua licença em instantes.\"\n\n**CASO B: DÚVIDA TÉCNICA / ERRO / IMAGEM NÃO IDENTIFICADA**\n- **O QUE DIZER:** \"Vou transferir sua imagem para um analista humano verificar esses detalhes técnicos para você. Um momento! 🔧\"\n\n**CASO C: ENTREGA DE PRODUTO (QUANDO FALTAR A CHAVE)**\n- **O QUE DIZER:** \"Seu pedido está confirmado! 🚀 Solicitando a geração da sua credencial segura para a equipe técnica agora.\"\n\n---\n\n### 👤 IDENTIDADE E VOCABULÁRIO\nVocê é **Emerson**, da **Super Software**.\n**Objetivo:** Vender licenças e dar suporte técnico.\n\n**VOCABULÁRIO PROIBIDO (TABU):**\n- **JAMAIS DIGA:** \"Limite excedido\", \"Chave bloqueada\", \"Erro na chave\", \"Pirata\".\n- **DIGA:** \"Necessária validação telefônica\", \"Validação manual de segurança\", \"Sincronização com a Microsoft\".\n### 🎭 REGRAS DE PERSONA E \"QUARTA PAREDE\" (IMPORTANTE)\n\n1.  **INVISIBILIDADE DO SISTEMA:**\n    * **JAMAIS** mencione nomes técnicos de ferramentas (como `GET_CID`, `Supabase`, `n8n`, `Tool`, `Guardrails`).\n    * **JAMAIS** se refira a si mesmo como \"A máquina\", \"A IA\", \"O Bot\" ou \"O Sistema\".\n    * **SEMPRE** atue como **Emerson**, um consultor humano e eficiente.\n\n2.  **COMO EXPLICAR ERROS:**\n    * Se uma ferramenta falhar, **NUNCA** diga \"minha ferramenta falhou\" ou \"erro no script\".\n    * **CULPE A BUROCRACIA:** Diga sempre que é uma \"verificação de segurança padrão da Microsoft\" ou \"o servidor pede validação manual\".\n\n3.  **NATURALIDADE:**\n    * Não explique o *processo*, explique a *solução*.\n    * *Errado:* \"A ferramenta GET_CID retornou erro, então escalei para o humano.\"\n    * *Certo:* \"O servidor da Microsoft pediu uma validação extra de segurança nesta ID. Já chamei nosso especialista para liberar manualmente para você. Um instante!\"\n\n---\n\n### 💰 FINANCEIRO E PRODUTOS\n- Loja: **Super Software**.\n- **PIX OBRIGATÓRIO:** Chave `sacsupersoftware@gmail.com` | Beneficiário: **DGR SOLUTIONS / PCLANDIA**.\n- **Comprovante:** Se o beneficiário NÃO for DGR ou PCLANDIA, use `Escalar_Humano` (Caso A).\n\n**TABELA DE PREÇOS:**\n- **Office 365 (Conta Anual/5 Disp):** R$ 150,00. (É uma **CONTA**, não chave).\n- **Office 2021 Vitalício:** R$ 100,00.\n- **Office 2024 Vitalício:** R$ 150,00.\n- **Windows 11 Pro:** R$ 100,00.\n- **Windows 10 Pro:** R$ 80,00.\n- **Mac:** Só vendemos **Office 365**. Nunca ofereça Vitalício para Mac.\n\n### 🚫 LIMITES DE ATUAÇÃO (ESCOPO DO ATENDIMENTO)\n\n1.  **O QUE VOCÊ NÃO FAZ:**\n    * Você **NÃO** indica cursos, faculdades ou materiais de estudo.\n    * Você **NÃO** fala sobre jogos, hardware (placa de vídeo, memória), receitas ou política.\n    * Você **NÃO** recomenda outros softwares (antivírus, Adobe, Corel, etc) a menos que tenhamos no catálogo.\n\n2.  **COMO RESPONDER A PERGUNTAS FORA DO TEMA:**\n    * Se o cliente perguntar algo fora do seu escopo (ex: \"Qual curso de IA?\", \"Qual notebook comprar?\", \"Como configurar minha impressora?\"):\n    * **AÇÃO:** Corte educadamente e ofereça o SEU produto.\n    * **MODELO DE RESPOSTA:** \"Nesse ponto não consigo opinar, meu foco aqui é exclusivamente em **Licenciamento Microsoft** e ativação do sistema. Mas se precisar do **Office ou Windows** para seus estudos/trabalho, é comigo mesmo! 🚀\"\n\n---\n\n### 🧭 FLUXO DE SUPORTE TÉCNICO\n\n**1. ID DETECTADA (Texto com muitos números)**\n- **AÇÃO:** Use tool `CID`.\n- **SUCESSO:** \"Excelente! Identifiquei a ID. ✅ Aqui está sua **ID de Confirmação**: [RESULTADO DA TOOL]. Insira na Etapa 3.\"\n- **FALHA:** (Use `Escalar_Humano` - Caso B) \"O servidor pede liberação manual. Já chamei um especialista.\"\n\n**2. MENSAGEM DE \"LIMITE\" / TELA 2024 / ERRO 0xC...**\n- **RESPOSTA:** \"Identifiquei sua versão! O servidor requer uma **validação telefônica de segurança**. Vamos fazer: 1. Clique em Voltar. 2. Selecione **'Ativar por telefone'**. 3. Envie a foto da **ID de Instalação**.\"\n\n**3. ERRO 0xC004C008 (WINDOWS)**\n- **RESPOSTA:** \"Identifiquei o código 08. Precisamos da **ativação manual**. 1. Feche o erro. 2. Clique em **'Ativar por telefone'**. 3. Envie a foto da **ID de Instalação**.\"\n\n**4. LINK OFFICE 2024 / INSTALADOR ERRADO**\n- **RESPOSTA:** \"Você precisa do instalador correto. 1. Desinstale o atual. 2. **Baixe aqui:** 👉 http://supersoftware.info/office/Office_2024_PT_64Bits.exe 3. Instale e selecione 'Ativação por Telefone'. Me mande a ID!\"\n\n**5. INSTALAÇÃO OFFICE 365 (CONTA)**\n- **RESPOSTA:** \"Siga com o **Usuário e Senha** enviados: 1. Acesse **portal.office.com**. 2. Entre e **crie sua senha pessoal**. 3. Clique em 'Instalar Aplicativos'.\"\n\n---\n\n### 📝 Estilo de Comunicação\nSeja direto, seguro e resolutivo. 00:57",
+          "systemMessage": "=### ⚙️ SYSTEM INSTRUCTIONS (DIRETRIZES MESTRAS)\n\n### 🕒 CONTEXTO TEMPORAL & REGRAS DE SAUDAÇÃO\n**Data e Hora Atual:** {{ $now.setZone('America/Sao_Paulo').toFormat('dd/MM/yyyy HH:mm') }}\n\n**🚨 REGRA DE OURO (ANTI-REPETIÇÃO):**\n1. **VERIFIQUE O HISTÓRICO:** Antes de responder, olhe as mensagens anteriores.\n2. **NÃO REPITA:** Se você ou o usuário já disseram \"Bom dia/tarde/noite\" no início desta conversa, **NÃO DIGA NOVAMENTE**.\n3. **SEJA DIRETO:** Se a conversa já está fluindo (meio do atendimento), responda diretamente à pergunta sem formalidades excessivas.\n   - *Errado:* \"Bom dia! Segue o boleto.\" (No meio da conversa)\n   - *Certo:* \"Certo, aqui está o boleto.\"\n4. **QUANDO USAR:** Use a saudação baseada no horário (abaixo) APENAS na **primeira mensagem** ou na **despedida final**.\n\n**Tabela de Horários (Apenas para Início ou Fim):**\n- Antes das 12:00 -> \"Bom dia\"\n- Entre 12:00 e 17:59 -> \"Boa tarde\"\n- Após as 18:00 -> \"Boa noite\"\n\n---\n\n### ⛔ REGRAS DE SEGURANÇA (RISCO CRÍTICO)\n\n1. **PROIBIDO INVENTAR SENHAS/CHAVES (CRÍTICO):**\n   - **JAMAIS** invente, crie ou gere números de licença, e-mails ou senhas.\n   - Se a tool não retornou o dado, você **NÃO TEM** o produto.\n   - Nunca dê exemplos fictícios parecendo reais.\n\n2. **⚠️ ATENÇÃO COM IMAGENS (VISÃO COMPUTACIONAL):**\n   - Se receber uma imagem, leia a classificação que o sistema visual forneceu:\n   - Se for **[TELA TÉCNICA]** ou conter números longos: Trate como ID de Instalação ou Erro. **NÃO** agradeça pagamento.\n   - Se for **[COMPROVANTE]**: Verifique o beneficiário e agradeça o pagamento.\n\n---\n\n### 🚨 PROTOCOLO DE ESCALONAMENTO (QUANDO CHAMAR O HUMANO)\n\nQuando você precisar usar a tool `Escalar_Humano` (seja por erro, falta de chave ou comprovante), escolha a frase baseada no contexto:\n\n**CASO A: COMPROVANTE BANCÁRIO / PIX**\n- **O QUE DIZER:** \"Recebi seu comprovante! 💰 Vou pedir para o financeiro validar e liberar sua licença em instantes.\"\n\n**CASO B: DÚVIDA TÉCNICA / ERRO / IMAGEM NÃO IDENTIFICADA**\n- **O QUE DIZER:** \"Vou transferir sua imagem para um analista humano verificar esses detalhes técnicos para você. Um momento! 🔧\"\n\n**CASO C: ENTREGA DE PRODUTO (QUANDO FALTAR A CHAVE)**\n- **O QUE DIZER:** \"Seu pedido está confirmado! 🚀 Solicitando a geração da sua credencial segura para a equipe técnica agora.\"\n\n---\n\n### 👤 IDENTIDADE E VOCABULÁRIO\nVocê é **Emerson**, da **Super Software**.\n**Objetivo:** Vender licenças e dar suporte técnico.\n\n**VOCABULÁRIO PROIBIDO (TABU):**\n- **JAMAIS DIGA:** \"Limite excedido\", \"Chave bloqueada\", \"Erro na chave\", \"Pirata\".\n- **DIGA:** \"Necessária validação telefônica\", \"Validação manual de segurança\", \"Sincronização com a Microsoft\".\n### 🎭 REGRAS DE PERSONA E \"QUARTA PAREDE\" (IMPORTANTE)\n\n1.  **INVISIBILIDADE DO SISTEMA:**\n    * **JAMAIS** mencione nomes técnicos de ferramentas (como `GET_CID`, `Supabase`, `n8n`, `Tool`, `Guardrails`).\n    * **JAMAIS** se refira a si mesmo como \"A máquina\", \"A IA\", \"O Bot\" ou \"O Sistema\".\n    * **SEMPRE** atue como **Emerson**, um consultor humano e eficiente.\n\n2.  **COMO EXPLICAR ERROS:**\n    * Se uma ferramenta falhar, **NUNCA** diga \"minha ferramenta falhou\" ou \"erro no script\".\n    * **CULPE A BUROCRACIA:** Diga sempre que é uma \"verificação de segurança padrão da Microsoft\" ou \"o servidor pede validação manual\".\n\n3.  **NATURALIDADE:**\n    * Não explique o *processo*, explique a *solução*.\n    * *Errado:* \"A ferramenta GET_CID retornou erro, então escalei para o humano.\"\n    * *Certo:* \"O servidor da Microsoft pediu uma validação extra de segurança nesta ID. Já chamei nosso especialista para liberar manualmente para você. Um instante!\"\n\n---\n\n### 💰 FINANCEIRO E PRODUTOS\n- Loja: **Super Software**.\n- **PIX OBRIGATÓRIO:** Chave `sacsupersoftware@gmail.com` | Beneficiário: **DGR SOLUTIONS / PCLANDIA**.\n- **Comprovante:** Se o beneficiário NÃO for DGR ou PCLANDIA, use `Escalar_Humano` (Caso A).\n\n**TABELA DE PREÇOS:**\n- **Office 365 (Conta Anual/5 Disp):** R$ 150,00. (É uma **CONTA**, não chave).\n- **Office 2021 Vitalício:** R$ 100,00.\n- **Office 2024 Vitalício:** R$ 150,00.\n- **Windows 11 Pro:** R$ 100,00.\n- **Windows 10 Pro:** R$ 80,00.\n- **Mac:** Só vendemos **Office 365**. Nunca ofereça Vitalício para Mac.\n\n### 🚫 LIMITES DE ATUAÇÃO (ESCOPO DO ATENDIMENTO)\n\n1.  **O QUE VOCÊ NÃO FAZ:**\n    * Você **NÃO** indica cursos, faculdades ou materiais de estudo.\n    * Você **NÃO** fala sobre jogos, hardware (placa de vídeo, memória), receitas ou política.\n    * Você **NÃO** recomenda outros softwares (antivírus, Adobe, Corel, etc) a menos que tenhamos no catálogo.\n\n2.  **COMO RESPONDER A PERGUNTAS FORA DO TEMA:**\n    * Se o cliente perguntar algo fora do seu escopo (ex: \"Qual curso de IA?\", \"Qual notebook comprar?\", \"Como configurar minha impressora?\"):\n    * **AÇÃO:** Corte educadamente e ofereça o SEU produto.\n    * **MODELO DE RESPOSTA:** \"Nesse ponto não consigo opinar, meu foco aqui é exclusivamente em **Licenciamento Microsoft** e ativação do sistema. Mas se precisar do **Office ou Windows** para seus estudos/trabalho, é comigo mesmo! 🚀\"\n\n---\n\n### 🧭 FLUXO DE SUPORTE TÉCNICO\n\n**1. ID DETECTADA (Texto com muitos números)**\n- **AÇÃO:** Use tool `CID`.\n- **SUCESSO:** \"Excelente! Identifiquei a ID. ✅ Aqui está sua **ID de Confirmação**: [RESULTADO DA TOOL]. Insira na Etapa 3.\"\n- **FALHA:** (Use `Escalar_Humano` - Caso B) \"O servidor pede liberação manual. Já chamei um especialista.\"\n\n**2. MENSAGEM DE \"LIMITE\" / TELA 2024 / ERRO 0xC...**\n- **RESPOSTA:** \"Identifiquei sua versão! O servidor requer uma **validação telefônica de segurança**. Vamos fazer: 1. Clique em Voltar. 2. Selecione **'Ativar por telefone'**. 3. Envie a foto da **ID de Instalação**.\"\n\n**3. ERRO 0xC004C008 (WINDOWS)**\n- **RESPOSTA:** \"Identifiquei o código 08. Precisamos da **ativação manual**. 1. Feche o erro. 2. Clique em **'Ativar por telefone'**. 3. Envie a foto da **ID de Instalação**.\"\n\n**4. LINK OFFICE 2024 / INSTALADOR ERRADO**\n- **RESPOSTA:** \"Você precisa do instalador correto. 1. Desinstale o atual. 2. **Baixe aqui:** 👉 http://supersoftware.info/office/Office_2024_PT_64Bits.exe 3. Instale e selecione 'Ativação por Telefone'. Me mande a ID!\"\n\n**5. INSTALAÇÃO OFFICE 365 (CONTA)**\n- **RESPOSTA:** \"Siga com o **Usuário e Senha** enviados: 1. Acesse **portal.office.com**. 2. Entre e **crie sua senha pessoal**. 3. Clique em 'Instalar Aplicativos'.\"\n\n---\n\n### 📝 Estilo de Comunicação\nSeja direto, seguro e resolutivo.",
           "maxIterations": 10
         }
       },
@@ -1472,16 +1478,50 @@
     },
     {
       "parameters": {
-        "jsCode": "const results = [];\nfor (const item of $input.all()) {\n    const rawChatId = item.json.chatid || \"\";\n    const phone = rawChatId.split('@')[0];\n    const text = item.json.text || \"\";\n    \n    results.push({\n        json: {\n            phone: phone,\n            message: text,\n            direction: \"inbound\", \n            status: \"received\",  \n            isValid: true        \n        }\n    });\n}\nreturn results;"
+        "assignments": {
+          "assignments": [
+            {
+              "id": "outbound-phone",
+              "name": "phone",
+              "value": "={{ $json.chatid.split('@')[0] }}",
+              "type": "string"
+            },
+            {
+              "id": "outbound-message",
+              "name": "message",
+              "value": "={{ $json.text }}",
+              "type": "string"
+            },
+            {
+              "id": "outbound-direction",
+              "name": "direction",
+              "value": "outbound",
+              "type": "string"
+            },
+            {
+              "id": "outbound-status",
+              "name": "status",
+              "value": "sent",
+              "type": "string"
+            },
+            {
+              "id": "outbound-isValid",
+              "name": "isValid",
+              "value": true,
+              "type": "boolean"
+            }
+          ]
+        },
+        "options": {}
       },
-      "type": "n8n-nodes-base.code",
-      "typeVersion": 2,
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
       "position": [
         -1040,
         -96
       ],
       "id": "c1a2b3c4-d5e6-4f7g-8h9i-j0k1l2m3n4o5",
-      "name": "Tratar Saída Send Message"
+      "name": "Edit Fields (Outbound)"
     },
     {
       "parameters": {
@@ -1784,134 +1824,29 @@
       "typeVersion": 1,
       "id": "b8eabb24-6ed4-496c-a515-32b85be9dc2e",
       "name": "Sticky Note1"
-    }
-  ],
-  "pinData": {
-    "Webhook": [
-      {
-        "json": {
-          "headers": {
-            "host": "n8n.supersoftware.info",
-            "x-real-ip": "187.45.178.254",
-            "x-forwarded-for": "187.45.178.254",
-            "x-forwarded-proto": "https",
-            "content-length": "2252",
-            "user-agent": "uazapiGO-Webhook/1.0",
-            "content-type": "application/json",
-            "accept-encoding": "gzip"
-          },
-          "params": {},
-          "query": {},
-          "body": {
-            "BaseUrl": "https://superbot.uazapi.com",
-            "EventType": "messages",
-            "chat": {
-              "chatbot_agentResetMemoryAt": 0,
-              "chatbot_disableUntil": 0,
-              "chatbot_lastTriggerAt": 0,
-              "chatbot_lastTrigger_id": "",
-              "id": "rdd5561147cac54",
-              "image": "",
-              "imagePreview": "",
-              "lead_assignedAttendant_id": "",
-              "lead_email": "",
-              "lead_field01": "",
-              "lead_field02": "",
-              "lead_field03": "",
-              "lead_field04": "",
-              "lead_field05": "",
-              "lead_field06": "",
-              "lead_field07": "",
-              "lead_field08": "",
-              "lead_field09": "",
-              "lead_field10": "",
-              "lead_field11": "",
-              "lead_field12": "",
-              "lead_field13": "",
-              "lead_field14": "",
-              "lead_field15": "",
-              "lead_field16": "",
-              "lead_field17": "",
-              "lead_field18": "",
-              "lead_field19": "",
-              "lead_field20": "",
-              "lead_fullName": "",
-              "lead_isTicketOpen": false,
-              "lead_kanbanOrder": 0,
-              "lead_name": "",
-              "lead_notes": "",
-              "lead_personalid": "",
-              "lead_status": "",
-              "lead_tags": [],
-              "name": "",
-              "owner": "5511935856950",
-              "phone": "+55 85 9747-1392",
-              "wa_archived": false,
-              "wa_chatid": "558597471392@s.whatsapp.net",
-              "wa_chatlid": "43134591434822@lid",
-              "wa_contactName": "",
-              "wa_ephemeralExpiration": 0,
-              "wa_fastid": "5511935856950:558597471392",
-              "wa_isBlocked": false,
-              "wa_isGroup": false,
-              "wa_isGroup_admin": false,
-              "wa_isGroup_announce": false,
-              "wa_isGroup_community": false,
-              "wa_isGroup_member": false,
-              "wa_isPinned": false,
-              "wa_label": [],
-              "wa_lastMessageSender": "160842398068809@lid",
-              "wa_lastMessageTextVote": "Gosstaria de tirar uma dúvida",
-              "wa_lastMessageType": "Conversation",
-              "wa_lastMsgTimestamp": 1769456608000,
-              "wa_muteEndTime": 0,
-              "wa_name": "May",
-              "wa_unreadCount": 2
-            },
-            "chatSource": "updated",
-            "instanceName": "Super Software",
-            "message": {
-              "buttonOrListid": "",
-              "chatid": "558597471392@s.whatsapp.net",
-              "content": "Gosstaria de tirar uma dúvida",
-              "convertOptions": "",
-              "edited": "",
-              "fromMe": false,
-              "groupName": "Unknown",
-              "id": "5511935856950:3EB0822FF7C6EAFB0788F5",
-              "isGroup": false,
-              "mediaType": "",
-              "messageTimestamp": 1769456608000,
-              "messageType": "Conversation",
-              "messageid": "3EB0822FF7C6EAFB0788F5",
-              "owner": "5511935856950",
-              "quoted": "",
-              "reaction": "",
-              "sender": "160842398068809@lid",
-              "senderName": "May",
-              "sender_lid": "160842398068809@lid",
-              "sender_pn": "558597471392@s.whatsapp.net",
-              "source": "web",
-              "status": "",
-              "text": "Gosstaria de tirar uma dúvida",
-              "track_id": "",
-              "track_source": "",
-              "type": "text",
-              "vote": "",
-              "wasSentByApi": false
-            },
-            "owner": "5511935856950",
-            "token": "b88a874b-180e-44bc-bfee-56ea32096c9c"
-          },
-          "webhookUrl": "https://n8n.supersoftware.info/webhook/superbot",
-          "executionMode": "production"
-        },
-        "pairedItem": {
-          "item": 0
+    },
+    {
+      "parameters": {
+        "endpointUrl": "https://api.n8n-mcp.com/mcp",
+        "authentication": "bearerAuth",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.mcpClientTool",
+      "typeVersion": 1.2,
+      "position": [
+        -2448,
+        224
+      ],
+      "id": "da2954cf-ecb3-4c31-9af8-cd2e48eab982",
+      "name": "MCP Client",
+      "credentials": {
+        "httpBearerAuth": {
+          "id": "IxpyFYwIVzPwQbYF",
+          "name": "Bearer Auth account"
         }
       }
-    ]
-  },
+    }
+  ],
   "connections": {
     "Mensagem chegando?": {
       "main": [
@@ -2453,14 +2388,14 @@
       "main": [
         [
           {
-            "node": "Tratar Saída Send Message",
+            "node": "Edit Fields (Outbound)",
             "type": "main",
             "index": 0
           }
         ]
       ]
     },
-    "Tratar Saída Send Message": {
+    "Edit Fields (Outbound)": {
       "main": [
         [
           {
@@ -2470,21 +2405,2647 @@
           }
         ]
       ]
+    },
+    "MCP Client": {
+      "ai_tool": [
+        [
+          {
+            "node": "Secretária",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
     }
   },
-  "active": true,
   "settings": {
     "executionOrder": "v1",
+    "availableInMCP": false,
     "timezone": "America/Sao_Paulo",
     "callerPolicy": "workflowsFromSameOwner",
-    "availableInMCP": false,
     "errorWorkflow": "8FWK3smpTszIpcjt"
   },
-  "versionId": "b67bd412-6181-492c-81ba-811bee981a03",
+  "staticData": null,
   "meta": {
-    "templateCredsSetupCompleted": true,
-    "instanceId": "7fa729d5d5248352a211ed566b54ed067bf52084fd0a7169ef463b9b0fd29c76"
+    "templateCredsSetupCompleted": true
   },
-  "id": "8FWK3smpTszIpcjt",
-  "tags": []
+  "pinData": {
+    "Webhook": [
+      {
+        "json": {
+          "headers": {
+            "host": "n8n.supersoftware.info",
+            "x-real-ip": "187.45.178.254",
+            "x-forwarded-for": "187.45.178.254",
+            "x-forwarded-proto": "https",
+            "content-length": "2252",
+            "user-agent": "uazapiGO-Webhook/1.0",
+            "content-type": "application/json",
+            "accept-encoding": "gzip"
+          },
+          "params": {},
+          "query": {},
+          "body": {
+            "BaseUrl": "https://superbot.uazapi.com",
+            "EventType": "messages",
+            "chat": {
+              "chatbot_agentResetMemoryAt": 0,
+              "chatbot_disableUntil": 0,
+              "chatbot_lastTriggerAt": 0,
+              "chatbot_lastTrigger_id": "",
+              "id": "rdd5561147cac54",
+              "image": "",
+              "imagePreview": "",
+              "lead_assignedAttendant_id": "",
+              "lead_email": "",
+              "lead_field01": "",
+              "lead_field02": "",
+              "lead_field03": "",
+              "lead_field04": "",
+              "lead_field05": "",
+              "lead_field06": "",
+              "lead_field07": "",
+              "lead_field08": "",
+              "lead_field09": "",
+              "lead_field10": "",
+              "lead_field11": "",
+              "lead_field12": "",
+              "lead_field13": "",
+              "lead_field14": "",
+              "lead_field15": "",
+              "lead_field16": "",
+              "lead_field17": "",
+              "lead_field18": "",
+              "lead_field19": "",
+              "lead_field20": "",
+              "lead_fullName": "",
+              "lead_isTicketOpen": false,
+              "lead_kanbanOrder": 0,
+              "lead_name": "",
+              "lead_notes": "",
+              "lead_personalid": "",
+              "lead_status": "",
+              "lead_tags": [],
+              "name": "",
+              "owner": "5511935856950",
+              "phone": "+55 85 9747-1392",
+              "wa_archived": false,
+              "wa_chatid": "558597471392@s.whatsapp.net",
+              "wa_chatlid": "43134591434822@lid",
+              "wa_contactName": "",
+              "wa_ephemeralExpiration": 0,
+              "wa_fastid": "5511935856950:558597471392",
+              "wa_isBlocked": false,
+              "wa_isGroup": false,
+              "wa_isGroup_admin": false,
+              "wa_isGroup_announce": false,
+              "wa_isGroup_community": false,
+              "wa_isGroup_member": false,
+              "wa_isPinned": false,
+              "wa_label": [],
+              "wa_lastMessageSender": "160842398068809@lid",
+              "wa_lastMessageTextVote": "Gosstaria de tirar uma dúvida",
+              "wa_lastMessageType": "Conversation",
+              "wa_lastMsgTimestamp": 1769456608000,
+              "wa_muteEndTime": 0,
+              "wa_name": "May",
+              "wa_unreadCount": 2
+            },
+            "chatSource": "updated",
+            "instanceName": "Super Software",
+            "message": {
+              "buttonOrListid": "",
+              "chatid": "558597471392@s.whatsapp.net",
+              "content": "Gosstaria de tirar uma dúvida",
+              "convertOptions": "",
+              "edited": "",
+              "fromMe": false,
+              "groupName": "Unknown",
+              "id": "5511935856950:3EB0822FF7C6EAFB0788F5",
+              "isGroup": false,
+              "mediaType": "",
+              "messageTimestamp": 1769456608000,
+              "messageType": "Conversation",
+              "messageid": "3EB0822FF7C6EAFB0788F5",
+              "owner": "5511935856950",
+              "quoted": "",
+              "reaction": "",
+              "sender": "160842398068809@lid",
+              "senderName": "May",
+              "sender_lid": "160842398068809@lid",
+              "sender_pn": "558597471392@s.whatsapp.net",
+              "source": "web",
+              "status": "",
+              "text": "Gosstaria de tirar uma dúvida",
+              "track_id": "",
+              "track_source": "",
+              "type": "text",
+              "vote": "",
+              "wasSentByApi": false
+            },
+            "owner": "5511935856950",
+            "token": "b88a874b-180e-44bc-bfee-56ea32096c9c"
+          },
+          "webhookUrl": "https://n8n.supersoftware.info/webhook/superbot",
+          "executionMode": "production"
+        },
+        "pairedItem": {
+          "item": 0
+        }
+      }
+    ]
+  },
+  "versionId": "671eb533-83c9-4c9a-9e60-2855c9fd3ff8",
+  "activeVersionId": "671eb533-83c9-4c9a-9e60-2855c9fd3ff8",
+  "versionCounter": 26,
+  "triggerCount": 1,
+  "shared": [
+    {
+      "updatedAt": "2026-01-27T03:17:50.455Z",
+      "createdAt": "2026-01-27T03:17:50.455Z",
+      "role": "workflow:owner",
+      "workflowId": "H5Ti5RcPjjoWFUZS",
+      "projectId": "g0AE8k8SzOd1CIEv",
+      "project": {
+        "updatedAt": "2025-10-22T15:15:38.332Z",
+        "createdAt": "2025-10-22T15:15:00.401Z",
+        "id": "g0AE8k8SzOd1CIEv",
+        "name": "Super Software <sacsupersoftware@gmail.com>",
+        "type": "personal",
+        "icon": null,
+        "description": null,
+        "creatorId": "21e4d782-2c71-4207-9c25-da8a950491b1",
+        "projectRelations": [
+          {
+            "updatedAt": "2025-10-22T15:15:00.401Z",
+            "createdAt": "2025-10-22T15:15:00.401Z",
+            "userId": "21e4d782-2c71-4207-9c25-da8a950491b1",
+            "projectId": "g0AE8k8SzOd1CIEv",
+            "user": {
+              "updatedAt": "2026-01-27T05:09:51.623Z",
+              "createdAt": "2025-10-22T15:14:59.123Z",
+              "id": "21e4d782-2c71-4207-9c25-da8a950491b1",
+              "email": "sacsupersoftware@gmail.com",
+              "firstName": "Super",
+              "lastName": "Software",
+              "personalizationAnswers": {
+                "version": "v4",
+                "personalization_survey_submitted_at": "2025-10-22T15:15:52.901Z",
+                "personalization_survey_n8n_version": "1.116.2",
+                "companyType": "personal",
+                "reportedSource": "google"
+              },
+              "settings": {
+                "userActivated": true,
+                "easyAIWorkflowOnboarded": true,
+                "firstSuccessfulWorkflowId": "2VppCbXNho1kBNcr",
+                "userActivatedAt": 1761148658761,
+                "npsSurvey": {
+                  "responded": true,
+                  "lastShownAt": 1762988056858
+                }
+              },
+              "disabled": false,
+              "mfaEnabled": false,
+              "lastActiveAt": "2026-01-27",
+              "isPending": false
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "tags": [],
+  "activeVersion": {
+    "updatedAt": "2026-01-27T21:04:27.299Z",
+    "createdAt": "2026-01-27T21:04:24.976Z",
+    "versionId": "671eb533-83c9-4c9a-9e60-2855c9fd3ff8",
+    "workflowId": "H5Ti5RcPjjoWFUZS",
+    "nodes": [
+      {
+        "parameters": {
+          "conditions": {
+            "options": {
+              "caseSensitive": true,
+              "leftValue": "",
+              "typeValidation": "strict",
+              "version": 2
+            },
+            "conditions": [
+              {
+                "id": "8ca54eae-15d1-49d3-af33-7a6e5d17b833",
+                "leftValue": "={{ $('Info').item.json.fromMe }}",
+                "rightValue": "",
+                "operator": {
+                  "type": "boolean",
+                  "operation": "false",
+                  "singleValue": true
+                }
+              },
+              {
+                "id": "4ca9226f-0401-49a7-93a1-8aeaf4b0bb79",
+                "leftValue": "={{ $('Info').item.json.mensagem_de_grupo }}",
+                "rightValue": "g.us",
+                "operator": {
+                  "type": "boolean",
+                  "operation": "false",
+                  "singleValue": true
+                }
+              }
+            ],
+            "combinator": "and"
+          },
+          "options": {}
+        },
+        "type": "n8n-nodes-base.filter",
+        "typeVersion": 2.2,
+        "position": [
+          -6960,
+          -16
+        ],
+        "id": "fb119375-9055-4956-b57c-b2ae0999cdb8",
+        "name": "Mensagem chegando?"
+      },
+      {
+        "parameters": {
+          "jsCode": "const ultima_mensagem_da_fila = $input.last()\nconst mensagem_do_workflow = $('Info').first()\n\nif (ultima_mensagem_da_fila.json.id_mensagem !== mensagem_do_workflow.json.id_mensagem) {\n  // Mensagem encavalada, para o workflow\n  return [];\n}\n\n// Pass-through da fila de mensagens\nreturn $input.all();"
+        },
+        "type": "n8n-nodes-base.code",
+        "typeVersion": 2,
+        "position": [
+          -5840,
+          -208
+        ],
+        "id": "951d3d2b-4432-4671-871e-adad69f51ca1",
+        "name": "Mensagem encavalada?"
+      },
+      {
+        "parameters": {
+          "operation": "select",
+          "schema": {
+            "__rl": true,
+            "mode": "list",
+            "value": "public"
+          },
+          "table": {
+            "__rl": true,
+            "value": "n8n_fila_mensagens",
+            "mode": "list"
+          },
+          "returnAll": true,
+          "where": {
+            "values": [
+              {
+                "column": "telefone",
+                "value": "={{ $('Info').item.json.telefone }}"
+              }
+            ]
+          },
+          "sort": {
+            "values": [
+              {
+                "column": "timestamp"
+              }
+            ]
+          },
+          "options": {}
+        },
+        "type": "n8n-nodes-base.postgres",
+        "typeVersion": 2.6,
+        "position": [
+          -6064,
+          -208
+        ],
+        "id": "9266cdcd-bc32-417c-ac74-000cc2b7ca1b",
+        "name": "Buscar mensagens",
+        "credentials": {
+          "postgres": {
+            "id": "GOaED8CXwSUFbrph",
+            "name": "Postgres account"
+          }
+        }
+      },
+      {
+        "parameters": {
+          "assignments": {
+            "assignments": [
+              {
+                "id": "7eab8669-6929-4dc6-b3e2-943065bc306c",
+                "name": "mensagem",
+                "value": "={{ $('Mensagem encavalada?').all().map(info => info.json.mensagem).join('\\\\n') }}",
+                "type": "string"
+              }
+            ]
+          },
+          "options": {}
+        },
+        "type": "n8n-nodes-base.set",
+        "typeVersion": 3.4,
+        "position": [
+          -4944,
+          -208
+        ],
+        "id": "84887486-7d1b-4d02-a8cb-15f169e223f2",
+        "name": "Concatenar mensagens",
+        "executeOnce": true
+      },
+      {
+        "parameters": {
+          "operation": "deleteTable",
+          "schema": {
+            "__rl": true,
+            "mode": "list",
+            "value": "public"
+          },
+          "table": {
+            "__rl": true,
+            "value": "n8n_fila_mensagens",
+            "mode": "list"
+          },
+          "deleteCommand": "delete",
+          "where": {
+            "values": [
+              {
+                "column": "telefone",
+                "value": "={{ $json.telefone }}"
+              }
+            ]
+          },
+          "options": {}
+        },
+        "type": "n8n-nodes-base.postgres",
+        "typeVersion": 2.6,
+        "position": [
+          -5616,
+          -208
+        ],
+        "id": "c8d64024-f18e-46eb-ba57-b6508aa89394",
+        "name": "Limpar fila de mensagens",
+        "credentials": {
+          "postgres": {
+            "id": "GOaED8CXwSUFbrph",
+            "name": "Postgres account"
+          }
+        }
+      },
+      {
+        "parameters": {
+          "content": "# Processando mensagens encavaladas\n\nEssa etapa trata a situação em que o usuário envia múltiplas mensagens seguidas. O ponto negativo é o aumento no tempo de resposta do agente. Lógica dispensa uso de soluções mais complexas, como RabbitMQ.\n\nTempo de espera recomendado de ~16s. Quando estiver testando, recomendamos reduzir um pouco para ficar mais rápido de testar.\n",
+          "height": 292,
+          "width": 1080,
+          "color": 4
+        },
+        "type": "n8n-nodes-base.stickyNote",
+        "typeVersion": 1,
+        "position": [
+          -6544,
+          -320
+        ],
+        "id": "190d8a45-f8e4-48cd-bf1b-ed4ecf30847b",
+        "name": "Sticky Note2"
+      },
+      {
+        "parameters": {
+          "amount": 16
+        },
+        "type": "n8n-nodes-base.wait",
+        "typeVersion": 1.1,
+        "position": [
+          -6288,
+          -208
+        ],
+        "id": "92817206-57f0-4c5a-88e3-eb1aa777a97c",
+        "name": "Esperar",
+        "webhookId": "2da4ca1d-5944-431c-8c8e-248231af4d41"
+      },
+      {
+        "parameters": {
+          "content": "# Gerando resposta",
+          "height": 500,
+          "width": 1920,
+          "color": 3
+        },
+        "type": "n8n-nodes-base.stickyNote",
+        "typeVersion": 1,
+        "position": [
+          -3280,
+          -192
+        ],
+        "id": "4fd19c3f-a0c7-4389-a3ad-6bb719c3e013",
+        "name": "Sticky Note3"
+      },
+      {
+        "parameters": {
+          "content": "# Enviando resposta",
+          "height": 500,
+          "width": 600,
+          "color": 7
+        },
+        "type": "n8n-nodes-base.stickyNote",
+        "typeVersion": 1,
+        "position": [
+          -1360,
+          -192
+        ],
+        "id": "c7f0a100-712b-4ebb-b23a-7ff7e401e3dc",
+        "name": "Sticky Note4"
+      },
+      {
+        "parameters": {
+          "content": "# Tratando input\n\nImplementação de etiquetas do Evolution API não é muito fácil de utilizar, portanto funcionalidade de \"agente off\" fica difícil de implementar.\nUma alternativa é utilizar uma base de dados externa para controle \"manual\" de etiquetas.",
+          "height": 500,
+          "width": 1060
+        },
+        "type": "n8n-nodes-base.stickyNote",
+        "typeVersion": 1,
+        "position": [
+          -7536,
+          -224
+        ],
+        "id": "b55771e3-72a3-47ba-9231-161786c23992",
+        "name": "Sticky Note5"
+      },
+      {
+        "parameters": {
+          "rules": {
+            "values": [
+              {
+                "conditions": {
+                  "options": {
+                    "caseSensitive": true,
+                    "leftValue": "",
+                    "typeValidation": "strict",
+                    "version": 2
+                  },
+                  "conditions": [
+                    {
+                      "id": "1382cd26-d96e-4c55-99dd-2ca305ffe82e",
+                      "leftValue": "={{ $('Info').item.json.mensagem }}",
+                      "rightValue": "",
+                      "operator": {
+                        "type": "string",
+                        "operation": "notEmpty",
+                        "singleValue": true
+                      }
+                    },
+                    {
+                      "leftValue": "={{ $('Info').item.json.eh_imagem }}",
+                      "rightValue": "",
+                      "operator": {
+                        "type": "boolean",
+                        "operation": "false",
+                        "singleValue": true
+                      }
+                    }
+                  ],
+                  "combinator": "and"
+                },
+                "renameOutput": true,
+                "outputKey": "Texto"
+              },
+              {
+                "conditions": {
+                  "options": {
+                    "caseSensitive": true,
+                    "leftValue": "",
+                    "typeValidation": "strict",
+                    "version": 2
+                  },
+                  "conditions": [
+                    {
+                      "id": "b9a7e16f-b6e4-45d7-846d-92dcb3117593",
+                      "leftValue": "={{ $('Info').item.json.mensagem_de_audio }}",
+                      "rightValue": "",
+                      "operator": {
+                        "type": "boolean",
+                        "operation": "true",
+                        "singleValue": true
+                      }
+                    }
+                  ],
+                  "combinator": "and"
+                },
+                "renameOutput": true,
+                "outputKey": "Áudio"
+              },
+              {
+                "conditions": {
+                  "options": {
+                    "caseSensitive": true,
+                    "leftValue": "",
+                    "typeValidation": "strict",
+                    "version": 2
+                  },
+                  "conditions": [
+                    {
+                      "id": "18f0c26b-e047-467a-9a3a-c211b454098a",
+                      "leftValue": "={{ $('Info').item.json.eh_imagem }}",
+                      "rightValue": "",
+                      "operator": {
+                        "type": "boolean",
+                        "operation": "true",
+                        "singleValue": true
+                      }
+                    }
+                  ],
+                  "combinator": "and"
+                },
+                "renameOutput": true,
+                "outputKey": "=Imagem"
+              }
+            ]
+          },
+          "options": {}
+        },
+        "type": "n8n-nodes-base.switch",
+        "typeVersion": 3.2,
+        "position": [
+          -6736,
+          -32
+        ],
+        "id": "c942d6bf-64b5-453a-8182-d020c2448b10",
+        "name": "Tipo de mensagem"
+      },
+      {
+        "parameters": {
+          "content": "# Processando áudio",
+          "height": 224,
+          "width": 1080,
+          "color": 6
+        },
+        "type": "n8n-nodes-base.stickyNote",
+        "typeVersion": 1,
+        "position": [
+          -6528,
+          -48
+        ],
+        "id": "c249ccd0-bf44-4f63-9d83-e9c5d8cd8822",
+        "name": "Sticky Note6"
+      },
+      {
+        "parameters": {
+          "operation": "binaryToPropery",
+          "options": {
+            "encoding": "base64"
+          }
+        },
+        "type": "n8n-nodes-base.extractFromFile",
+        "typeVersion": 1,
+        "position": [
+          -1680,
+          192
+        ],
+        "id": "affe0038-3d17-467b-94a8-c760b74491ea",
+        "name": "Converter áudio para base64"
+      },
+      {
+        "parameters": {
+          "content": "Waveform nem sempre funciona no Evolution. Requer formato de áudio específico",
+          "height": 80
+        },
+        "type": "n8n-nodes-base.stickyNote",
+        "typeVersion": 1,
+        "position": [
+          -784,
+          -32
+        ],
+        "id": "59a45eb3-69c8-4280-875e-24634c4f4463",
+        "name": "Sticky Note"
+      },
+      {
+        "parameters": {
+          "content": "# Marcar como lida e \"digitando...\"",
+          "height": 840,
+          "width": 660,
+          "color": 5
+        },
+        "type": "n8n-nodes-base.stickyNote",
+        "typeVersion": 1,
+        "position": [
+          -5456,
+          -384
+        ],
+        "id": "c29982cd-ff7b-48f8-b20d-d3371fa0dcbf",
+        "name": "Sticky Note12"
+      },
+      {
+        "parameters": {
+          "promptType": "define",
+          "text": "={{ $json.input }}",
+          "options": {
+            "systemMessage": "=### ⚙️ SYSTEM INSTRUCTIONS (DIRETRIZES MESTRAS)\n\n### 🕒 CONTEXTO TEMPORAL & REGRAS DE SAUDAÇÃO\n**Data e Hora Atual:** {{ $now.setZone('America/Sao_Paulo').toFormat('dd/MM/yyyy HH:mm') }}\n\n**🚨 REGRA DE OURO (ANTI-REPETIÇÃO):**\n1. **VERIFIQUE O HISTÓRICO:** Antes de responder, olhe as mensagens anteriores.\n2. **NÃO REPITA:** Se você ou o usuário já disseram \"Bom dia/tarde/noite\" no início desta conversa, **NÃO DIGA NOVAMENTE**.\n3. **SEJA DIRETO:** Se a conversa já está fluindo (meio do atendimento), responda diretamente à pergunta sem formalidades excessivas.\n   - *Errado:* \"Bom dia! Segue o boleto.\" (No meio da conversa)\n   - *Certo:* \"Certo, aqui está o boleto.\"\n4. **QUANDO USAR:** Use a saudação baseada no horário (abaixo) APENAS na **primeira mensagem** ou na **despedida final**.\n\n**Tabela de Horários (Apenas para Início ou Fim):**\n- Antes das 12:00 -> \"Bom dia\"\n- Entre 12:00 e 17:59 -> \"Boa tarde\"\n- Após as 18:00 -> \"Boa noite\"\n\n---\n\n### ⛔ REGRAS DE SEGURANÇA (RISCO CRÍTICO)\n\n1. **PROIBIDO INVENTAR SENHAS/CHAVES (CRÍTICO):**\n   - **JAMAIS** invente, crie ou gere números de licença, e-mails ou senhas.\n   - Se a tool não retornou o dado, você **NÃO TEM** o produto.\n   - Nunca dê exemplos fictícios parecendo reais.\n\n2. **⚠️ ATENÇÃO COM IMAGENS (VISÃO COMPUTACIONAL):**\n   - Se receber uma imagem, leia a classificação que o sistema visual forneceu:\n   - Se for **[TELA TÉCNICA]** ou conter números longos: Trate como ID de Instalação ou Erro. **NÃO** agradeça pagamento.\n   - Se for **[COMPROVANTE]**: Verifique o beneficiário e agradeça o pagamento.\n\n---\n\n### 🚨 PROTOCOLO DE ESCALONAMENTO (QUANDO CHAMAR O HUMANO)\n\nQuando você precisar usar a tool `Escalar_Humano` (seja por erro, falta de chave ou comprovante), escolha a frase baseada no contexto:\n\n**CASO A: COMPROVANTE BANCÁRIO / PIX**\n- **O QUE DIZER:** \"Recebi seu comprovante! 💰 Vou pedir para o financeiro validar e liberar sua licença em instantes.\"\n\n**CASO B: DÚVIDA TÉCNICA / ERRO / IMAGEM NÃO IDENTIFICADA**\n- **O QUE DIZER:** \"Vou transferir sua imagem para um analista humano verificar esses detalhes técnicos para você. Um momento! 🔧\"\n\n**CASO C: ENTREGA DE PRODUTO (QUANDO FALTAR A CHAVE)**\n- **O QUE DIZER:** \"Seu pedido está confirmado! 🚀 Solicitando a geração da sua credencial segura para a equipe técnica agora.\"\n\n---\n\n### 👤 IDENTIDADE E VOCABULÁRIO\nVocê é **Emerson**, da **Super Software**.\n**Objetivo:** Vender licenças e dar suporte técnico.\n\n**VOCABULÁRIO PROIBIDO (TABU):**\n- **JAMAIS DIGA:** \"Limite excedido\", \"Chave bloqueada\", \"Erro na chave\", \"Pirata\".\n- **DIGA:** \"Necessária validação telefônica\", \"Validação manual de segurança\", \"Sincronização com a Microsoft\".\n### 🎭 REGRAS DE PERSONA E \"QUARTA PAREDE\" (IMPORTANTE)\n\n1.  **INVISIBILIDADE DO SISTEMA:**\n    * **JAMAIS** mencione nomes técnicos de ferramentas (como `GET_CID`, `Supabase`, `n8n`, `Tool`, `Guardrails`).\n    * **JAMAIS** se refira a si mesmo como \"A máquina\", \"A IA\", \"O Bot\" ou \"O Sistema\".\n    * **SEMPRE** atue como **Emerson**, um consultor humano e eficiente.\n\n2.  **COMO EXPLICAR ERROS:**\n    * Se uma ferramenta falhar, **NUNCA** diga \"minha ferramenta falhou\" ou \"erro no script\".\n    * **CULPE A BUROCRACIA:** Diga sempre que é uma \"verificação de segurança padrão da Microsoft\" ou \"o servidor pede validação manual\".\n\n3.  **NATURALIDADE:**\n    * Não explique o *processo*, explique a *solução*.\n    * *Errado:* \"A ferramenta GET_CID retornou erro, então escalei para o humano.\"\n    * *Certo:* \"O servidor da Microsoft pediu uma validação extra de segurança nesta ID. Já chamei nosso especialista para liberar manualmente para você. Um instante!\"\n\n---\n\n### 💰 FINANCEIRO E PRODUTOS\n- Loja: **Super Software**.\n- **PIX OBRIGATÓRIO:** Chave `sacsupersoftware@gmail.com` | Beneficiário: **DGR SOLUTIONS / PCLANDIA**.\n- **Comprovante:** Se o beneficiário NÃO for DGR ou PCLANDIA, use `Escalar_Humano` (Caso A).\n\n**TABELA DE PREÇOS:**\n- **Office 365 (Conta Anual/5 Disp):** R$ 150,00. (É uma **CONTA**, não chave).\n- **Office 2021 Vitalício:** R$ 100,00.\n- **Office 2024 Vitalício:** R$ 150,00.\n- **Windows 11 Pro:** R$ 100,00.\n- **Windows 10 Pro:** R$ 80,00.\n- **Mac:** Só vendemos **Office 365**. Nunca ofereça Vitalício para Mac.\n\n### 🚫 LIMITES DE ATUAÇÃO (ESCOPO DO ATENDIMENTO)\n\n1.  **O QUE VOCÊ NÃO FAZ:**\n    * Você **NÃO** indica cursos, faculdades ou materiais de estudo.\n    * Você **NÃO** fala sobre jogos, hardware (placa de vídeo, memória), receitas ou política.\n    * Você **NÃO** recomenda outros softwares (antivírus, Adobe, Corel, etc) a menos que tenhamos no catálogo.\n\n2.  **COMO RESPONDER A PERGUNTAS FORA DO TEMA:**\n    * Se o cliente perguntar algo fora do seu escopo (ex: \"Qual curso de IA?\", \"Qual notebook comprar?\", \"Como configurar minha impressora?\"):\n    * **AÇÃO:** Corte educadamente e ofereça o SEU produto.\n    * **MODELO DE RESPOSTA:** \"Nesse ponto não consigo opinar, meu foco aqui é exclusivamente em **Licenciamento Microsoft** e ativação do sistema. Mas se precisar do **Office ou Windows** para seus estudos/trabalho, é comigo mesmo! 🚀\"\n\n---\n\n### 🧭 FLUXO DE SUPORTE TÉCNICO\n\n**1. ID DETECTADA (Texto com muitos números)**\n- **AÇÃO:** Use tool `CID`.\n- **SUCESSO:** \"Excelente! Identifiquei a ID. ✅ Aqui está sua **ID de Confirmação**: [RESULTADO DA TOOL]. Insira na Etapa 3.\"\n- **FALHA:** (Use `Escalar_Humano` - Caso B) \"O servidor pede liberação manual. Já chamei um especialista.\"\n\n**2. MENSAGEM DE \"LIMITE\" / TELA 2024 / ERRO 0xC...**\n- **RESPOSTA:** \"Identifiquei sua versão! O servidor requer uma **validação telefônica de segurança**. Vamos fazer: 1. Clique em Voltar. 2. Selecione **'Ativar por telefone'**. 3. Envie a foto da **ID de Instalação**.\"\n\n**3. ERRO 0xC004C008 (WINDOWS)**\n- **RESPOSTA:** \"Identifiquei o código 08. Precisamos da **ativação manual**. 1. Feche o erro. 2. Clique em **'Ativar por telefone'**. 3. Envie a foto da **ID de Instalação**.\"\n\n**4. LINK OFFICE 2024 / INSTALADOR ERRADO**\n- **RESPOSTA:** \"Você precisa do instalador correto. 1. Desinstale o atual. 2. **Baixe aqui:** 👉 http://supersoftware.info/office/Office_2024_PT_64Bits.exe 3. Instale e selecione 'Ativação por Telefone'. Me mande a ID!\"\n\n**5. INSTALAÇÃO OFFICE 365 (CONTA)**\n- **RESPOSTA:** \"Siga com o **Usuário e Senha** enviados: 1. Acesse **portal.office.com**. 2. Entre e **crie sua senha pessoal**. 3. Clique em 'Instalar Aplicativos'.\"\n\n---\n\n### 📝 Estilo de Comunicação\nSeja direto, seguro e resolutivo.",
+            "maxIterations": 10
+          }
+        },
+        "type": "@n8n/n8n-nodes-langchain.agent",
+        "typeVersion": 1.9,
+        "position": [
+          -3024,
+          -16
+        ],
+        "id": "f0de20ef-63cf-4ce1-8425-2b58111c01c3",
+        "name": "Secretária",
+        "retryOnFail": true
+      },
+      {
+        "parameters": {
+          "method": "POST",
+          "url": "https://api.elevenlabs.io/v1/text-to-speech/33B4UnXyTNbgLmdEDh5P",
+          "authentication": "genericCredentialType",
+          "genericAuthType": "httpHeaderAuth",
+          "sendQuery": true,
+          "queryParameters": {
+            "parameters": [
+              {
+                "name": "output_format",
+                "value": "mp3_44100_32"
+              }
+            ]
+          },
+          "sendBody": true,
+          "bodyParameters": {
+            "parameters": [
+              {
+                "name": "text",
+                "value": "={{ $json.text }}"
+              },
+              {
+                "name": "model_id",
+                "value": "eleven_flash_v2_5"
+              }
+            ]
+          },
+          "options": {}
+        },
+        "type": "n8n-nodes-base.httpRequest",
+        "typeVersion": 4.2,
+        "position": [
+          -1904,
+          192
+        ],
+        "id": "ea6bd552-d2f0-4142-b023-745cd4dc567f",
+        "name": "Gerar áudio",
+        "retryOnFail": true,
+        "credentials": {
+          "httpHeaderAuth": {
+            "id": "p4P0L8okZhEPaRsX",
+            "name": "Header Auth account"
+          }
+        }
+      },
+      {
+        "parameters": {
+          "promptType": "define",
+          "text": "={{ $('Secretária').item.json.output }}",
+          "messages": {
+            "messageValues": [
+              {
+                "message": "=Você é um assistente especialista em text-to-speech e formatação usando tags SSML.\n\nVocê irá receber um texto e a sua tarefa é aplicar tags SSML para deixá-lo mais natural no processo de geração de voz.\n\n### Formatação\n\n#### Datas e horas\n\nNo caso de datas e horas, modifique o texto para um formato que seja mais natural quando falado.\n\nExemplos:\n\n- Entrada: '10:00'\n- Saída: 'dez horas'\n\n- Entrada: '22:00'\n- Saída: 'vinte e duas horas'\n\n- Entrada: '01/01/2025'\n- Saída: 'primeiro de janeiro de 2025'\n\n#### Telefones\n\nSimilar ao feita para datas, modifique o texto para um formato que seja mais natural quando falado. Para o DDD converta sempre em dezena, e para o resto dos números, adicione pausas entre cada bloco.\n\nExemplos:\n\n- Entrada: '(11) 1234-5678'\n- Saída: 'onze, um dois três quatro, cinco seis sete oito'\n\n\n### Notas\n\n- Sempre coloque uma pausa de 1.0s no começo.\n- Não use breaks no meio do texto, apenas no começo.\n- Mantenha o mesmo texto original, mas revise o uso de vírgulas excessivas para deixar o texto mais natural ao falar.\n- Remova emojis.\n- A sua saída será somente o texto convertido.\n- Use <speak> ao redor da saída.\n\n\n**NÃO INCLUA NENHUMA INFORMAÇÃO ALÉM DO TEXTO CONVERTIDO**\n**NUNCA INCLUA CARACTER DE NOVA LINHA \"\\n\" NA SAÍDA**\n**NUNCA COLOQUE ÂNCORAS COMO ```ssml AO REDOR DO TEXTO**"
+              }
+            ]
+          }
+        },
+        "type": "@n8n/n8n-nodes-langchain.chainLlm",
+        "typeVersion": 1.6,
+        "position": [
+          -2256,
+          192
+        ],
+        "id": "0de05833-cf90-4bd0-ab2a-91ca889a6e2e",
+        "name": "Formatar SSML"
+      },
+      {
+        "parameters": {
+          "rules": {
+            "values": [
+              {
+                "conditions": {
+                  "options": {
+                    "caseSensitive": true,
+                    "leftValue": "",
+                    "typeValidation": "strict",
+                    "version": 2
+                  },
+                  "conditions": [
+                    {
+                      "leftValue": "={{ $json.output }}",
+                      "rightValue": "",
+                      "operator": {
+                        "type": "string",
+                        "operation": "notEmpty",
+                        "singleValue": true
+                      },
+                      "id": "1382cd26-d96e-4c55-99dd-2ca305ffe82e"
+                    }
+                  ],
+                  "combinator": "and"
+                },
+                "renameOutput": true,
+                "outputKey": "Texto"
+              },
+              {
+                "conditions": {
+                  "options": {
+                    "caseSensitive": true,
+                    "leftValue": "",
+                    "typeValidation": "strict",
+                    "version": 2
+                  },
+                  "conditions": [
+                    {
+                      "id": "b9a7e16f-b6e4-45d7-846d-92dcb3117593",
+                      "leftValue": "={{ $('Info').item.json.mensagem_de_audio }}",
+                      "rightValue": "",
+                      "operator": {
+                        "type": "boolean",
+                        "operation": "true",
+                        "singleValue": true
+                      }
+                    }
+                  ],
+                  "combinator": "and"
+                },
+                "renameOutput": true,
+                "outputKey": "Áudio"
+              }
+            ]
+          },
+          "options": {}
+        },
+        "type": "n8n-nodes-base.switch",
+        "typeVersion": 3.2,
+        "position": [
+          -2480,
+          -16
+        ],
+        "id": "17ac699b-3352-40d4-87db-ba85eea99ed6",
+        "name": "Tipo de mensagem1"
+      },
+      {
+        "parameters": {
+          "promptType": "define",
+          "text": "={{ $('Secretária').item.json.output }}",
+          "messages": {
+            "messageValues": [
+              {
+                "message": "=Você é especialista em formatação de mensagem para WhatsApp, trabalhando somente na formatação e não alterando o conteúdo da menssagem.\n\n- Substitua ** por *\n- Remova #\n- Remova emojis"
+              }
+            ]
+          }
+        },
+        "type": "@n8n/n8n-nodes-langchain.chainLlm",
+        "typeVersion": 1.6,
+        "position": [
+          -2144,
+          -144
+        ],
+        "id": "ffecca92-7f78-4464-af2f-099770318860",
+        "name": "Formatar texto"
+      },
+      {
+        "parameters": {
+          "modelName": "models/gemini-2.5-flash-lite",
+          "options": {}
+        },
+        "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+        "typeVersion": 1,
+        "position": [
+          -2064,
+          32
+        ],
+        "id": "897eedba-661b-4fe6-b0e8-d982cda5981b",
+        "name": "Google Gemini Chat Model2",
+        "retryOnFail": true,
+        "waitBetweenTries": 5000,
+        "credentials": {
+          "googlePalmApi": {
+            "id": "F7VJtvWmFt7k83H5",
+            "name": "Google Gemini(PaLM) Api account"
+          }
+        }
+      },
+      {
+        "parameters": {
+          "options": {}
+        },
+        "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+        "typeVersion": 1,
+        "position": [
+          -3200,
+          224
+        ],
+        "id": "e8167e22-fc38-4932-9367-30ee11b72c3d",
+        "name": "Gemini",
+        "credentials": {
+          "googlePalmApi": {
+            "id": "F7VJtvWmFt7k83H5",
+            "name": "Google Gemini(PaLM) Api account"
+          }
+        }
+      },
+      {
+        "parameters": {
+          "sessionIdType": "customKey",
+          "sessionKey": "={{ $('Info').item.json.telefone }}",
+          "tableName": "n8n_historico_mensagens",
+          "contextWindowLength": 50
+        },
+        "type": "@n8n/n8n-nodes-langchain.memoryPostgresChat",
+        "typeVersion": 1.3,
+        "position": [
+          -3072,
+          224
+        ],
+        "id": "7bb5e32b-7208-4bf1-b4a0-a810a1ecf5d9",
+        "name": "Memory",
+        "credentials": {
+          "postgres": {
+            "id": "GOaED8CXwSUFbrph",
+            "name": "Postgres account"
+          }
+        }
+      },
+      {
+        "parameters": {
+          "description": "Use a ferramenta para refletir sobre algo. Ela não obterá novas informações nem alterará o banco de dados, apenas adicionará o pensamento ao registro. Use-a quando for necessário um raciocínio complexo ou alguma memória em cache."
+        },
+        "type": "@n8n/n8n-nodes-langchain.toolThink",
+        "typeVersion": 1,
+        "position": [
+          -2944,
+          224
+        ],
+        "id": "a834e2db-5dfb-4428-864e-ee4a5b7d8901",
+        "name": "Refletir"
+      },
+      {
+        "parameters": {
+          "schema": {
+            "__rl": true,
+            "mode": "list",
+            "value": "public"
+          },
+          "table": {
+            "__rl": true,
+            "value": "n8n_fila_mensagens",
+            "mode": "list"
+          },
+          "columns": {
+            "mappingMode": "defineBelow",
+            "value": {
+              "telefone": "={{ $('Info').item.json.telefone }}",
+              "mensagem": "={{ $('Info').item.json.mensagem }}",
+              "timestamp": "={{ $('Info').item.json.timestamp.toDateTime('s') }}",
+              "id_mensagem": "={{ $('Info').item.json.id_mensagem }}"
+            },
+            "matchingColumns": [
+              "id"
+            ],
+            "schema": [
+              {
+                "id": "id",
+                "displayName": "id",
+                "required": false,
+                "defaultMatch": true,
+                "display": true,
+                "type": "number",
+                "canBeUsedToMatch": true,
+                "removed": true
+              },
+              {
+                "id": "id_mensagem",
+                "displayName": "id_mensagem",
+                "required": true,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true,
+                "removed": false
+              },
+              {
+                "id": "telefone",
+                "displayName": "telefone",
+                "required": true,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "mensagem",
+                "displayName": "mensagem",
+                "required": true,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "timestamp",
+                "displayName": "timestamp",
+                "required": true,
+                "defaultMatch": false,
+                "display": true,
+                "type": "dateTime",
+                "canBeUsedToMatch": true
+              }
+            ],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {}
+        },
+        "type": "n8n-nodes-base.postgres",
+        "typeVersion": 2.6,
+        "position": [
+          -6512,
+          -208
+        ],
+        "id": "cf9b08de-2072-4596-9aad-48ba477df43c",
+        "name": "Enfileirar mensagem.",
+        "credentials": {
+          "postgres": {
+            "id": "GOaED8CXwSUFbrph",
+            "name": "Postgres account"
+          }
+        }
+      },
+      {
+        "parameters": {
+          "assignments": {
+            "assignments": [
+              {
+                "id": "d29ae5a6-0f4d-4bf7-b8f1-b77608e1ea74",
+                "name": "mensagem",
+                "value": "={{ $json.content.parts[0].text }}",
+                "type": "string"
+              }
+            ]
+          },
+          "options": {}
+        },
+        "type": "n8n-nodes-base.set",
+        "typeVersion": 3.4,
+        "position": [
+          -4944,
+          -16
+        ],
+        "id": "e334f11e-dc59-460e-b99a-ddd41895e01c",
+        "name": "Set mensagem.",
+        "executeOnce": true
+      },
+      {
+        "parameters": {
+          "modelName": "models/gemini-2.0-flash",
+          "options": {}
+        },
+        "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+        "typeVersion": 1,
+        "position": [
+          -2192,
+          416
+        ],
+        "id": "c32b193a-29e3-48d5-9dd9-e48548aac257",
+        "name": "Google Gemini Chat Model.",
+        "credentials": {
+          "googlePalmApi": {
+            "id": "F7VJtvWmFt7k83H5",
+            "name": "Google Gemini(PaLM) Api account"
+          }
+        }
+      },
+      {
+        "parameters": {
+          "content": "## Notas sobre a ferramenta \"Salvar memoria\"\n\nPor padrão, no N8N não existe uma forma direta de compartilhar memória entre agentes diferentes.\n\nUsando a ferramenta acima \"Salvar memoria\", nós conseguimos simular no banco de dados o Assistente de confirmação respondendo como se fosse a Secretária.\n\nDessa forma, quando o paciente enviar uma mensagem para a Secretária, ela irá ver a mensagem do Assistente como se ela mesmo tivesse enviado.\n\nIsso garante que ela entenderá o contexto caso o paciente simplesmente responda \"confirmar\", por exemplo.",
+          "height": 240,
+          "width": 1060,
+          "color": 6
+        },
+        "type": "n8n-nodes-base.stickyNote",
+        "typeVersion": 1,
+        "position": [
+          -352,
+          32
+        ],
+        "id": "f1b562c7-f3dc-4d01-bed6-590d8d37d7dc",
+        "name": "Sticky Note19"
+      },
+      {
+        "parameters": {
+          "number": "={{ $('Info').item.json.telefone }}",
+          "text": "={{ $json.text }}"
+        },
+        "type": "n8n-nodes-uazapi.uazApi",
+        "typeVersion": 1,
+        "position": [
+          -1264,
+          -96
+        ],
+        "id": "b313626d-bcdd-4205-be15-72579d3f69fa",
+        "name": "Send text message",
+        "credentials": {
+          "uazApiApi": {
+            "id": "mxNiyheY2zUK8EX2",
+            "name": "UazAPI SuperSoftware"
+          }
+        }
+      },
+      {
+        "parameters": {
+          "operation": "sendMedia",
+          "number": "={{ $('Info').item.json.telefone }}",
+          "mediaType": "ptt",
+          "file": "={{ $json.data }}"
+        },
+        "type": "n8n-nodes-uazapi.uazApi",
+        "typeVersion": 1,
+        "position": [
+          -1264,
+          192
+        ],
+        "id": "4a6d8a56-fd8d-4f2a-9ec6-772c0ac06332",
+        "name": "Send media message1",
+        "credentials": {
+          "uazApiApi": {
+            "id": "mxNiyheY2zUK8EX2",
+            "name": "UazAPI SuperSoftware"
+          }
+        }
+      },
+      {
+        "parameters": {
+          "toolDescription": "Recebe a ID de instalação (Installation ID) extraída da imagem e retorna a ID de Confirmação (Confirmation ID) necessária para ativar o Windows/Office.",
+          "url": "=https://api.get-cid.com/api/getcid",
+          "authentication": "genericCredentialType",
+          "genericAuthType": "httpQueryAuth",
+          "sendQuery": true,
+          "queryParameters": {
+            "parameters": [
+              {
+                "name": "iid",
+                "value": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('parameters1_Value', ``, 'string') }}"
+              }
+            ]
+          },
+          "options": {}
+        },
+        "type": "n8n-nodes-base.httpRequestTool",
+        "typeVersion": 4.3,
+        "position": [
+          -2688,
+          224
+        ],
+        "id": "adc361d0-ebf3-433b-a463-f8aa2f9726be",
+        "name": "GET CID",
+        "credentials": {
+          "httpHeaderAuth": {
+            "id": "LR9jZhcpZ83W1sEf",
+            "name": "API CID"
+          },
+          "httpQueryAuth": {
+            "id": "BoXRC0VcbueYP3o9",
+            "name": "Query Auth account"
+          }
+        }
+      },
+      {
+        "parameters": {
+          "operation": "downloadMedia",
+          "messageId": "={{ $json.id_mensagem }}"
+        },
+        "type": "n8n-nodes-uazapi.uazApi",
+        "typeVersion": 1,
+        "position": [
+          -5840,
+          -16
+        ],
+        "id": "32f9253a-99c2-40b5-91db-40e1c113d2a4",
+        "name": "Download Audio",
+        "credentials": {
+          "uazApiApi": {
+            "id": "mxNiyheY2zUK8EX2",
+            "name": "UazAPI SuperSoftware"
+          }
+        }
+      },
+      {
+        "parameters": {
+          "operation": "downloadMedia",
+          "messageId": "={{ $json.id_mensagem }}"
+        },
+        "type": "n8n-nodes-uazapi.uazApi",
+        "typeVersion": 1,
+        "position": [
+          -5840,
+          192
+        ],
+        "id": "fdad073b-adcb-47cf-abe2-b35f6a8cf27c",
+        "name": "Download Imagem",
+        "credentials": {
+          "uazApiApi": {
+            "id": "mxNiyheY2zUK8EX2",
+            "name": "UazAPI SuperSoftware"
+          }
+        }
+      },
+      {
+        "parameters": {
+          "assignments": {
+            "assignments": [
+              {
+                "id": "e43c16b4-310d-4f0c-89f3-25878bd664e0",
+                "name": "mensagem",
+                "value": "={{ $('Analyze an image').item.json.content.parts[0].text }}",
+                "type": "string"
+              }
+            ]
+          },
+          "options": {}
+        },
+        "type": "n8n-nodes-base.set",
+        "typeVersion": 3.4,
+        "position": [
+          -4944,
+          192
+        ],
+        "id": "beee4eee-56e9-4933-8aa9-97789c1c34b8",
+        "name": "Edit Fields"
+      },
+      {
+        "parameters": {
+          "method": "POST",
+          "url": "https://superbot.uazapi.com/chat/read",
+          "authentication": "predefinedCredentialType",
+          "nodeCredentialType": "uazApiApi",
+          "sendHeaders": true,
+          "headerParameters": {
+            "parameters": [
+              {
+                "name": "Accept",
+                "value": "application/json"
+              }
+            ]
+          },
+          "sendBody": true,
+          "bodyParameters": {
+            "parameters": [
+              {
+                "name": "number",
+                "value": "={{ $('Info').item.json.telefone }}"
+              },
+              {
+                "name": "read",
+                "value": "true"
+              }
+            ]
+          },
+          "options": {}
+        },
+        "type": "n8n-nodes-base.httpRequest",
+        "typeVersion": 4.3,
+        "position": [
+          -5392,
+          -208
+        ],
+        "id": "42eb7010-63a2-4ba2-adfe-70f69977dc92",
+        "name": "Marca Mensagem como Lida",
+        "credentials": {
+          "uazApiApi": {
+            "id": "mxNiyheY2zUK8EX2",
+            "name": "UazAPI SuperSoftware"
+          }
+        }
+      },
+      {
+        "parameters": {
+          "method": "POST",
+          "url": "https://superbot.uazapi.com/message/presence",
+          "authentication": "predefinedCredentialType",
+          "nodeCredentialType": "uazApiApi",
+          "sendHeaders": true,
+          "headerParameters": {
+            "parameters": [
+              {
+                "name": "Accept",
+                "value": "application/json"
+              }
+            ]
+          },
+          "sendBody": true,
+          "bodyParameters": {
+            "parameters": [
+              {
+                "name": "number",
+                "value": "={{ $('Info').item.json.telefone }}"
+              },
+              {
+                "name": "presence",
+                "value": "composing"
+              },
+              {
+                "name": "delay",
+                "value": "30000"
+              }
+            ]
+          },
+          "options": {}
+        },
+        "type": "n8n-nodes-base.httpRequest",
+        "typeVersion": 4.3,
+        "position": [
+          -5168,
+          -208
+        ],
+        "id": "86531ec6-71af-43cb-9d35-c4b8113c063f",
+        "name": "Digitando",
+        "credentials": {
+          "uazApiApi": {
+            "id": "mxNiyheY2zUK8EX2",
+            "name": "UazAPI SuperSoftware"
+          }
+        }
+      },
+      {
+        "parameters": {
+          "method": "POST",
+          "url": "https://superbot.uazapi.com/chat/read",
+          "authentication": "predefinedCredentialType",
+          "nodeCredentialType": "uazApiApi",
+          "sendHeaders": true,
+          "headerParameters": {
+            "parameters": [
+              {
+                "name": "Accept",
+                "value": "application/json"
+              }
+            ]
+          },
+          "sendBody": true,
+          "bodyParameters": {
+            "parameters": [
+              {
+                "name": "number",
+                "value": "={{ $('Info').item.json.telefone }}"
+              },
+              {
+                "name": "read",
+                "value": "true"
+              }
+            ]
+          },
+          "options": {}
+        },
+        "type": "n8n-nodes-base.httpRequest",
+        "typeVersion": 4.3,
+        "position": [
+          -5392,
+          -16
+        ],
+        "id": "0b1917f1-3734-4e61-9c24-6b2683019742",
+        "name": "Marca Mensagem como Lida1",
+        "credentials": {
+          "uazApiApi": {
+            "id": "mxNiyheY2zUK8EX2",
+            "name": "UazAPI SuperSoftware"
+          }
+        },
+        "disabled": true
+      },
+      {
+        "parameters": {
+          "method": "POST",
+          "url": "https://superbot.uazapi.com/message/presence",
+          "authentication": "predefinedCredentialType",
+          "nodeCredentialType": "uazApiApi",
+          "sendHeaders": true,
+          "headerParameters": {
+            "parameters": [
+              {
+                "name": "Accept",
+                "value": "application/json"
+              }
+            ]
+          },
+          "sendBody": true,
+          "bodyParameters": {
+            "parameters": [
+              {
+                "name": "number",
+                "value": "={{ $('Info').item.json.telefone }}"
+              },
+              {
+                "name": "presence",
+                "value": "composing"
+              },
+              {
+                "name": "delay",
+                "value": "30000"
+              }
+            ]
+          },
+          "options": {}
+        },
+        "type": "n8n-nodes-base.httpRequest",
+        "typeVersion": 4.3,
+        "position": [
+          -5168,
+          -16
+        ],
+        "id": "e47648e3-a6c3-47b9-a714-51c6da79f255",
+        "name": "Digitando1",
+        "credentials": {
+          "uazApiApi": {
+            "id": "mxNiyheY2zUK8EX2",
+            "name": "UazAPI SuperSoftware"
+          }
+        },
+        "disabled": true
+      },
+      {
+        "parameters": {
+          "method": "POST",
+          "url": "https://superbot.uazapi.com/chat/read",
+          "authentication": "predefinedCredentialType",
+          "nodeCredentialType": "uazApiApi",
+          "sendHeaders": true,
+          "headerParameters": {
+            "parameters": [
+              {
+                "name": "Accept",
+                "value": "application/json"
+              }
+            ]
+          },
+          "sendBody": true,
+          "bodyParameters": {
+            "parameters": [
+              {
+                "name": "number",
+                "value": "={{ $('Info').item.json.telefone }}"
+              },
+              {
+                "name": "read",
+                "value": "true"
+              }
+            ]
+          },
+          "options": {}
+        },
+        "type": "n8n-nodes-base.httpRequest",
+        "typeVersion": 4.3,
+        "position": [
+          -5392,
+          192
+        ],
+        "id": "96c743ee-9ce3-4b31-966b-ff32d43efd40",
+        "name": "Marca Mensagem como Lida2",
+        "credentials": {
+          "uazApiApi": {
+            "id": "mxNiyheY2zUK8EX2",
+            "name": "UazAPI SuperSoftware"
+          }
+        },
+        "disabled": true
+      },
+      {
+        "parameters": {
+          "method": "POST",
+          "url": "https://superbot.uazapi.com/message/presence",
+          "authentication": "predefinedCredentialType",
+          "nodeCredentialType": "uazApiApi",
+          "sendHeaders": true,
+          "headerParameters": {
+            "parameters": [
+              {
+                "name": "Accept",
+                "value": "application/json"
+              }
+            ]
+          },
+          "sendBody": true,
+          "bodyParameters": {
+            "parameters": [
+              {
+                "name": "number",
+                "value": "={{ $('Info').item.json.telefone }}"
+              },
+              {
+                "name": "presence",
+                "value": "composing"
+              },
+              {
+                "name": "delay",
+                "value": "30000"
+              }
+            ]
+          },
+          "options": {}
+        },
+        "type": "n8n-nodes-base.httpRequest",
+        "typeVersion": 4.3,
+        "position": [
+          -5168,
+          192
+        ],
+        "id": "e54f82f5-3dae-4217-983f-16c3070b4d45",
+        "name": "Digitando2",
+        "credentials": {
+          "uazApiApi": {
+            "id": "mxNiyheY2zUK8EX2",
+            "name": "UazAPI SuperSoftware"
+          }
+        },
+        "disabled": true
+      },
+      {
+        "parameters": {
+          "assignments": {
+            "assignments": [
+              {
+                "id": "c8fd010d-6096-4a50-b3e2-e9fe26661840",
+                "name": "id_mensagem",
+                "value": "={{ $json.body.message.messageid }}",
+                "type": "string"
+              },
+              {
+                "id": "e72f-4a0b-9c1d-8b2e5a1c3d4e",
+                "name": "eh_imagem",
+                "value": "={{ ['image', 'ImageMessage', 'media'].includes($json.body.message.type || $json.body.message.messageType) }}",
+                "type": "boolean"
+              },
+              {
+                "id": "8bf522a6-75fb-434a-854c-b736539309e1",
+                "name": "telefone",
+                "value": "={{ $json.body.message.chatid.split('@')[0]}}\n",
+                "type": "string"
+              },
+              {
+                "id": "731eef50-51cd-4328-8eda-177d937d519b",
+                "name": "instancia",
+                "value": "={{ $json.body.instanceName }}",
+                "type": "string"
+              },
+              {
+                "id": "0d622a33-f313-4758-a764-fa6cbf2b0587",
+                "name": "mensagem",
+                "value": "={{ $json.body.chat.wa_lastMessageTextVote }}",
+                "type": "string"
+              },
+              {
+                "id": "8f4b9d84-56e0-4f45-9f17-68c53f365f43",
+                "name": "mensagem_de_audio",
+                "value": "={{ $json.body.message.content.PTT }}",
+                "type": "boolean"
+              },
+              {
+                "id": "2b679a3f-788f-4cd2-88d5-4f03af68f224",
+                "name": "timestamp",
+                "value": "={{ $json.body.chat.wa_lastMsgTimestamp }}",
+                "type": "number"
+              },
+              {
+                "id": "a445d43a-6cd5-4388-982b-9fc58433b342",
+                "name": "fromMe",
+                "value": "={{ $json.body.message.fromMe }}",
+                "type": "boolean"
+              },
+              {
+                "id": "3faf2f42-c3aa-4862-8e35-a09cfe87b2b8",
+                "name": "mensagem_de_grupo",
+                "value": "={{ $json.body.chat.wa_isGroup }}",
+                "type": "boolean"
+              },
+              {
+                "id": "9d73a108-1624-4d16-b3ba-caac1c921d1d",
+                "name": "nome",
+                "value": "={{ $json.body.message.senderName }}",
+                "type": "string"
+              }
+            ]
+          },
+          "options": {}
+        },
+        "type": "n8n-nodes-base.set",
+        "typeVersion": 3.4,
+        "position": [
+          -7232,
+          -16
+        ],
+        "id": "e07dc660-1c26-4c0a-ba15-10828f274e8b",
+        "name": "Info"
+      },
+      {
+        "parameters": {
+          "httpMethod": "POST",
+          "path": "superbot",
+          "options": {}
+        },
+        "type": "n8n-nodes-base.webhook",
+        "typeVersion": 2.1,
+        "position": [
+          -7472,
+          -16
+        ],
+        "id": "4c5a203b-882a-4f9f-996f-17aeb7bb360d",
+        "name": "Webhook",
+        "webhookId": "a88f2733-e618-461a-8c38-3c262dd086c9"
+      },
+      {
+        "parameters": {
+          "toolDescription": "Use essa ferramenta quando detectar uma situação que deve ser informada ao gestor responsável.\n",
+          "method": "POST",
+          "url": "https://superbot.uazapi.com/send/text",
+          "authentication": "predefinedCredentialType",
+          "nodeCredentialType": "uazApiApi",
+          "sendHeaders": true,
+          "headerParameters": {
+            "parameters": [
+              {
+                "name": "Accept",
+                "value": "application/json"
+              }
+            ]
+          },
+          "sendBody": true,
+          "bodyParameters": {
+            "parameters": [
+              {
+                "name": "number",
+                "value": "5511919025098"
+              },
+              {
+                "name": "text",
+                "value": "=Cliente ,{{ $('Info').item.json.nome }}   , precisa de ajuda.\nTelefone: {{ $('Info').item.json.telefone }} , \nMensagem Ai: {{ $fromAI('parameters2_Value', ``, 'string') }}\n"
+              }
+            ]
+          },
+          "options": {}
+        },
+        "type": "n8n-nodes-base.httpRequestTool",
+        "typeVersion": 4.3,
+        "position": [
+          -2576,
+          224
+        ],
+        "id": "aa2caa3f-99d0-4e62-b746-3a7c0198a143",
+        "name": "Escalar Humano",
+        "credentials": {
+          "uazApiApi": {
+            "id": "mxNiyheY2zUK8EX2",
+            "name": "UazAPI SuperSoftware"
+          }
+        }
+      },
+      {
+        "parameters": {
+          "resource": "audio",
+          "modelId": {
+            "__rl": true,
+            "value": "models/gemini-2.0-flash",
+            "mode": "list",
+            "cachedResultName": "models/gemini-2.0-flash"
+          },
+          "audioUrls": "={{ $json.fileURL }}",
+          "options": {}
+        },
+        "type": "@n8n/n8n-nodes-langchain.googleGemini",
+        "typeVersion": 1,
+        "position": [
+          -5616,
+          -16
+        ],
+        "id": "758c071e-c395-4352-99a9-6d29f97106f3",
+        "name": "Transcribe a recording",
+        "credentials": {
+          "googlePalmApi": {
+            "id": "F7VJtvWmFt7k83H5",
+            "name": "Google Gemini(PaLM) Api account"
+          }
+        }
+      },
+      {
+        "parameters": {
+          "jsCode": "// Acessa o corpo recebido\nconst body = items[0].json.body || {};\nconst msg = body.message || {};\nconst chat = body.chat || {};\n\n// ====================================================================\n// 1. EXTRAÇÃO DO TELEFONE\n// ====================================================================\nlet rawPhone = msg.sender_pn || chat.phone || msg.sender || msg.chatid || '';\nif (rawPhone.includes('@lid')) rawPhone = chat.phone || '';\nconst phone = rawPhone ? rawPhone.replace(/\\D/g, '').split('@')[0] : null;\n\n// ====================================================================\n// 2. EXTRAÇÃO DA MENSAGEM (CORRIGIDA)\n// ====================================================================\nlet content = '';\n\n// Tenta pegar texto em TODOS os lugares possíveis antes de assumir que é mídia\ncontent = \n  msg.text || \n  msg.conversation || \n  msg.extendedTextMessage?.text ||  // <--- Faltava isso\n  msg.imageMessage?.caption || \n  msg.videoMessage?.caption || \n  msg.documentMessage?.caption ||\n  '';\n\n// Se ainda estiver vazio, tenta dentro de content (algumas versões da API)\nif (!content && msg.content) {\n    if (typeof msg.content === 'string') content = msg.content;\n    else if (msg.content.text) content = msg.content.text;\n    else if (msg.content.caption) content = msg.content.caption;\n}\n\n// Se AINDA estiver vazio, aí sim verifica se é Mídia\nif (!content) {\n    const type = msg.type || msg.messageType || 'text';\n    \n    // Se o tipo for texto, mas não achamos nada, evitamos salvar \"[Arquivo: text]\"\n    if (type === 'text' || type === 'extendedTextMessage') {\n         // Mantém vazio ou coloca um aviso de erro, mas não [Arquivo]\n         content = ''; \n    }\n    // Tratamento de Imagem\n    else if (type === 'image' || type === 'ImageMessage' || type === 'media') {\n        const thumb = msg.content?.JPEGThumbnail || msg.jpegThumbnail;\n        const url = msg.content?.URL || msg.imagePreview || msg.url || '';\n        \n        if (thumb) {\n            content = `<img src=\"data:image/jpeg;base64,${thumb}\" style=\"border-radius:8px; max-width:200px;\">`;\n        } else if (url && !url.includes('.enc')) {\n            content = `<img src=\"${url}\" style=\"max-width:200px;\">`;\n        } else {\n            content = '[Imagem Recebida]';\n        }\n    }\n    // Tratamento de Áudio\n    else if (type === 'audio' || type === 'AudioMessage' || type === 'ptt' || type === 'voice') {\n        const audioUrl = msg.content?.URL || msg.url || msg.audioMessage?.url || '';\n        content = audioUrl && !audioUrl.includes('.enc') ? `[Áudio: ${audioUrl}]` : '[Áudio Recebido]';\n    }\n    // Outros\n    else {\n        content = `[Arquivo: ${type}]`;\n    }\n}\n\n// ====================================================================\n// 3. RETORNO\n// ====================================================================\nconst isFromMe = msg.fromMe === true;\nconst direction = isFromMe ? 'outbound' : 'inbound';\nconst status = isFromMe ? 'sent' : 'received';\n// Só salva se tiver telefone E mensagem válida (ignora textos vazios)\nconst isValid = (phone && phone.length > 8 && content && content.trim() !== '') ? true : false;\n\nreturn [{\n    json: {\n      phone: phone,\n      message: content,\n      direction: direction,\n      status: status,\n      isValid: isValid\n    }\n}];"
+        },
+        "id": "daa1ad5f-89d2-49e5-a998-364805f4060f",
+        "name": "Extrair Dados Inteligente",
+        "type": "n8n-nodes-base.code",
+        "typeVersion": 2,
+        "position": [
+          -7168,
+          176
+        ]
+      },
+      {
+        "parameters": {
+          "conditions": {
+            "boolean": [
+              {
+                "value1": "={{ $json.isValid }}",
+                "value2": true
+              }
+            ]
+          }
+        },
+        "id": "056266dd-66b2-44bd-9077-f1c9ee0d9105",
+        "name": "Apenas Dados Válidos",
+        "type": "n8n-nodes-base.if",
+        "typeVersion": 1,
+        "position": [
+          -6944,
+          176
+        ]
+      },
+      {
+        "parameters": {
+          "tableId": "whatsapp_chat",
+          "fieldsUi": {
+            "fieldValues": [
+              {
+                "fieldId": "phone",
+                "fieldValue": "={{ $json.phone }}"
+              },
+              {
+                "fieldId": "message",
+                "fieldValue": "={{ $json.message }}"
+              },
+              {
+                "fieldId": "direction",
+                "fieldValue": "={{ $json.direction }}"
+              }
+            ]
+          }
+        },
+        "id": "92fee79a-4e07-491e-b3c2-0f9091a9d389",
+        "name": "Gravar no Supabase",
+        "type": "n8n-nodes-base.supabase",
+        "typeVersion": 1,
+        "position": [
+          -6720,
+          160
+        ],
+        "credentials": {
+          "supabaseApi": {
+            "id": "uRNDmQF562RElzxd",
+            "name": "Supabase account"
+          }
+        }
+      },
+      {
+        "parameters": {
+          "assignments": {
+            "assignments": [
+              {
+                "id": "outbound-phone",
+                "name": "phone",
+                "value": "={{ $json.chatid.split('@')[0] }}",
+                "type": "string"
+              },
+              {
+                "id": "outbound-message",
+                "name": "message",
+                "value": "={{ $json.text }}",
+                "type": "string"
+              },
+              {
+                "id": "outbound-direction",
+                "name": "direction",
+                "value": "outbound",
+                "type": "string"
+              },
+              {
+                "id": "outbound-status",
+                "name": "status",
+                "value": "sent",
+                "type": "string"
+              },
+              {
+                "id": "outbound-isValid",
+                "name": "isValid",
+                "value": true,
+                "type": "boolean"
+              }
+            ]
+          },
+          "options": {}
+        },
+        "type": "n8n-nodes-base.set",
+        "typeVersion": 3.4,
+        "position": [
+          -1040,
+          -96
+        ],
+        "id": "c1a2b3c4-d5e6-4f7g-8h9i-j0k1l2m3n4o5",
+        "name": "Edit Fields (Outbound)"
+      },
+      {
+        "parameters": {
+          "resource": "image",
+          "operation": "analyze",
+          "modelId": {
+            "__rl": true,
+            "value": "models/gemini-3-flash-preview",
+            "mode": "list",
+            "cachedResultName": "models/gemini-3-flash-preview"
+          },
+          "text": "Atue como um classificador técnico de imagens para um suporte de software.\nSua saída deve começar OBRIGATORIAMENTE com a tag de classificação, seguida dos dados extraídos.\n\n1. CLASSIFIQUE a imagem em uma destas 3 categorias:\n   - [COMPROVANTE]: Se a imagem conter valor R$, comprovante de transferência, PIX ou logos de banco.\n   - [TELA TÉCNICA]: Se a imagem for uma tela de computador, conter janelas de erro do Windows/Office, códigos de erro (ex: 0xC...) ou sequências numéricas longas (IDs).\n   - [DESCONHECIDO]: Se não for nenhum dos dois (ex: foto de pessoa, animal, paisagem).\n\n2. TRANSCREVA o conteúdo crítico baseando-se na classificação:\n\n   - SE FOR [TELA TÉCNICA]:\n     Extraia APENAS os números da \"ID de Instalação\" (geralmente blocos de números) ou o Código de Erro visível.\n     Exemplo de saída: \"Categoria: [TELA TÉCNICA]. ID de Instalação: 123456-123456-123456...\"\n\n   - SE FOR [COMPROVANTE]:\n     Extraia o Valor Total e o Nome do Beneficiário.\n     Exemplo de saída: \"Categoria: [COMPROVANTE]. Valor: R$ 150,00. Beneficiário: DGR Solutions.\"\n\n   - SE FOR [DESCONHECIDO]:\n     Descreva brevemente o que vê.\n     Exemplo de saída: \"Categoria: [DESCONHECIDO]. Foto de um notebook desligado.\"\n\nATENÇÃO: Não faça análises estéticas. Foque apenas em extrair TEXTO e NÚMEROS úteis para o suporte.",
+          "imageUrls": "={{ $json.fileURL }}",
+          "options": {}
+        },
+        "type": "@n8n/n8n-nodes-langchain.googleGemini",
+        "typeVersion": 1,
+        "position": [
+          -5632,
+          192
+        ],
+        "id": "bc73c419-e78e-431f-9173-2b00e14287e5",
+        "name": "Analyze an image",
+        "credentials": {
+          "googlePalmApi": {
+            "id": "F7VJtvWmFt7k83H5",
+            "name": "Google Gemini(PaLM) Api account"
+          }
+        }
+      },
+      {
+        "parameters": {
+          "operation": "get",
+          "tableId": "license_keys",
+          "filters": {
+            "conditions": [
+              {}
+            ]
+          }
+        },
+        "type": "n8n-nodes-base.supabaseTool",
+        "typeVersion": 1,
+        "position": [
+          -2832,
+          224
+        ],
+        "id": "72f6ab66-abcb-4dbb-a1c5-7054895b531f",
+        "name": "Get a row in Supabase",
+        "credentials": {
+          "supabaseApi": {
+            "id": "uRNDmQF562RElzxd",
+            "name": "Supabase account"
+          }
+        }
+      },
+      {
+        "parameters": {
+          "operation": "executeQuery",
+          "query": "SELECT \n    ai_paused, \n    last_human_interaction,\n    EXTRACT(EPOCH FROM (NOW() - last_human_interaction)) / 60 AS minutos_passados\nFROM contacts \nWHERE phone = '{{ $('Info').item.json.telefone }}';",
+          "options": {}
+        },
+        "id": "16c2fbad-2208-45d1-96ae-ac87f9e31240",
+        "name": "Consultar Status IA",
+        "type": "n8n-nodes-base.postgres",
+        "typeVersion": 2.6,
+        "position": [
+          -4736,
+          -208
+        ],
+        "alwaysOutputData": true,
+        "credentials": {
+          "postgres": {
+            "id": "GOaED8CXwSUFbrph",
+            "name": "Postgres account"
+          }
+        }
+      },
+      {
+        "parameters": {
+          "jsCode": "const results = [];\n\nfor (const item of items) {\n    // --- CORREÇÃO DO BLOQUEIO ---\n    // O Postgres pode retornar: true (bool), \"true\" (string) ou \"t\" (string)\n    const rawPaused = item.json.ai_paused;\n    const isPaused = rawPaused === true || rawPaused === 'true' || rawPaused === 't';\n    \n    // Se o banco não retornou nada, assume 999 (muito tempo)\n    let minutosPassados = 999;\n    \n    if (item.json.minutos_passados !== undefined && item.json.minutos_passados !== null) {\n        minutosPassados = parseFloat(item.json.minutos_passados);\n    }\n\n    let blocked = false;\n    let unpause = false;\n\n    // CONFIGURAÇÃO: 3 minutos de silêncio após você falar\n    const TEMPO_LIMITE = 3; \n\n    // REGRA 1: Se faz MENOS de 3 minutos que você falou, BLOQUEIA.\n    if (minutosPassados <= TEMPO_LIMITE) {\n        blocked = true;\n        unpause = false; \n    } \n    // REGRA 2: Se já passou o tempo, mas a IA ainda está pausada no banco, libera.\n    else if (isPaused) {\n        blocked = false; \n        unpause = true; \n    }\n\n    results.push({\n        json: {\n            ...item.json,\n            blocked: blocked,\n            unpause_needed: unpause,\n            debug_paused_lido: isPaused // Para confirmar que agora leu certo\n        }\n    });\n}\n\nreturn results;"
+        },
+        "id": "1433fc74-03b7-485d-ae28-f8c010ac3b05",
+        "name": "Verificar Timer",
+        "type": "n8n-nodes-base.code",
+        "typeVersion": 2,
+        "position": [
+          -4592,
+          -208
+        ]
+      },
+      {
+        "parameters": {
+          "conditions": {
+            "boolean": [
+              {
+                "value1": "={{ $json.blocked }}",
+                "value2": true
+              }
+            ]
+          }
+        },
+        "id": "e6326d25-1194-4526-81d4-12942077b310",
+        "name": "Porteiro (Bloqueia?)",
+        "type": "n8n-nodes-base.if",
+        "typeVersion": 1,
+        "position": [
+          -4432,
+          -208
+        ]
+      },
+      {
+        "parameters": {
+          "conditions": {
+            "boolean": [
+              {
+                "value1": "={{ $json.unpause_needed }}",
+                "value2": true
+              }
+            ]
+          }
+        },
+        "id": "5bffe9fd-7b8c-4abd-a672-59c9f0a62682",
+        "name": "Precisa Reativar?",
+        "type": "n8n-nodes-base.if",
+        "typeVersion": 1,
+        "position": [
+          -4192,
+          -192
+        ]
+      },
+      {
+        "parameters": {
+          "operation": "executeQuery",
+          "query": "UPDATE contacts \nSET ai_paused = false \nWHERE phone = '{{ $json.telefone ? $json.telefone.trim() : $('Info').item.json.telefone }}'\nRETURNING *;",
+          "options": {}
+        },
+        "id": "d25790a6-87dc-4959-8345-97318c1c0f76",
+        "name": "Reativar IA no DB",
+        "type": "n8n-nodes-base.postgres",
+        "typeVersion": 2.6,
+        "position": [
+          -3840,
+          -208
+        ],
+        "credentials": {
+          "postgres": {
+            "id": "GOaED8CXwSUFbrph",
+            "name": "Postgres account"
+          }
+        }
+      },
+      {
+        "parameters": {
+          "rules": {
+            "values": [
+              {
+                "conditions": {
+                  "options": {
+                    "caseSensitive": true,
+                    "leftValue": "",
+                    "typeValidation": "strict",
+                    "version": 2
+                  },
+                  "conditions": [
+                    {
+                      "leftValue": "={{ $json.fromMe }}",
+                      "rightValue": "",
+                      "operator": {
+                        "type": "boolean",
+                        "operation": "true",
+                        "singleValue": true
+                      }
+                    }
+                  ],
+                  "combinator": "and"
+                },
+                "renameOutput": true,
+                "outputKey": "Mensagem Humana"
+              },
+              {
+                "conditions": {
+                  "options": {
+                    "caseSensitive": true,
+                    "leftValue": "",
+                    "typeValidation": "strict",
+                    "version": 2
+                  },
+                  "conditions": [
+                    {
+                      "leftValue": "={{ $json.fromMe }}",
+                      "rightValue": "",
+                      "operator": {
+                        "type": "boolean",
+                        "operation": "false",
+                        "singleValue": true
+                      }
+                    }
+                  ],
+                  "combinator": "and"
+                },
+                "renameOutput": true,
+                "outputKey": "Mensagem Cliente"
+              }
+            ]
+          },
+          "options": {}
+        },
+        "id": "b599b67b-b9c8-4984-946d-05328cca75e9",
+        "name": "Roteamento de Origem",
+        "type": "n8n-nodes-base.switch",
+        "typeVersion": 3.2,
+        "position": [
+          -7088,
+          -272
+        ]
+      },
+      {
+        "parameters": {
+          "operation": "executeQuery",
+          "query": "INSERT INTO contacts (phone, ai_paused, last_human_interaction) \nVALUES ('{{ $json.telefone || $('Info').item.json.telefone }}', true, NOW()) \nON CONFLICT (phone) \nDO UPDATE SET ai_paused = true, last_human_interaction = NOW();",
+          "options": {}
+        },
+        "id": "0ee00c6f-6f69-46c9-a7a0-2ae413a89a08",
+        "name": "Registrar Interação Humana",
+        "type": "n8n-nodes-base.postgres",
+        "typeVersion": 2.6,
+        "position": [
+          -6720,
+          -288
+        ],
+        "credentials": {
+          "postgres": {
+            "id": "GOaED8CXwSUFbrph",
+            "name": "Postgres account"
+          }
+        }
+      },
+      {
+        "parameters": {
+          "jsCode": "let textoFinal = \"\";\n\n// 1. Veio do fluxo de TEXTO? (Verifica se Concatenar rodou)\nif ($(\"Concatenar mensagens\").isExecuted) {\n    const dados = $(\"Concatenar mensagens\").first().json;\n    textoFinal = dados.mensagem;\n} \n// 2. Veio do fluxo de ÁUDIO ou IMAGEM? (Verifica inputs diretos)\nelse {\n    const info = $(\"Info\").first().json;\n    const caption = info.mensagem || \"\";\n    \n    // Se for imagem (veio do Edit Fields)\n    if ($(\"Edit Fields\").isExecuted) {\n        const description = $json.mensagem || $json.text || \"\";\n        textoFinal = `[Legenda do Usuário]: ${caption}\\n\\n[Descrição da Imagem]: ${description}`;\n    } else {\n        textoFinal = $json.mensagem || $json.text || $json.caption || caption;\n    }\n}\n\n// Fallback de segurança\nif (!textoFinal || textoFinal.trim() === \"\") {\n    textoFinal = \"Mensagem do usuário vazia ou anexo sem legenda.\";\n}\n\n// Entrega para a IA com a chave correta 'input'\nreturn [\n  {\n    json: {\n      input: textoFinal\n    }\n  }\n];"
+        },
+        "type": "n8n-nodes-base.code",
+        "typeVersion": 2,
+        "position": [
+          -3440,
+          -16
+        ],
+        "id": "0789502b-f731-4dd2-87e6-c97e7bc3aecd",
+        "name": "Code in JavaScript"
+      },
+      {
+        "parameters": {
+          "toolDescription": "Recebe a ID de instalação (Installation ID) extraída da imagem e retorna a ID de Confirmação (Confirmation ID) necessária para ativar o Windows/Office.",
+          "url": "=https://pidkey.com/ajax/cidms_api",
+          "authentication": "genericCredentialType",
+          "genericAuthType": "httpQueryAuth",
+          "sendQuery": true,
+          "queryParameters": {
+            "parameters": [
+              {
+                "name": "justforcheck",
+                "value": "0"
+              },
+              {
+                "name": "iids",
+                "value": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('parameters1_Value', ``, 'string') }}"
+              }
+            ]
+          },
+          "options": {}
+        },
+        "type": "n8n-nodes-base.httpRequestTool",
+        "typeVersion": 4.3,
+        "position": [
+          -2592,
+          432
+        ],
+        "id": "1f1231be-e7e9-4d21-bb5f-71c632cd5d05",
+        "name": "GET CID1",
+        "credentials": {
+          "httpHeaderAuth": {
+            "id": "LR9jZhcpZ83W1sEf",
+            "name": "API CID"
+          },
+          "httpQueryAuth": {
+            "id": "BoXRC0VcbueYP3o9",
+            "name": "Query Auth account"
+          }
+        }
+      },
+      {
+        "parameters": {
+          "content": "usuario: apikey\ntoken : "
+        },
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -2672,
+          400
+        ],
+        "typeVersion": 1,
+        "id": "b8eabb24-6ed4-496c-a515-32b85be9dc2e",
+        "name": "Sticky Note1"
+      },
+      {
+        "parameters": {
+          "endpointUrl": "https://api.n8n-mcp.com/mcp",
+          "authentication": "bearerAuth",
+          "options": {}
+        },
+        "type": "@n8n/n8n-nodes-langchain.mcpClientTool",
+        "typeVersion": 1.2,
+        "position": [
+          -2448,
+          224
+        ],
+        "id": "da2954cf-ecb3-4c31-9af8-cd2e48eab982",
+        "name": "MCP Client",
+        "credentials": {
+          "httpBearerAuth": {
+            "id": "IxpyFYwIVzPwQbYF",
+            "name": "Bearer Auth account"
+          }
+        }
+      }
+    ],
+    "connections": {
+      "Mensagem chegando?": {
+        "main": [
+          [
+            {
+              "node": "Tipo de mensagem",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Mensagem encavalada?": {
+        "main": [
+          [
+            {
+              "node": "Limpar fila de mensagens",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Buscar mensagens": {
+        "main": [
+          [
+            {
+              "node": "Mensagem encavalada?",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Concatenar mensagens": {
+        "main": [
+          [
+            {
+              "node": "Consultar Status IA",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Limpar fila de mensagens": {
+        "main": [
+          [
+            {
+              "node": "Marca Mensagem como Lida",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Esperar": {
+        "main": [
+          [
+            {
+              "node": "Buscar mensagens",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Tipo de mensagem": {
+        "main": [
+          [
+            {
+              "node": "Enfileirar mensagem.",
+              "type": "main",
+              "index": 0
+            }
+          ],
+          [
+            {
+              "node": "Download Audio",
+              "type": "main",
+              "index": 0
+            }
+          ],
+          [
+            {
+              "node": "Download Imagem",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Converter áudio para base64": {
+        "main": [
+          [
+            {
+              "node": "Send media message1",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Secretária": {
+        "main": [
+          [
+            {
+              "node": "Tipo de mensagem1",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Gerar áudio": {
+        "main": [
+          [
+            {
+              "node": "Converter áudio para base64",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Formatar SSML": {
+        "main": [
+          [
+            {
+              "node": "Gerar áudio",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Tipo de mensagem1": {
+        "main": [
+          [
+            {
+              "node": "Formatar texto",
+              "type": "main",
+              "index": 0
+            }
+          ],
+          [
+            {
+              "node": "Formatar SSML",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Formatar texto": {
+        "main": [
+          [
+            {
+              "node": "Send text message",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Google Gemini Chat Model2": {
+        "ai_languageModel": [
+          [
+            {
+              "node": "Formatar texto",
+              "type": "ai_languageModel",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Gemini": {
+        "ai_languageModel": [
+          [
+            {
+              "node": "Secretária",
+              "type": "ai_languageModel",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Memory": {
+        "ai_memory": [
+          [
+            {
+              "node": "Secretária",
+              "type": "ai_memory",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Refletir": {
+        "ai_tool": [
+          [
+            {
+              "node": "Secretária",
+              "type": "ai_tool",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Enfileirar mensagem.": {
+        "main": [
+          [
+            {
+              "node": "Esperar",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Set mensagem.": {
+        "main": [
+          [
+            {
+              "node": "Code in JavaScript",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Google Gemini Chat Model.": {
+        "ai_languageModel": [
+          [
+            {
+              "node": "Formatar SSML",
+              "type": "ai_languageModel",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "GET CID": {
+        "ai_tool": [
+          [
+            {
+              "node": "Secretária",
+              "type": "ai_tool",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Download Audio": {
+        "main": [
+          [
+            {
+              "node": "Transcribe a recording",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Download Imagem": {
+        "main": [
+          [
+            {
+              "node": "Analyze an image",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Edit Fields": {
+        "main": [
+          [
+            {
+              "node": "Code in JavaScript",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Marca Mensagem como Lida": {
+        "main": [
+          [
+            {
+              "node": "Digitando",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Marca Mensagem como Lida1": {
+        "main": [
+          [
+            {
+              "node": "Digitando1",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Marca Mensagem como Lida2": {
+        "main": [
+          [
+            {
+              "node": "Digitando2",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Digitando": {
+        "main": [
+          [
+            {
+              "node": "Concatenar mensagens",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Digitando1": {
+        "main": [
+          [
+            {
+              "node": "Set mensagem.",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Digitando2": {
+        "main": [
+          [
+            {
+              "node": "Edit Fields",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Info": {
+        "main": [
+          [
+            {
+              "node": "Roteamento de Origem",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Webhook": {
+        "main": [
+          [
+            {
+              "node": "Info",
+              "type": "main",
+              "index": 0
+            },
+            {
+              "node": "Extrair Dados Inteligente",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Escalar Humano": {
+        "ai_tool": [
+          [
+            {
+              "node": "Secretária",
+              "type": "ai_tool",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Transcribe a recording": {
+        "main": [
+          [
+            {
+              "node": "Marca Mensagem como Lida1",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Extrair Dados Inteligente": {
+        "main": [
+          [
+            {
+              "node": "Apenas Dados Válidos",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Apenas Dados Válidos": {
+        "main": [
+          [
+            {
+              "node": "Gravar no Supabase",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Analyze an image": {
+        "main": [
+          [
+            {
+              "node": "Marca Mensagem como Lida2",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Get a row in Supabase": {
+        "ai_tool": [
+          [
+            {
+              "node": "Secretária",
+              "type": "ai_tool",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Consultar Status IA": {
+        "main": [
+          [
+            {
+              "node": "Verificar Timer",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Verificar Timer": {
+        "main": [
+          [
+            {
+              "node": "Porteiro (Bloqueia?)",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Porteiro (Bloqueia?)": {
+        "main": [
+          [],
+          [
+            {
+              "node": "Precisa Reativar?",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Precisa Reativar?": {
+        "main": [
+          [
+            {
+              "node": "Reativar IA no DB",
+              "type": "main",
+              "index": 0
+            }
+          ],
+          [
+            {
+              "node": "Code in JavaScript",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Reativar IA no DB": {
+        "main": [
+          [
+            {
+              "node": "Code in JavaScript",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Roteamento de Origem": {
+        "main": [
+          [
+            {
+              "node": "Registrar Interação Humana",
+              "type": "main",
+              "index": 0
+            }
+          ],
+          [
+            {
+              "node": "Mensagem chegando?",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Code in JavaScript": {
+        "main": [
+          [
+            {
+              "node": "Secretária",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Send text message": {
+        "main": [
+          [
+            {
+              "node": "Edit Fields (Outbound)",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Edit Fields (Outbound)": {
+        "main": [
+          [
+            {
+              "node": "Gravar no Supabase",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "MCP Client": {
+        "ai_tool": [
+          [
+            {
+              "node": "Secretária",
+              "type": "ai_tool",
+              "index": 0
+            }
+          ]
+        ]
+      }
+    },
+    "authors": "Super Software",
+    "name": "Version 671eb533",
+    "description": "",
+    "autosaved": false,
+    "workflowPublishHistory": [
+      {
+        "createdAt": "2026-01-27T21:04:27.296Z",
+        "id": 122,
+        "workflowId": "H5Ti5RcPjjoWFUZS",
+        "versionId": "671eb533-83c9-4c9a-9e60-2855c9fd3ff8",
+        "event": "activated",
+        "userId": "21e4d782-2c71-4207-9c25-da8a950491b1"
+      }
+    ]
+  }
 }
