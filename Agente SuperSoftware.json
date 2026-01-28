@@ -2066,6 +2066,16 @@
             "node": "Agente Super Software",
             "type": "ai_languageModel",
             "index": 0
+          },
+          {
+            "node": "Guardrail Entrada",
+            "type": "ai_languageModel",
+            "index": 0
+          },
+          {
+            "node": "Guardrail Saída",
+            "type": "ai_languageModel",
+            "index": 0
           }
         ]
       ]
