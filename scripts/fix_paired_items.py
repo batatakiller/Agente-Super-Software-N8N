@@ -1,18 +1,15 @@
-import json
+import re
 
 filepath = 'Agente SuperSoftware.json'
 
 with open(filepath, 'r', encoding='utf-8') as f:
     data = f.read()
 
-# Replace both escaped and unescaped versions
-# Note: n8n usually uses single quotes internally in expressions
-# but they might be escaped in the JSON string.
-
-data = data.replace("$('Info').item.json", "$('Info').first().json")
-data = data.replace('$(\\"Info\\").item.json', '$(\\"Info\\").first().json')
+# Replace $(...).item.json with $(...).first().json
+# Handles 'Info', "Info", and escaped versions
+data = re.sub(r"\$\((['\"]|\\+['\"])(.+?)\1\)\.item\.json", r"$([\1\2\1]).first().json", data)
 
 with open(filepath, 'w', encoding='utf-8') as f:
     f.write(data)
 
-print("Replaced all $('Info').item.json with $('Info').first().json")
+print("Replaced node reference .item.json with .first().json")

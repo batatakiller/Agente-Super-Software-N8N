@@ -55,6 +55,6 @@ Prioridade absoluta ao receber imagens:
 ---
 
 ### 📜 HISTÓRICO RECENTE
-{{ $if($('Formatar Historico').isExecuted, $('Formatar Historico').item.json.historico_recente, 'Sem histórico recente disponível para esta mensagem.') }}
+{{ $if($('Formatar Historico').isExecuted, $('Formatar Historico').first().json.historico_recente, 'Sem histórico recente disponível para esta mensagem.') }}
 
 **Instrução:** Use este histórico para saber o que já foi negociado ou resolvido. Se houver uma mensagem de 'Emerson' contendo chaves ou links de download, trate como venda concluída e ofereça suporte.
