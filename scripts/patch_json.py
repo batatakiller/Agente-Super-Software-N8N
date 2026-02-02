@@ -1,15 +1,37 @@
 import json
-import os
 
 filepath = 'Agente SuperSoftware.json'
 
-with open(filepath, 'r') as f:
+with open(filepath, 'r', encoding='utf-8') as f:
     data = json.load(f)
+
+query_template = """SELECT 
+    string_agg(formatted_message, E'\\n') AS historico_recente
+FROM (
+    (SELECT 
+        created_at,
+        'Cliente: ' || message AS formatted_message
+    FROM whatsapp_chat 
+    WHERE phone = '{{ $("Extrair Dados Inteligente").item.json.phone }}' 
+      AND direction = 'inbound'
+    ORDER BY created_at DESC 
+    LIMIT 5)
+    UNION ALL
+    (SELECT 
+        created_at,
+        'Emerson (Você): ' || message AS formatted_message
+    FROM whatsapp_chat 
+    WHERE phone = '{{ $("Extrair Dados Inteligente").item.json.phone }}' 
+      AND direction = 'outbound'
+    ORDER BY created_at DESC 
+    LIMIT 5)
+) AS chat_unificado
+ORDER BY created_at ASC;"""
 
 new_node = {
     "parameters": {
         "operation": "executeQuery",
-        "query": "SELECT \n    string_agg(formatted_message, E'\\n') AS historico_recente\nFROM (\n    (SELECT \n        created_at,\n        'Cliente: ' || message AS formatted_message\n    FROM whatsapp_chat \n    WHERE phone = '{{ $(\\'Extrair Dados Inteligente\\').item.json.phone }}' \n      AND direction = 'inbound'\n    ORDER BY created_at DESC \n    LIMIT 5)\n    UNION ALL\n    (SELECT \n        created_at,\n        'Emerson (Você): ' || message AS formatted_message\n    FROM whatsapp_chat \n    WHERE phone = '{{ $(\\'Extrair Dados Inteligente\\').item.json.phone }}' \n      AND direction = 'outbound'\n    ORDER BY created_at DESC \n    LIMIT 5)\n) AS chat_unificado\nORDER BY created_at ASC;",
+        "query": query_template,
         "options": {}
     },
     "id": "carregar-contexto-hibrido-id",
@@ -24,30 +46,19 @@ new_node = {
         "postgres": {
             "id": "GOaED8CXwSUFbrph",
             "name": "Postgres account"
-        }
+          }
     }
 }
 
-def patch_nodes_and_connections(obj):
+def clean_and_patch(obj):
     if not isinstance(obj, dict):
         return
     
     if 'nodes' in obj and 'connections' in obj:
-        # 1. Add node if not exists
-        if not any(node.get('name') == 'Carregar Contexto Híbrido' for node in obj['nodes']):
-            obj['nodes'].append(new_node)
-            print(f"Added node to a section")
-        else:
-            # Update existing node to ensure correct query (no extra backslashes)
-            for node in obj['nodes']:
-                if node.get('name') == 'Carregar Contexto Híbrido':
-                    node['parameters']['query'] = new_node['parameters']['query']
-            print(f"Updated node query in a section")
-
-        # 2. Update connections
-        connections = obj['connections']
+        obj['nodes'] = [n for n in obj['nodes'] if n.get('name') != 'Carregar Contexto Híbrido']
+        obj['nodes'].append(new_node)
         
-        # Link Extrair -> Carregar
+        connections = obj['connections']
         if "Extrair Dados Inteligente" in connections:
             connections["Extrair Dados Inteligente"]["main"] = [[
                 {
@@ -56,8 +67,6 @@ def patch_nodes_and_connections(obj):
                     "index": 0
                 }
             ]]
-        
-        # Link Carregar -> Apenas
         connections["Carregar Contexto Híbrido"] = {
             "main": [[
                 {
@@ -67,20 +76,18 @@ def patch_nodes_and_connections(obj):
                 }
             ]]
         }
-        print(f"Updated connections in a section")
 
-    # Recurse for nested blocks like activeVersion
     for key, value in obj.items():
         if isinstance(value, dict):
-            patch_nodes_and_connections(value)
+            clean_and_patch(value)
         elif isinstance(value, list):
             for item in value:
                 if isinstance(item, dict):
-                    patch_nodes_and_connections(item)
+                    clean_and_patch(item)
 
-patch_nodes_and_connections(data)
+clean_and_patch(data)
 
-with open(filepath, 'w') as f:
-    json.dump(data, f, indent=2)
+with open(filepath, 'w', encoding='utf-8') as f:
+    json.dump(data, f, indent=2, ensure_ascii=False)
 
-print("Done patching.")
+print("Done cleaning and patching with UTF-8.")
