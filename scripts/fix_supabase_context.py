@@ -16,6 +16,7 @@ new_supabase_node = {
             "conditions": [
                 {
                     "keyName": "phone",
+                    "condition": "eq",
                     "keyValue": "={{ $('Info').item.json.telefone }}"
                 }
             ]
