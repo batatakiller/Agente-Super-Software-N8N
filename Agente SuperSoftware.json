@@ -1302,7 +1302,7 @@
             {
               "id": "8bf522a6-75fb-434a-854c-b736539309e1",
               "name": "telefone",
-              "value": "={{ $json.body.message.chatid.split('@')[0]}}\n",
+              "value": "={{ $json.body.message.chatid.split('@')[0]}}",
               "type": "string"
             },
             {
@@ -4051,7 +4051,7 @@
               {
                 "id": "8bf522a6-75fb-434a-854c-b736539309e1",
                 "name": "telefone",
-                "value": "={{ $json.body.message.chatid.split('@')[0]}}\n",
+                "value": "={{ $json.body.message.chatid.split('@')[0]}}",
                 "type": "string"
               },
               {
