@@ -1923,6 +1923,27 @@
           "name": "Postgres account"
         }
       }
+    },
+    {
+      "parameters": {
+        "endpointUrl": "https://mcp.supabase.com/mcp?project_ref=qoobmxjzcjtkpezajbbv",
+        "authentication": "bearerAuth",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.mcpClientTool",
+      "typeVersion": 1.2,
+      "position": [
+        -3100,
+        250
+      ],
+      "id": "mcp-supabase-history-id",
+      "name": "Historico Supabase (MCP)",
+      "credentials": {
+        "httpBearerAuth": {
+          "id": "IxpyFYwIVzPwQbYF",
+          "name": "Bearer Auth account"
+        }
+      }
     }
   ],
   "connections": {
@@ -2528,6 +2549,17 @@
       ]
     },
     "MCP Client": {
+      "ai_tool": [
+        [
+          {
+            "node": "Agente Super Software",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Historico Supabase (MCP)": {
       "ai_tool": [
         [
           {
@@ -4534,6 +4566,27 @@
             "name": "Postgres account"
           }
         }
+      },
+      {
+        "parameters": {
+          "endpointUrl": "https://mcp.supabase.com/mcp?project_ref=qoobmxjzcjtkpezajbbv",
+          "authentication": "bearerAuth",
+          "options": {}
+        },
+        "type": "@n8n/n8n-nodes-langchain.mcpClientTool",
+        "typeVersion": 1.2,
+        "position": [
+          -3100,
+          250
+        ],
+        "id": "mcp-supabase-history-id",
+        "name": "Historico Supabase (MCP)",
+        "credentials": {
+          "httpBearerAuth": {
+            "id": "IxpyFYwIVzPwQbYF",
+            "name": "Bearer Auth account"
+          }
+        }
       }
     ],
     "connections": {
@@ -5139,6 +5192,17 @@
         ]
       },
       "MCP Client": {
+        "ai_tool": [
+          [
+            {
+              "node": "Agente Super Software",
+              "type": "ai_tool",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Historico Supabase (MCP)": {
         "ai_tool": [
           [
             {
