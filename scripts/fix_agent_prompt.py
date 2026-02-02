@@ -14,8 +14,8 @@ def fix_agent_prompt(obj):
             if node.get('name') == 'Agente Super Software':
                 # Update the main text/prompt parameter
                 if 'parameters' in node:
-                    # n8n Langchain Agent V1.7+ uses 'text' for prompt
-                    node['parameters']['text'] = "={{ $('Guardrail Entrada').first().json.guardrailsInput }}"
+                    # Point to Code in JavaScript where the prompt is normalized
+                    node['parameters']['text'] = "={{ $('Code in JavaScript').first().json.input }}"
                     print("Updated Agent prompt to reference Guardrail Entrada.")
 
     # Recurse
