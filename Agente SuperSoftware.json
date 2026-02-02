@@ -19,7 +19,7 @@
           "conditions": [
             {
               "id": "8ca54eae-15d1-49d3-af33-7a6e5d17b833",
-              "leftValue": "={{ $('Info').item.json.fromMe }}",
+              "leftValue": "={{ $('Info').first().json.fromMe }}",
               "rightValue": "",
               "operator": {
                 "type": "boolean",
@@ -29,7 +29,7 @@
             },
             {
               "id": "4ca9226f-0401-49a7-93a1-8aeaf4b0bb79",
-              "leftValue": "={{ $('Info').item.json.mensagem_de_grupo }}",
+              "leftValue": "={{ $('Info').first().json.mensagem_de_grupo }}",
               "rightValue": "g.us",
               "operator": {
                 "type": "boolean",
@@ -82,7 +82,7 @@
           "values": [
             {
               "column": "telefone",
-              "value": "={{ $('Info').item.json.telefone }}"
+              "value": "={{ $('Info').first().json.telefone }}"
             }
           ]
         },
@@ -265,7 +265,7 @@
                 "conditions": [
                   {
                     "id": "1382cd26-d96e-4c55-99dd-2ca305ffe82e",
-                    "leftValue": "={{ $('Info').item.json.mensagem }}",
+                    "leftValue": "={{ $('Info').first().json.mensagem }}",
                     "rightValue": "",
                     "operator": {
                       "type": "string",
@@ -274,7 +274,7 @@
                     }
                   },
                   {
-                    "leftValue": "={{ $('Info').item.json.eh_imagem }}",
+                    "leftValue": "={{ $('Info').first().json.eh_imagem }}",
                     "rightValue": "",
                     "operator": {
                       "type": "boolean",
@@ -299,7 +299,7 @@
                 "conditions": [
                   {
                     "id": "b9a7e16f-b6e4-45d7-846d-92dcb3117593",
-                    "leftValue": "={{ $('Info').item.json.mensagem_de_audio }}",
+                    "leftValue": "={{ $('Info').first().json.mensagem_de_audio }}",
                     "rightValue": "",
                     "operator": {
                       "type": "boolean",
@@ -324,7 +324,7 @@
                 "conditions": [
                   {
                     "id": "18f0c26b-e047-467a-9a3a-c211b454098a",
-                    "leftValue": "={{ $('Info').item.json.eh_imagem }}",
+                    "leftValue": "={{ $('Info').first().json.eh_imagem }}",
                     "rightValue": "",
                     "operator": {
                       "type": "boolean",
@@ -580,7 +580,7 @@
                 "conditions": [
                   {
                     "id": "b9a7e16f-b6e4-45d7-846d-92dcb3117593",
-                    "leftValue": "={{ $('Info').item.json.mensagem_de_audio }}",
+                    "leftValue": "={{ $('Info').first().json.mensagem_de_audio }}",
                     "rightValue": "",
                     "operator": {
                       "type": "boolean",
@@ -672,7 +672,7 @@
     {
       "parameters": {
         "sessionIdType": "customKey",
-        "sessionKey": "={{ $('Info').item.json.telefone }}",
+        "sessionKey": "={{ $('Info').first().json.telefone }}",
         "tableName": "n8n_historico_mensagens",
         "contextWindowLength": 50
       },
@@ -719,10 +719,10 @@
         "columns": {
           "mappingMode": "defineBelow",
           "value": {
-            "telefone": "={{ $('Info').item.json.telefone }}",
-            "mensagem": "={{ $('Info').item.json.mensagem }}",
-            "timestamp": "={{ $('Info').item.json.timestamp.toDateTime('s') }}",
-            "id_mensagem": "={{ $('Info').item.json.id_mensagem }}"
+            "telefone": "={{ $('Info').first().json.telefone }}",
+            "mensagem": "={{ $('Info').first().json.mensagem }}",
+            "timestamp": "={{ $('Info').first().json.timestamp.toDateTime('s') }}",
+            "id_mensagem": "={{ $('Info').first().json.id_mensagem }}"
           },
           "matchingColumns": [
             "id"
@@ -858,7 +858,7 @@
     },
     {
       "parameters": {
-        "number": "={{ $('Info').item.json.telefone }}",
+        "number": "={{ $('Info').first().json.telefone }}",
         "text": "={{ $json.text }}"
       },
       "type": "n8n-nodes-uazapi.uazApi",
@@ -879,7 +879,7 @@
     {
       "parameters": {
         "operation": "sendMedia",
-        "number": "={{ $('Info').item.json.telefone }}",
+        "number": "={{ $('Info').first().json.telefone }}",
         "mediaType": "ptt",
         "file": "={{ $json.data }}"
       },
@@ -1017,7 +1017,7 @@
           "parameters": [
             {
               "name": "number",
-              "value": "={{ $('Info').item.json.telefone }}"
+              "value": "={{ $('Info').first().json.telefone }}"
             },
             {
               "name": "read",
@@ -1062,7 +1062,7 @@
           "parameters": [
             {
               "name": "number",
-              "value": "={{ $('Info').item.json.telefone }}"
+              "value": "={{ $('Info').first().json.telefone }}"
             },
             {
               "name": "presence",
@@ -1111,7 +1111,7 @@
           "parameters": [
             {
               "name": "number",
-              "value": "={{ $('Info').item.json.telefone }}"
+              "value": "={{ $('Info').first().json.telefone }}"
             },
             {
               "name": "read",
@@ -1157,7 +1157,7 @@
           "parameters": [
             {
               "name": "number",
-              "value": "={{ $('Info').item.json.telefone }}"
+              "value": "={{ $('Info').first().json.telefone }}"
             },
             {
               "name": "presence",
@@ -1207,7 +1207,7 @@
           "parameters": [
             {
               "name": "number",
-              "value": "={{ $('Info').item.json.telefone }}"
+              "value": "={{ $('Info').first().json.telefone }}"
             },
             {
               "name": "read",
@@ -1253,7 +1253,7 @@
           "parameters": [
             {
               "name": "number",
-              "value": "={{ $('Info').item.json.telefone }}"
+              "value": "={{ $('Info').first().json.telefone }}"
             },
             {
               "name": "presence",
@@ -1407,7 +1407,7 @@
             },
             {
               "name": "text",
-              "value": "=Cliente ,{{ $('Info').item.json.nome }}   , precisa de ajuda.\nTelefone: {{ $('Info').item.json.telefone }} , \nMensagem Ai: {{ $fromAI('parameters2_Value', ``, 'string') }}\n"
+              "value": "=Cliente ,{{ $('Info').first().json.nome }}   , precisa de ajuda.\nTelefone: {{ $('Info').first().json.telefone }} , \nMensagem Ai: {{ $fromAI('parameters2_Value', ``, 'string') }}\n"
             }
           ]
         },
@@ -1564,7 +1564,7 @@
             {
               "id": "outbound-owner",
               "name": "owner",
-              "value": "={{ $('Info').item.json.owner }}",
+              "value": "={{ $('Info').first().json.owner }}",
               "type": "string"
             }
           ]
@@ -1640,7 +1640,7 @@
     {
       "parameters": {
         "operation": "executeQuery",
-        "query": "SELECT \n    ai_paused, \n    last_human_interaction,\n    EXTRACT(EPOCH FROM (NOW() - last_human_interaction)) / 60 AS minutos_passados\nFROM contacts \nWHERE phone = '{{ $('Info').item.json.telefone }}';",
+        "query": "SELECT \n    ai_paused, \n    last_human_interaction,\n    EXTRACT(EPOCH FROM (NOW() - last_human_interaction)) / 60 AS minutos_passados\nFROM contacts \nWHERE phone = '{{ $('Info').first().json.telefone }}';",
         "options": {}
       },
       "id": "16c2fbad-2208-45d1-96ae-ac87f9e31240",
@@ -1715,7 +1715,7 @@
     {
       "parameters": {
         "operation": "executeQuery",
-        "query": "UPDATE contacts \nSET ai_paused = false \nWHERE phone = '{{ $json.telefone ? $json.telefone.trim() : $('Info').item.json.telefone }}'\nRETURNING *;",
+        "query": "UPDATE contacts \nSET ai_paused = false \nWHERE phone = '{{ $json.telefone ? $json.telefone.trim() : $('Info').first().json.telefone }}'\nRETURNING *;",
         "options": {}
       },
       "id": "d25790a6-87dc-4959-8345-97318c1c0f76",
@@ -1801,7 +1801,7 @@
     {
       "parameters": {
         "operation": "executeQuery",
-        "query": "INSERT INTO contacts (phone, ai_paused, last_human_interaction) \nVALUES ('{{ $json.telefone || $('Info').item.json.telefone }}', true, NOW()) \nON CONFLICT (phone) \nDO UPDATE SET ai_paused = true, last_human_interaction = NOW();",
+        "query": "INSERT INTO contacts (phone, ai_paused, last_human_interaction) \nVALUES ('{{ $json.telefone || $('Info').first().json.telefone }}', true, NOW()) \nON CONFLICT (phone) \nDO UPDATE SET ai_paused = true, last_human_interaction = NOW();",
         "options": {}
       },
       "id": "0ee00c6f-6f69-46c9-a7a0-2ae413a89a08",
@@ -1909,7 +1909,7 @@
             {
               "keyName": "phone",
               "condition": "eq",
-              "keyValue": "={{ $('Info').item.json.telefone }}"
+              "keyValue": "={{ $('Info').first().json.telefone }}"
             }
           ]
         },
@@ -2782,7 +2782,7 @@
             "conditions": [
               {
                 "id": "8ca54eae-15d1-49d3-af33-7a6e5d17b833",
-                "leftValue": "={{ $('Info').item.json.fromMe }}",
+                "leftValue": "={{ $('Info').first().json.fromMe }}",
                 "rightValue": "",
                 "operator": {
                   "type": "boolean",
@@ -2792,7 +2792,7 @@
               },
               {
                 "id": "4ca9226f-0401-49a7-93a1-8aeaf4b0bb79",
-                "leftValue": "={{ $('Info').item.json.mensagem_de_grupo }}",
+                "leftValue": "={{ $('Info').first().json.mensagem_de_grupo }}",
                 "rightValue": "g.us",
                 "operator": {
                   "type": "boolean",
@@ -2845,7 +2845,7 @@
             "values": [
               {
                 "column": "telefone",
-                "value": "={{ $('Info').item.json.telefone }}"
+                "value": "={{ $('Info').first().json.telefone }}"
               }
             ]
           },
@@ -3028,7 +3028,7 @@
                   "conditions": [
                     {
                       "id": "1382cd26-d96e-4c55-99dd-2ca305ffe82e",
-                      "leftValue": "={{ $('Info').item.json.mensagem }}",
+                      "leftValue": "={{ $('Info').first().json.mensagem }}",
                       "rightValue": "",
                       "operator": {
                         "type": "string",
@@ -3037,7 +3037,7 @@
                       }
                     },
                     {
-                      "leftValue": "={{ $('Info').item.json.eh_imagem }}",
+                      "leftValue": "={{ $('Info').first().json.eh_imagem }}",
                       "rightValue": "",
                       "operator": {
                         "type": "boolean",
@@ -3062,7 +3062,7 @@
                   "conditions": [
                     {
                       "id": "b9a7e16f-b6e4-45d7-846d-92dcb3117593",
-                      "leftValue": "={{ $('Info').item.json.mensagem_de_audio }}",
+                      "leftValue": "={{ $('Info').first().json.mensagem_de_audio }}",
                       "rightValue": "",
                       "operator": {
                         "type": "boolean",
@@ -3087,7 +3087,7 @@
                   "conditions": [
                     {
                       "id": "18f0c26b-e047-467a-9a3a-c211b454098a",
-                      "leftValue": "={{ $('Info').item.json.eh_imagem }}",
+                      "leftValue": "={{ $('Info').first().json.eh_imagem }}",
                       "rightValue": "",
                       "operator": {
                         "type": "boolean",
@@ -3343,7 +3343,7 @@
                   "conditions": [
                     {
                       "id": "b9a7e16f-b6e4-45d7-846d-92dcb3117593",
-                      "leftValue": "={{ $('Info').item.json.mensagem_de_audio }}",
+                      "leftValue": "={{ $('Info').first().json.mensagem_de_audio }}",
                       "rightValue": "",
                       "operator": {
                         "type": "boolean",
@@ -3435,7 +3435,7 @@
       {
         "parameters": {
           "sessionIdType": "customKey",
-          "sessionKey": "={{ $('Info').item.json.telefone }}",
+          "sessionKey": "={{ $('Info').first().json.telefone }}",
           "tableName": "n8n_historico_mensagens",
           "contextWindowLength": 50
         },
@@ -3482,10 +3482,10 @@
           "columns": {
             "mappingMode": "defineBelow",
             "value": {
-              "telefone": "={{ $('Info').item.json.telefone }}",
-              "mensagem": "={{ $('Info').item.json.mensagem }}",
-              "timestamp": "={{ $('Info').item.json.timestamp.toDateTime('s') }}",
-              "id_mensagem": "={{ $('Info').item.json.id_mensagem }}"
+              "telefone": "={{ $('Info').first().json.telefone }}",
+              "mensagem": "={{ $('Info').first().json.mensagem }}",
+              "timestamp": "={{ $('Info').first().json.timestamp.toDateTime('s') }}",
+              "id_mensagem": "={{ $('Info').first().json.id_mensagem }}"
             },
             "matchingColumns": [
               "id"
@@ -3621,7 +3621,7 @@
       },
       {
         "parameters": {
-          "number": "={{ $('Info').item.json.telefone }}",
+          "number": "={{ $('Info').first().json.telefone }}",
           "text": "={{ $json.text }}"
         },
         "type": "n8n-nodes-uazapi.uazApi",
@@ -3642,7 +3642,7 @@
       {
         "parameters": {
           "operation": "sendMedia",
-          "number": "={{ $('Info').item.json.telefone }}",
+          "number": "={{ $('Info').first().json.telefone }}",
           "mediaType": "ptt",
           "file": "={{ $json.data }}"
         },
@@ -3780,7 +3780,7 @@
             "parameters": [
               {
                 "name": "number",
-                "value": "={{ $('Info').item.json.telefone }}"
+                "value": "={{ $('Info').first().json.telefone }}"
               },
               {
                 "name": "read",
@@ -3825,7 +3825,7 @@
             "parameters": [
               {
                 "name": "number",
-                "value": "={{ $('Info').item.json.telefone }}"
+                "value": "={{ $('Info').first().json.telefone }}"
               },
               {
                 "name": "presence",
@@ -3874,7 +3874,7 @@
             "parameters": [
               {
                 "name": "number",
-                "value": "={{ $('Info').item.json.telefone }}"
+                "value": "={{ $('Info').first().json.telefone }}"
               },
               {
                 "name": "read",
@@ -3920,7 +3920,7 @@
             "parameters": [
               {
                 "name": "number",
-                "value": "={{ $('Info').item.json.telefone }}"
+                "value": "={{ $('Info').first().json.telefone }}"
               },
               {
                 "name": "presence",
@@ -3970,7 +3970,7 @@
             "parameters": [
               {
                 "name": "number",
-                "value": "={{ $('Info').item.json.telefone }}"
+                "value": "={{ $('Info').first().json.telefone }}"
               },
               {
                 "name": "read",
@@ -4016,7 +4016,7 @@
             "parameters": [
               {
                 "name": "number",
-                "value": "={{ $('Info').item.json.telefone }}"
+                "value": "={{ $('Info').first().json.telefone }}"
               },
               {
                 "name": "presence",
@@ -4170,7 +4170,7 @@
               },
               {
                 "name": "text",
-                "value": "=Cliente ,{{ $('Info').item.json.nome }}   , precisa de ajuda.\nTelefone: {{ $('Info').item.json.telefone }} , \nMensagem Ai: {{ $fromAI('parameters2_Value', ``, 'string') }}\n"
+                "value": "=Cliente ,{{ $('Info').first().json.nome }}   , precisa de ajuda.\nTelefone: {{ $('Info').first().json.telefone }} , \nMensagem Ai: {{ $fromAI('parameters2_Value', ``, 'string') }}\n"
               }
             ]
           },
@@ -4327,7 +4327,7 @@
               {
                 "id": "outbound-owner",
                 "name": "owner",
-                "value": "={{ $('Info').item.json.owner }}",
+                "value": "={{ $('Info').first().json.owner }}",
                 "type": "string"
               }
             ]
@@ -4403,7 +4403,7 @@
       {
         "parameters": {
           "operation": "executeQuery",
-          "query": "SELECT \n    ai_paused, \n    last_human_interaction,\n    EXTRACT(EPOCH FROM (NOW() - last_human_interaction)) / 60 AS minutos_passados\nFROM contacts \nWHERE phone = '{{ $('Info').item.json.telefone }}';",
+          "query": "SELECT \n    ai_paused, \n    last_human_interaction,\n    EXTRACT(EPOCH FROM (NOW() - last_human_interaction)) / 60 AS minutos_passados\nFROM contacts \nWHERE phone = '{{ $('Info').first().json.telefone }}';",
           "options": {}
         },
         "id": "16c2fbad-2208-45d1-96ae-ac87f9e31240",
@@ -4478,7 +4478,7 @@
       {
         "parameters": {
           "operation": "executeQuery",
-          "query": "UPDATE contacts \nSET ai_paused = false \nWHERE phone = '{{ $json.telefone ? $json.telefone.trim() : $('Info').item.json.telefone }}'\nRETURNING *;",
+          "query": "UPDATE contacts \nSET ai_paused = false \nWHERE phone = '{{ $json.telefone ? $json.telefone.trim() : $('Info').first().json.telefone }}'\nRETURNING *;",
           "options": {}
         },
         "id": "d25790a6-87dc-4959-8345-97318c1c0f76",
@@ -4564,7 +4564,7 @@
       {
         "parameters": {
           "operation": "executeQuery",
-          "query": "INSERT INTO contacts (phone, ai_paused, last_human_interaction) \nVALUES ('{{ $json.telefone || $('Info').item.json.telefone }}', true, NOW()) \nON CONFLICT (phone) \nDO UPDATE SET ai_paused = true, last_human_interaction = NOW();",
+          "query": "INSERT INTO contacts (phone, ai_paused, last_human_interaction) \nVALUES ('{{ $json.telefone || $('Info').first().json.telefone }}', true, NOW()) \nON CONFLICT (phone) \nDO UPDATE SET ai_paused = true, last_human_interaction = NOW();",
           "options": {}
         },
         "id": "0ee00c6f-6f69-46c9-a7a0-2ae413a89a08",
@@ -4672,7 +4672,7 @@
               {
                 "keyName": "phone",
                 "condition": "eq",
-                "keyValue": "={{ $('Info').item.json.telefone }}"
+                "keyValue": "={{ $('Info').first().json.telefone }}"
               }
             ]
           },
