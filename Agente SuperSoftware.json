@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-02-02T02:26:11.074Z",
+  "updatedAt": "2026-02-02T02:48:15.101Z",
   "createdAt": "2026-01-27T03:17:50.455Z",
   "id": "H5Ti5RcPjjoWFUZS",
   "name": "Agente Super Software",
@@ -1896,8 +1896,8 @@
       "type": "n8n-nodes-base.postgres",
       "typeVersion": 2.6,
       "position": [
-        -3150,
-        -150
+        -3152,
+        -144
       ],
       "credentials": {
         "postgres": {
@@ -2141,7 +2141,7 @@
       "main": [
         [
           {
-            "node": "Guardrail Entrada",
+            "node": "Code in JavaScript",
             "type": "main",
             "index": 0
           }
@@ -2480,7 +2480,7 @@
       "main": [
         [
           {
-            "node": "Agente Super Software",
+            "node": "Guardrail Entrada",
             "type": "main",
             "index": 0
           }
@@ -2530,7 +2530,7 @@
             "x-real-ip": "187.45.178.254",
             "x-forwarded-for": "187.45.178.254",
             "x-forwarded-proto": "https",
-            "content-length": "2479",
+            "content-length": "2464",
             "user-agent": "uazapiGO-Webhook/1.0",
             "content-type": "application/json",
             "accept-encoding": "gzip"
@@ -2596,9 +2596,9 @@
               "wa_isPinned": false,
               "wa_label": [],
               "wa_lastMessageSender": "5511919025098@s.whatsapp.net",
-              "wa_lastMessageTextVote": "Boa noite",
+              "wa_lastMessageTextVote": "Olá",
               "wa_lastMessageType": "Conversation",
-              "wa_lastMsgTimestamp": 1769998386000,
+              "wa_lastMsgTimestamp": 1770000357000,
               "wa_muteEndTime": 0,
               "wa_name": "Daniel",
               "wa_unreadCount": 1
@@ -2609,17 +2609,17 @@
               "buttonOrListid": "",
               "chatid": "5511919025098@s.whatsapp.net",
               "chatlid": "",
-              "content": "Boa noite",
+              "content": "Olá",
               "convertOptions": "",
               "edited": "",
               "fromMe": false,
               "groupName": "Unknown",
-              "id": "5511935856950:3AC653EDC6DF43038BCA",
+              "id": "5511935856950:3AA6837E558BE724ED73",
               "isGroup": false,
               "mediaType": "",
-              "messageTimestamp": 1769998386000,
+              "messageTimestamp": 1770000357000,
               "messageType": "Conversation",
-              "messageid": "3AC653EDC6DF43038BCA",
+              "messageid": "3AA6837E558BE724ED73",
               "owner": "5511935856950",
               "quoted": "",
               "reaction": "",
@@ -2629,7 +2629,7 @@
               "sender_pn": "5511919025098@s.whatsapp.net",
               "source": "ios",
               "status": "",
-              "text": "Boa noite",
+              "text": "Olá",
               "track_id": "",
               "track_source": "",
               "type": "text",
@@ -2648,9 +2648,9 @@
       }
     ]
   },
-  "versionId": "0e03cd2e-da08-4988-b593-74bec018a743",
-  "activeVersionId": "ad3af8e4-bdf3-4846-91bd-1e44e9051fcf",
-  "versionCounter": 123,
+  "versionId": "59fbac54-328e-448d-89e6-7611d343c99f",
+  "activeVersionId": "59fbac54-328e-448d-89e6-7611d343c99f",
+  "versionCounter": 134,
   "triggerCount": 1,
   "shared": [
     {
@@ -2675,7 +2675,7 @@
             "userId": "21e4d782-2c71-4207-9c25-da8a950491b1",
             "projectId": "g0AE8k8SzOd1CIEv",
             "user": {
-              "updatedAt": "2026-02-02T00:21:29.228Z",
+              "updatedAt": "2026-02-02T03:55:52.148Z",
               "createdAt": "2025-10-22T15:14:59.123Z",
               "id": "21e4d782-2c71-4207-9c25-da8a950491b1",
               "email": "sacsupersoftware@gmail.com",
@@ -2700,7 +2700,7 @@
               },
               "disabled": false,
               "mfaEnabled": false,
-              "lastActiveAt": "2026-02-01",
+              "lastActiveAt": "2026-02-02",
               "isPending": false
             }
           }
@@ -2710,9 +2710,9 @@
   ],
   "tags": [],
   "activeVersion": {
-    "updatedAt": "2026-02-02T02:21:56.221Z",
-    "createdAt": "2026-02-02T02:21:50.386Z",
-    "versionId": "ad3af8e4-bdf3-4846-91bd-1e44e9051fcf",
+    "updatedAt": "2026-02-02T02:48:17.031Z",
+    "createdAt": "2026-02-02T02:48:15.109Z",
+    "versionId": "59fbac54-328e-448d-89e6-7611d343c99f",
     "workflowId": "H5Ti5RcPjjoWFUZS",
     "nodes": [
       {
@@ -4320,10 +4320,13 @@
       {
         "parameters": {
           "operation": "get",
-          "tableId": "license_keys",
+          "tableId": "whatsapp_chat",
           "filters": {
             "conditions": [
-              {}
+              {
+                "keyName": "phone",
+                "keyValue": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('conditions0_Value', ``, 'string') }}"
+              }
             ]
           }
         },
@@ -4592,27 +4595,6 @@
       },
       {
         "parameters": {
-          "endpointUrl": "https://api.n8n-mcp.com/mcp",
-          "authentication": "bearerAuth",
-          "options": {}
-        },
-        "type": "@n8n/n8n-nodes-langchain.mcpClientTool",
-        "typeVersion": 1.2,
-        "position": [
-          -2448,
-          224
-        ],
-        "id": "da2954cf-ecb3-4c31-9af8-cd2e48eab982",
-        "name": "MCP Client",
-        "credentials": {
-          "httpBearerAuth": {
-            "id": "IxpyFYwIVzPwQbYF",
-            "name": "Bearer Auth account"
-          }
-        }
-      },
-      {
-        "parameters": {
           "operation": "executeQuery",
           "query": "SELECT \n    string_agg(formatted_message, E'\\n') AS historico_recente\nFROM (\n    (SELECT \n        created_at,\n        'Cliente: ' || message AS formatted_message\n    FROM whatsapp_chat \n    WHERE phone = '{{ $(\"Info\").item.json.telefone }}' \n      AND direction = 'inbound'\n    ORDER BY created_at DESC \n    LIMIT 5)\n    UNION ALL\n    (SELECT \n        created_at,\n        'Emerson (Você): ' || message AS formatted_message\n    FROM whatsapp_chat \n    WHERE phone = '{{ $(\"Info\").item.json.telefone }}' \n      AND direction = 'outbound'\n    ORDER BY created_at DESC \n    LIMIT 5)\n) AS chat_unificado\nORDER BY created_at ASC;",
           "options": {}
@@ -4622,8 +4604,8 @@
         "type": "n8n-nodes-base.postgres",
         "typeVersion": 2.6,
         "position": [
-          -3150,
-          -150
+          -3152,
+          -144
         ],
         "credentials": {
           "postgres": {
@@ -4867,7 +4849,7 @@
         "main": [
           [
             {
-              "node": "Guardrail Entrada",
+              "node": "Code in JavaScript",
               "type": "main",
               "index": 0
             }
@@ -5206,7 +5188,7 @@
         "main": [
           [
             {
-              "node": "Agente Super Software",
+              "node": "Guardrail Entrada",
               "type": "main",
               "index": 0
             }
@@ -5234,29 +5216,18 @@
             }
           ]
         ]
-      },
-      "MCP Client": {
-        "ai_tool": [
-          [
-            {
-              "node": "Agente Super Software",
-              "type": "ai_tool",
-              "index": 0
-            }
-          ]
-        ]
       }
     },
     "authors": "Super Software",
-    "name": "Version ad3af8e4",
+    "name": "Version 59fbac54",
     "description": "",
     "autosaved": false,
     "workflowPublishHistory": [
       {
-        "createdAt": "2026-02-02T02:21:56.218Z",
-        "id": 167,
+        "createdAt": "2026-02-02T02:48:17.028Z",
+        "id": 171,
         "workflowId": "H5Ti5RcPjjoWFUZS",
-        "versionId": "ad3af8e4-bdf3-4846-91bd-1e44e9051fcf",
+        "versionId": "59fbac54-328e-448d-89e6-7611d343c99f",
         "event": "activated",
         "userId": "21e4d782-2c71-4207-9c25-da8a950491b1"
       }
