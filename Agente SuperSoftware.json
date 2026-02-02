@@ -1887,23 +1887,10 @@
     },
     {
       "parameters": {
-        "jsCode": "\nconst items = $input.all();\nif (items.length === 0) {\n    return [{ json: { historico_recente: \"Nenhum histórico encontrado.\" } }];\n}\n\nconst rawMessages = items.map(i => i.json);\n\n// Separar e pegar os últimos 5 de cada (já vêm ordenados por desc no Supabase)\nconst inbound = rawMessages.filter(m => m.direction === 'inbound').slice(0, 5);\nconst outbound = rawMessages.filter(m => m.direction === 'outbound').slice(0, 5);\n\n// Unificar, formatar e ordenar cronologicamente (ASC)\nconst finalHistory = [...inbound, ...outbound]\n    .sort((a, b) => new Date(a.created_at) - new Date(b.created_at))\n    .map(m => {\n        const prefix = m.direction === 'inbound' ? 'Cliente: ' : 'Emerson (Você): ';\n        return `${prefix}${m.message}`;\n    })\n    .join('\\n');\n\nreturn [{ json: { historico_recente: finalHistory || \"Sem histórico relevante.\" } }];\n"
-      },
-      "id": "formatar-historico-id",
-      "name": "Formatar Historico",
-      "type": "n8n-nodes-base.code",
-      "typeVersion": 2,
-      "position": [
-        -2900,
-        -150
-      ]
-    },
-    {
-      "parameters": {
         "operation": "getAll",
         "tableId": "whatsapp_chat",
         "returnAll": false,
-        "limit": 20,
+        "limit": 50,
         "filters": {
           "conditions": [
             {
@@ -1939,19 +1926,6 @@
     },
     {
       "parameters": {
-        "jsCode": "\nconst items = $input.all();\nif (items.length === 0) {\n    return [{ json: { historico_recente: \"Nenhum histórico encontrado.\" } }];\n}\n\nconst rawMessages = items.map(i => i.json);\n\n// Separar e pegar os últimos 5 de cada (já vêm ordenados por desc no Supabase)\nconst inbound = rawMessages.filter(m => m.direction === 'inbound').slice(0, 5);\nconst outbound = rawMessages.filter(m => m.direction === 'outbound').slice(0, 5);\n\n// Unificar, formatar e ordenar cronologicamente (ASC)\nconst finalHistory = [...inbound, ...outbound]\n    .sort((a, b) => new Date(a.created_at) - new Date(b.created_at))\n    .map(m => {\n        const prefix = m.direction === 'inbound' ? 'Cliente: ' : 'Emerson (Você): ';\n        return `${prefix}${m.message}`;\n    })\n    .join('\\n');\n\nreturn [{ json: { historico_recente: finalHistory || \"Sem histórico relevante.\" } }];\n"
-      },
-      "id": "formatar-historico-id",
-      "name": "Formatar Historico",
-      "type": "n8n-nodes-base.code",
-      "typeVersion": 2,
-      "position": [
-        -2900,
-        -150
-      ]
-    },
-    {
-      "parameters": {
         "conditions": {
           "string": [
             {
@@ -1968,6 +1942,19 @@
       "position": [
         -3180,
         -16
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "\nconst items = $input.all();\nif (items.length === 0) {\n    return [{ json: { historico_recente: \"Nenhum histórico encontrado.\" } }];\n}\n\n// Supabase retorna DESC (mais recentes primeiro)\nconst rawMessages = items.map(i => i.json);\n\n// Pegar as últimas 40 mensagens, reverter para ordem cronológica (ASC)\nconst finalHistory = rawMessages\n    .slice(0, 40)\n    .reverse() \n    .map(m => {\n        const direction = String(m.direction || '').toLowerCase();\n        // Aceita 'outbound', 'sent', 'out' como Emerson\n        const isOutbound = ['outbound', 'sent', 'out'].includes(direction);\n        const prefix = isOutbound ? 'Emerson (Você): ' : 'Cliente: ';\n        return `${prefix}${m.message}`;\n    })\n    .join('\\n');\n\nreturn [{ json: { historico_recente: finalHistory || \"Sem histórico relevante.\" } }];\n"
+      },
+      "id": "formatar-historico-id",
+      "name": "Formatar Historico",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -2900,
+        -150
       ]
     }
   ],
@@ -4681,23 +4668,10 @@
       },
       {
         "parameters": {
-          "jsCode": "\nconst items = $input.all();\nif (items.length === 0) {\n    return [{ json: { historico_recente: \"Nenhum histórico encontrado.\" } }];\n}\n\nconst rawMessages = items.map(i => i.json);\n\n// Separar e pegar os últimos 5 de cada (já vêm ordenados por desc no Supabase)\nconst inbound = rawMessages.filter(m => m.direction === 'inbound').slice(0, 5);\nconst outbound = rawMessages.filter(m => m.direction === 'outbound').slice(0, 5);\n\n// Unificar, formatar e ordenar cronologicamente (ASC)\nconst finalHistory = [...inbound, ...outbound]\n    .sort((a, b) => new Date(a.created_at) - new Date(b.created_at))\n    .map(m => {\n        const prefix = m.direction === 'inbound' ? 'Cliente: ' : 'Emerson (Você): ';\n        return `${prefix}${m.message}`;\n    })\n    .join('\\n');\n\nreturn [{ json: { historico_recente: finalHistory || \"Sem histórico relevante.\" } }];\n"
-        },
-        "id": "formatar-historico-id",
-        "name": "Formatar Historico",
-        "type": "n8n-nodes-base.code",
-        "typeVersion": 2,
-        "position": [
-          -2900,
-          -150
-        ]
-      },
-      {
-        "parameters": {
           "operation": "getAll",
           "tableId": "whatsapp_chat",
           "returnAll": false,
-          "limit": 20,
+          "limit": 50,
           "filters": {
             "conditions": [
               {
@@ -4733,19 +4707,6 @@
       },
       {
         "parameters": {
-          "jsCode": "\nconst items = $input.all();\nif (items.length === 0) {\n    return [{ json: { historico_recente: \"Nenhum histórico encontrado.\" } }];\n}\n\nconst rawMessages = items.map(i => i.json);\n\n// Separar e pegar os últimos 5 de cada (já vêm ordenados por desc no Supabase)\nconst inbound = rawMessages.filter(m => m.direction === 'inbound').slice(0, 5);\nconst outbound = rawMessages.filter(m => m.direction === 'outbound').slice(0, 5);\n\n// Unificar, formatar e ordenar cronologicamente (ASC)\nconst finalHistory = [...inbound, ...outbound]\n    .sort((a, b) => new Date(a.created_at) - new Date(b.created_at))\n    .map(m => {\n        const prefix = m.direction === 'inbound' ? 'Cliente: ' : 'Emerson (Você): ';\n        return `${prefix}${m.message}`;\n    })\n    .join('\\n');\n\nreturn [{ json: { historico_recente: finalHistory || \"Sem histórico relevante.\" } }];\n"
-        },
-        "id": "formatar-historico-id",
-        "name": "Formatar Historico",
-        "type": "n8n-nodes-base.code",
-        "typeVersion": 2,
-        "position": [
-          -2900,
-          -150
-        ]
-      },
-      {
-        "parameters": {
           "conditions": {
             "string": [
               {
@@ -4762,6 +4723,19 @@
         "position": [
           -3180,
           -16
+        ]
+      },
+      {
+        "parameters": {
+          "jsCode": "\nconst items = $input.all();\nif (items.length === 0) {\n    return [{ json: { historico_recente: \"Nenhum histórico encontrado.\" } }];\n}\n\n// Supabase retorna DESC (mais recentes primeiro)\nconst rawMessages = items.map(i => i.json);\n\n// Pegar as últimas 40 mensagens, reverter para ordem cronológica (ASC)\nconst finalHistory = rawMessages\n    .slice(0, 40)\n    .reverse() \n    .map(m => {\n        const direction = String(m.direction || '').toLowerCase();\n        // Aceita 'outbound', 'sent', 'out' como Emerson\n        const isOutbound = ['outbound', 'sent', 'out'].includes(direction);\n        const prefix = isOutbound ? 'Emerson (Você): ' : 'Cliente: ';\n        return `${prefix}${m.message}`;\n    })\n    .join('\\n');\n\nreturn [{ json: { historico_recente: finalHistory || \"Sem histórico relevante.\" } }];\n"
+        },
+        "id": "formatar-historico-id",
+        "name": "Formatar Historico",
+        "type": "n8n-nodes-base.code",
+        "typeVersion": 2,
+        "position": [
+          -2900,
+          -150
         ]
       }
     ],
