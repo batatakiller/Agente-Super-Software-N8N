@@ -1888,7 +1888,7 @@
     {
       "parameters": {
         "operation": "executeQuery",
-        "query": "SELECT \n    string_agg(formatted_message, E'\\n') AS historico_recente\nFROM (\n    (SELECT \n        created_at,\n        'Cliente: ' || message AS formatted_message\n    FROM whatsapp_chat \n    WHERE phone = '{{ $(\"Extrair Dados Inteligente\").item.json.phone }}' \n      AND direction = 'inbound'\n    ORDER BY created_at DESC \n    LIMIT 5)\n    UNION ALL\n    (SELECT \n        created_at,\n        'Emerson (Você): ' || message AS formatted_message\n    FROM whatsapp_chat \n    WHERE phone = '{{ $(\"Extrair Dados Inteligente\").item.json.phone }}' \n      AND direction = 'outbound'\n    ORDER BY created_at DESC \n    LIMIT 5)\n) AS chat_unificado\nORDER BY created_at ASC;",
+        "query": "SELECT \n    string_agg(formatted_message, E'\\n') AS historico_recente\nFROM (\n    (SELECT \n        created_at,\n        'Cliente: ' || message AS formatted_message\n    FROM whatsapp_chat \n    WHERE phone = '{{ $(\"Info\").item.json.telefone }}' \n      AND direction = 'inbound'\n    ORDER BY created_at DESC \n    LIMIT 5)\n    UNION ALL\n    (SELECT \n        created_at,\n        'Emerson (Você): ' || message AS formatted_message\n    FROM whatsapp_chat \n    WHERE phone = '{{ $(\"Info\").item.json.telefone }}' \n      AND direction = 'outbound'\n    ORDER BY created_at DESC \n    LIMIT 5)\n) AS chat_unificado\nORDER BY created_at ASC;",
         "options": {}
       },
       "id": "carregar-contexto-hibrido-id",
@@ -1896,8 +1896,8 @@
       "type": "n8n-nodes-base.postgres",
       "typeVersion": 2.6,
       "position": [
-        -7056,
-        320
+        -3150,
+        -150
       ],
       "credentials": {
         "postgres": {
@@ -2152,7 +2152,7 @@
       "main": [
         [
           {
-            "node": "Agente Super Software",
+            "node": "Carregar Contexto Híbrido",
             "type": "main",
             "index": 0
           }
@@ -2344,7 +2344,7 @@
       "main": [
         [
           {
-            "node": "Carregar Contexto Híbrido",
+            "node": "Apenas Dados Válidos",
             "type": "main",
             "index": 0
           }
@@ -2355,7 +2355,7 @@
       "main": [
         [
           {
-            "node": "Apenas Dados Válidos",
+            "node": "Agente Super Software",
             "type": "main",
             "index": 0
           }
@@ -4614,7 +4614,7 @@
       {
         "parameters": {
           "operation": "executeQuery",
-          "query": "SELECT \n    string_agg(formatted_message, E'\\n') AS historico_recente\nFROM (\n    (SELECT \n        created_at,\n        'Cliente: ' || message AS formatted_message\n    FROM whatsapp_chat \n    WHERE phone = '{{ $(\"Extrair Dados Inteligente\").item.json.phone }}' \n      AND direction = 'inbound'\n    ORDER BY created_at DESC \n    LIMIT 5)\n    UNION ALL\n    (SELECT \n        created_at,\n        'Emerson (Você): ' || message AS formatted_message\n    FROM whatsapp_chat \n    WHERE phone = '{{ $(\"Extrair Dados Inteligente\").item.json.phone }}' \n      AND direction = 'outbound'\n    ORDER BY created_at DESC \n    LIMIT 5)\n) AS chat_unificado\nORDER BY created_at ASC;",
+          "query": "SELECT \n    string_agg(formatted_message, E'\\n') AS historico_recente\nFROM (\n    (SELECT \n        created_at,\n        'Cliente: ' || message AS formatted_message\n    FROM whatsapp_chat \n    WHERE phone = '{{ $(\"Info\").item.json.telefone }}' \n      AND direction = 'inbound'\n    ORDER BY created_at DESC \n    LIMIT 5)\n    UNION ALL\n    (SELECT \n        created_at,\n        'Emerson (Você): ' || message AS formatted_message\n    FROM whatsapp_chat \n    WHERE phone = '{{ $(\"Info\").item.json.telefone }}' \n      AND direction = 'outbound'\n    ORDER BY created_at DESC \n    LIMIT 5)\n) AS chat_unificado\nORDER BY created_at ASC;",
           "options": {}
         },
         "id": "carregar-contexto-hibrido-id",
@@ -4622,8 +4622,8 @@
         "type": "n8n-nodes-base.postgres",
         "typeVersion": 2.6,
         "position": [
-          -7056,
-          320
+          -3150,
+          -150
         ],
         "credentials": {
           "postgres": {
@@ -4878,7 +4878,7 @@
         "main": [
           [
             {
-              "node": "Agente Super Software",
+              "node": "Carregar Contexto Híbrido",
               "type": "main",
               "index": 0
             }
@@ -5070,7 +5070,7 @@
         "main": [
           [
             {
-              "node": "Carregar Contexto Híbrido",
+              "node": "Apenas Dados Válidos",
               "type": "main",
               "index": 0
             }
@@ -5081,7 +5081,7 @@
         "main": [
           [
             {
-              "node": "Apenas Dados Válidos",
+              "node": "Agente Super Software",
               "type": "main",
               "index": 0
             }
