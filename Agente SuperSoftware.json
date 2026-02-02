@@ -1949,6 +1949,26 @@
         -2900,
         -150
       ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $json.text }}",
+              "value2": "VALIDA"
+            }
+          ]
+        }
+      },
+      "id": "filtro-seguranca-id",
+      "name": "Filtro de Segurança",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        -3180,
+        -16
+      ]
     }
   ],
   "connections": {
@@ -2196,7 +2216,7 @@
       "main": [
         [
           {
-            "node": "Carregar Contexto Híbrido",
+            "node": "Filtro de Segurança",
             "type": "main",
             "index": 0
           }
@@ -2558,6 +2578,17 @@
         [
           {
             "node": "Agente Super Software",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Filtro de Segurança": {
+      "main": [
+        [
+          {
+            "node": "Carregar Contexto Híbrido",
             "type": "main",
             "index": 0
           }
@@ -4712,6 +4743,26 @@
           -2900,
           -150
         ]
+      },
+      {
+        "parameters": {
+          "conditions": {
+            "string": [
+              {
+                "value1": "={{ $json.text }}",
+                "value2": "VALIDA"
+              }
+            ]
+          }
+        },
+        "id": "filtro-seguranca-id",
+        "name": "Filtro de Segurança",
+        "type": "n8n-nodes-base.if",
+        "typeVersion": 1,
+        "position": [
+          -3180,
+          -16
+        ]
       }
     ],
     "connections": {
@@ -4959,7 +5010,7 @@
         "main": [
           [
             {
-              "node": "Carregar Contexto Híbrido",
+              "node": "Filtro de Segurança",
               "type": "main",
               "index": 0
             }
@@ -5321,6 +5372,17 @@
           [
             {
               "node": "Agente Super Software",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Filtro de Segurança": {
+        "main": [
+          [
+            {
+              "node": "Carregar Contexto Híbrido",
               "type": "main",
               "index": 0
             }
