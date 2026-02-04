@@ -36,13 +36,12 @@ if (items.length === 0) {
 // Supabase retorna DESC (mais recentes primeiro)
 const rawMessages = items.map(i => i.json);
 
-// Pegar as últimas 40 mensagens, reverter para ordem cronológica (ASC)
+// Pegar as últimas 20 mensagens, reverter para ordem cronológica (ASC)
 const finalHistory = rawMessages
-    .slice(0, 40)
+    .slice(0, 20)
     .reverse() 
     .map(m => {
         const direction = String(m.direction || '').toLowerCase();
-        // Aceita 'outbound', 'sent', 'out' como Emerson
         const isOutbound = ['outbound', 'sent', 'out'].includes(direction);
         const prefix = isOutbound ? 'Emerson (Você): ' : 'Cliente: ';
         return `${prefix}${m.message}`;
