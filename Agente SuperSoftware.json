@@ -1974,7 +1974,7 @@
         },
         "sendBody": true,
         "contentType": "binaryData",
-        "inputDataFieldName": "data",
+        "inputDataFieldName": "={{Object.keys($binary)[0]}}",
         "options": {}
       },
       "id": "2a734370-1a71-46cf-89b5-b3cb56638aad",
