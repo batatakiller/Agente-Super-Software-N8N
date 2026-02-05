@@ -1321,13 +1321,13 @@
             {
               "id": "e72f-4a0b-9c1d-8b2e5a1c3d4e",
               "name": "eh_imagem",
-              "value": "={{ \n  (function() {\n    const msg = $json.body.message;\n    const type = (msg && !Array.isArray(msg)) ? (msg.type || msg.messageType || '') : '';\n    const mimetype = (Array.isArray(msg) && msg.length > 0) ? (msg[0].mimetype || '') : '';\n    return ['image', 'ImageMessage'].includes(type) || mimetype.startsWith('image/');\n  })()\n}}",
+              "value": "={{ (['image', 'ImageMessage', 'media'].includes($json.body.message?.type || $json.body.message?.messageType || '')) || (Array.isArray($json.body.message) && $json.body.message[0]?.mimetype?.startsWith('image/')) }}",
               "type": "boolean"
             },
             {
               "id": "eh_video_id",
               "name": "eh_video",
-              "value": "={{ \n  (function() {\n    const msg = $json.body.message;\n    const type = (msg && !Array.isArray(msg)) ? (msg.type || msg.messageType || '') : '';\n    const mimetype = (Array.isArray(msg) && msg.length > 0) ? (msg[0].mimetype || '') : '';\n    return ['video', 'VideoMessage'].includes(type) || mimetype.startsWith('video/');\n  })()\n}}",
+              "value": "={{ (['video', 'VideoMessage'].includes($json.body.message?.type || $json.body.message?.messageType || '')) || (Array.isArray($json.body.message) && $json.body.message[0]?.mimetype?.startsWith('video/')) }}",
               "type": "boolean"
             },
             {
