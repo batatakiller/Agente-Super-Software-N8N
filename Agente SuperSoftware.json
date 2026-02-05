@@ -1959,6 +1959,27 @@
     },
     {
       "parameters": {
+        "method": "GET",
+        "url": "={{ $json.fileURL }}",
+        "options": {
+          "response": {
+            "response": {
+              "responseFormat": "file"
+            }
+          }
+        }
+      },
+      "id": "download-from-uazapi-url",
+      "name": "Baixar Imagem da URL",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -5650,
+        350
+      ]
+    },
+    {
+      "parameters": {
         "method": "POST",
         "url": "=https://qoobmxjzcjtkpezajbbv.supabase.co/storage/v1/object/chat_media/{{ $(\"Info\").first().json.id_mensagem }}.jpg",
         "authentication": "predefinedCredentialType",
@@ -1974,7 +1995,7 @@
         },
         "sendBody": true,
         "contentType": "binaryData",
-        "inputDataFieldName": "file",
+        "inputDataFieldName": "data",
         "options": {}
       },
       "id": "2a734370-1a71-46cf-89b5-b3cb56638aad",
@@ -2334,6 +2355,17 @@
             "type": "main",
             "index": 0
           },
+          {
+            "node": "Baixar Imagem da URL",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Baixar Imagem da URL": {
+      "main": [
+        [
           {
             "node": "Upload para Supabase Storage",
             "type": "main",
