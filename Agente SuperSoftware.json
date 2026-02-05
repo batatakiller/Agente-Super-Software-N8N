@@ -2012,7 +2012,7 @@
     {
       "parameters": {
         "method": "POST",
-        "url": "=https://qoobmxjzcjtkpezajbbv.supabase.co/storage/v1/object/chat_media/{{ $(\"Info\").first().json.id_mensagem }}.{{ $(\"Info\").first().json.eh_video ? 'mp4' : 'jpg' }}",
+        "url": "=https://qoobmxjzcjtkpezajbbv.supabase.co/storage/v1/object/chat_media/{{ $(\"Info\").first().json.id_mensagem }}.{{ $binary.data.mimeType.includes('video') ? 'mp4' : 'jpg' }}",
         "authentication": "predefinedCredentialType",
         "nodeCredentialType": "supabaseApi",
         "sendHeaders": true,
@@ -2020,7 +2020,7 @@
           "parameters": [
             {
               "name": "Content-Type",
-              "value": "={{ $(\"Info\").first().json.eh_video ? 'video/mp4' : 'image/jpeg' }}"
+              "value": "={{ $binary.data.mimeType }}"
             },
             {
               "name": "x-upsert",
@@ -2065,7 +2065,7 @@
           "fieldValues": [
             {
               "fieldId": "message",
-              "fieldValue": "={{ \n  (function() {\n    const id = $(\"Info\").first().json.id_mensagem;\n    const isVideo = $(\"Info\").first().json.eh_video;\n    const url = `https://qoobmxjzcjtkpezajbbv.supabase.co/storage/v1/object/public/chat_media/${id}.${isVideo ? 'mp4' : 'jpg'}`;\n    if (isVideo) {\n        return `<video src=\"${url}\" controls style=\"border-radius:8px; max-width:100%;\"></video>`;\n    } else {\n        return `<img src=\"${url}\" style=\"border-radius:8px; max-width:100%;\">`;\n    }\n  })()\n}}"
+              "fieldValue": "={{ (function() { const id = $(\"Info\").first().json.id_mensagem; const isVideo = ($binary.data.mimeType || '').includes('video'); const url = `https://qoobmxjzcjtkpezajbbv.supabase.co/storage/v1/object/public/chat_media/${id}.${isVideo ? 'mp4' : 'jpg'}`; if (isVideo) { return `<video src=\"${url}\" controls style=\"border-radius:8px; max-width:100%;\"></video>`; } else { return `<img src=\"${url}\" style=\"border-radius:8px; max-width:100%;\">`; } })() }}"
             }
           ]
         }
