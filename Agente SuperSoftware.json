@@ -1959,16 +1959,28 @@
     },
     {
       "parameters": {
-        "resource": "storage",
-        "operation": "upload",
-        "bucketId": "chat_media",
-        "filePrefix": "={{ $(\"Info\").first().json.id_mensagem }}",
-        "binaryPropertyName": "data"
+        "method": "POST",
+        "url": "=https://qoobmxjzcjtkpezajbbv.supabase.co/storage/v1/object/chat_media/{{ $(\"Info\").first().json.id_mensagem }}.jpg",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "supabaseApi",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "image/jpeg"
+            }
+          ]
+        },
+        "sendBody": true,
+        "contentType": "binaryData",
+        "inputDataFieldName": "data",
+        "options": {}
       },
       "id": "2a734370-1a71-46cf-89b5-b3cb56638aad",
       "name": "Upload para Supabase Storage",
-      "type": "n8n-nodes-base.supabase",
-      "typeVersion": 1,
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
       "position": [
         -5500,
         350
