@@ -1990,6 +1990,10 @@
             {
               "name": "Content-Type",
               "value": "image/jpeg"
+            },
+            {
+              "name": "x-upsert",
+              "value": "true"
             }
           ]
         },
