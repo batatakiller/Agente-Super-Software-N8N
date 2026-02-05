@@ -1959,6 +1959,7 @@
     },
     {
       "parameters": {
+        "resource": "storage",
         "operation": "upload",
         "bucketId": "chat_media",
         "filePrefix": "={{ $(\"Info\").first().json.id_mensagem }}",
