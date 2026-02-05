@@ -43,8 +43,9 @@ const finalHistory = rawMessages
     .map(m => {
         const direction = String(m.direction || '').toLowerCase();
         const isOutbound = ['outbound', 'sent', 'out'].includes(direction);
+        const timestamp = new Date(m.created_at).toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' });
         const prefix = isOutbound ? 'Emerson (Você): ' : 'Cliente: ';
-        return `${prefix}${m.message}`;
+        return `[${timestamp}] ${prefix}${m.message}`;
     })
     .join('\\n');
 
