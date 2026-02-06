@@ -1926,8 +1926,8 @@
           "conditions": [
             {
               "keyName": "phone",
-              "condition": "eq",
-              "keyValue": "={{ $('Info').first().json.telefone }}"
+              "condition": "ilike",
+              "keyValue": "=%{{ $('Info').first().json.telefone.slice(-8) }}"
             }
           ]
         },
@@ -4838,8 +4838,8 @@
             "conditions": [
               {
                 "keyName": "phone",
-                "condition": "eq",
-                "keyValue": "={{ $('Info').first().json.telefone }}"
+                "condition": "ilike",
+                "keyValue": "=%{{ $('Info').first().json.telefone.slice(-8) }}"
               }
             ]
           },
