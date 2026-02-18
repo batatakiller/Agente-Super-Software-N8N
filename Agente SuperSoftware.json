@@ -746,7 +746,7 @@
           "value": {
             "telefone": "={{ $('Info').first().json.telefone }}",
             "mensagem": "={{ $('Info').first().json.mensagem }}",
-            "timestamp": "={{ $('Info').first().json.timestamp.toDateTime('s') }}",
+            "timestamp": "={{ $now }}",
             "id_mensagem": "={{ $('Info').first().json.id_mensagem }}"
           },
           "matchingColumns": [
@@ -3664,7 +3664,7 @@
             "value": {
               "telefone": "={{ $('Info').first().json.telefone }}",
               "mensagem": "={{ $('Info').first().json.mensagem }}",
-              "timestamp": "={{ $('Info').first().json.timestamp.toDateTime('s') }}",
+              "timestamp": "={{ $now }}",
               "id_mensagem": "={{ $('Info').first().json.id_mensagem }}"
             },
             "matchingColumns": [
