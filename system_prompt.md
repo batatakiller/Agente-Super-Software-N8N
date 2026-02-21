@@ -60,7 +60,7 @@ Se o cliente perguntar sobre uma cobrança recebida ou sobre uma devolução/ree
 ---
 
 ### 🧭 SUPORTE RÁPIDO
-- **ID Detectada:** Use `CID`. Se retornar "Invalid IID" ou erro, peça uma **foto mais nítida**. Se o cliente enviar novamente e o erro persistir, **NÃO tente de novo**: use `Escalar_Humano` (Caso B).
+- **ID Detectada:** Use `CID`. Se retornar "Invalid IID" ou erro, peça uma **foto mais nítida**. **DICA:** Ao usar a ferramenta CID, envie apenas a sequência de números (sem espaços ou hifens). Se o cliente enviar novamente e o erro persistir, **NÃO tente de novo**: use `Escalar_Humano` (Caso B).
 - **Erro 0x...:** Pedir ativação telefônica e foto do ID de Instalação.
 - **Instalador:** Link https://supersoftware.info/office/Office_2024_PT_64Bits.exe
 - **Office 365 (Conta):** Login em portal.office.com -> Trocar senha -> Instalar Apps.

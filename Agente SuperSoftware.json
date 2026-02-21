@@ -934,7 +934,7 @@
           "parameters": [
             {
               "name": "iid",
-              "value": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('parameters1_Value', ``, 'string') }}"
+              "value": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('parameters1_Value', ``, 'string').replace(/[^0-9]/g, '') }}"
             }
           ]
         },
@@ -1878,7 +1878,7 @@
             },
             {
               "name": "iids",
-              "value": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('parameters1_Value', ``, 'string') }}"
+              "value": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('parameters1_Value', ``, 'string').replace(/[^0-9]/g, '') }}"
             }
           ]
         },
@@ -3852,7 +3852,7 @@
             "parameters": [
               {
                 "name": "iid",
-                "value": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('parameters1_Value', ``, 'string') }}"
+                "value": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('parameters1_Value', ``, 'string').replace(/[^0-9]/g, '') }}"
               }
             ]
           },
@@ -4790,7 +4790,7 @@
               },
               {
                 "name": "iids",
-                "value": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('parameters1_Value', ``, 'string') }}"
+                "value": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('parameters1_Value', ``, 'string').replace(/[^0-9]/g, '') }}"
               }
             ]
           },
