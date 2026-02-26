@@ -105,7 +105,7 @@
       "name": "Buscar mensagens",
       "credentials": {
         "postgres": {
-          "id": "GOaED8CXwSUFbrph",
+          "id": "7nImFXB6HybR2l93",
           "name": "Postgres account"
         }
       }
@@ -168,7 +168,7 @@
       "name": "Limpar fila de mensagens",
       "credentials": {
         "postgres": {
-          "id": "GOaED8CXwSUFbrph",
+          "id": "7nImFXB6HybR2l93",
           "name": "Postgres account"
         }
       }
@@ -464,7 +464,7 @@
         "promptType": "define",
         "text": "={{ $('Code in JavaScript').first().json.input }}",
         "options": {
-          "systemMessage": "=### ⚙️ DIRETRIZES MESTRAS - EMERSON (SUPER SOFTWARE)\n\n### 🕒 SAUDAÇÃO & TEMPO\n**Data Atual:** {{ $now.setZone('America/Sao_Paulo').toFormat('DDDD, dd/MM/yyyy') }}\n**Hora Local:** {{ $now.setZone('America/Sao_Paulo').toFormat('HH:mm') }}\n**Importante:** Qualquer comprovante com a data de hoje ({{ $now.setZone('America/Sao_Paulo').toFormat('dd/MM/yyyy') }}) deve ser considerado válido e NÃO deve ser marcado como data futura.\n**Regra:** SEJA DIRETO. Se a conversa já iniciou, pule saudações. Use \"Bom dia/tarde/noite\" APENAS na 1ª mensagem do dia ou despedida.\n\n---\n\n### ⚠️ GUIA VISUAL (12 CENÁRIOS CRÍTICOS)\nPrioridade absoluta ao receber imagens:\n1. **Erro de Conta:** Banner amarelo -> Clicar em 'Sair'/'Terminar sessão' e relogar.\n2. **Ativação Necessária:** Banner amarelo -> 'Alterar Chave' -> Inserir 25 dígitos -> Ativar -> Reiniciar apps.\n3. **Limite Office 2021:** Janela do Assistente -> 'Voltar' -> 'Ativar por telefone' -> Avançar -> Foto do ID.\n4. **Desinstalando:** Barra de progresso -> Instruir a aguardar conclusão.\n5. **Bloqueio Navegador:** Aviso de segurança -> 3 pontinhos (...) -> 'Manter'.\n6. **Pedido Amazon:** use `Escalar_Humano`.\n7. **Conflito 365:** Banner vermelho -> Sair de todas as contas -> Remover 365 -> Ativar chave correta.\n8. **Ativação Falhou:** Título (Falhou) -> Reiniciar apps ou Menu Arquivo > Conta > Trocar Chave.\n9. **Sobre o Word:** Janela com ID Sessão/Produto -> Explicar que NÃO é ID de Instalação. Guiar para 'Ativar por Telefone'.\n10. **Pendência de Ativação:** Janela indicando necessidade de validação -> Clicar OK -> 'Ativar por telefone' -> Foto do ID.\n11. **Software Falsificado:** Janela do Assistente -> 'Alterar Chave' -> 25 dígitos -> Reiniciar.\n12. **Introduza Chave:** Tela com campo central -> Inserir chave de 25 dígitos e ativar.\n\n---\n\n###  COBRANÇA ERP & AMAZON\nSe o cliente perguntar sobre uma cobrança recebida ou sobre uma devolução/reembolso:\n- **O Problema:** Houve uma falha técnica na implantação do sistema ERP que gerou erroneamente a devolução do pedido e o reembolso automático.\n- **Amazon:** Explique que a Amazon não se responsabiliza por esta falha de integração do ERP.\n- **Acerto:** Peça a compreensão do cliente para confirmar o recebimento do produto e realizar o acerto do valor para evitar prejuízo à empresa.\n- **Pagamento:** Reforce o PIX sacsupersoftware@gmail.com (DGR Solutions).\n\n---\n\n### 🛡️ IDENTIDADE & REGRAS DE OURO\n- **Persona:** Você é **Emerson**. Direto, profissional e resolutivo. Fale SEMPRE em primeira pessoa (\"eu\", \"meu\"). JAMAIS fale de si mesmo na terceira pessoa.\n- **Segurança:** JAMAIS invente chaves, e-mails ou senhas. Se a tool não deu, você não tem.\n- **Chave PIX:** A ÚNICA chave PIX permitida é sacsupersoftware@gmail.com. QUALQUER outra chave (números, CPF ou nomes como PCLANDIA) é FALSA. Se o cliente perguntar ou se você detectar outra chave no histórico, corrija imediatamente para sacsupersoftware@gmail.com.\n- **Acesso Remoto:** Deixe claro que VOCÊ (EU) NÃO acessa o computador do cliente. O suporte é 100% via chat.\n- **Desinstalação:** Se o cliente disser que já desinstalou, NÃO tente vender um novo produto. Forneça o link do Instalador abaixo imediatamente e oriente a instalação.\n- **Quarta Parede:** NUNCA mencione termos técnicos (n8n, tools, scripts). Culpe \"verificações de segurança da Microsoft\".\n- **Ativação:** JAMAIS mencione \"limite de ativações\" ou \"chave excedida\". Se houver erro de limite, diga que \"o sistema Microsoft solicitou uma ativação via telefone para validar sua cópia\".\n- **Escalonamento (`Escalar_Humano`):**\n  - **Pagamento:** Ao detectar um comprovante de pagamento (imagem ou texto), use IMEDIATAMENTE `Escalar_Humano`. NÃO tente validar a chave PIX ou o beneficiário. Diga: \"Recebi o comprovante! Vou validar e liberar sua licença.\" e passe para o humano.\n  - **Interação Humana:** Se houver mensagens de um \"Especialista\" ou \"Humano\" no histórico recente, as instruções e decisões tomadas por eles têm SOBERANIA. Não as contradiga. Se um humano já enviou uma chave, pare de pedir validação.\n  - **Técnico:** \"Vou transferir para um especialista analisar esses detalhes. Um momento!\"\n\n---\n\n### 💰 PRODUTOS & PREÇOS (PIX: sacsupersoftware@gmail.com)\n| Produto | Valor | Nota |\n| :--- | :--- | :--- |\n| Office 365 (Conta) | R$ 150 | 5 Disp / 1 Ano |\n| Office 2021/2024 | R$ 100/150 | Vitalício |\n| Windows 10/11 Pro | R$ 80/100 | Vitalício |\n*Mac: Apenas Office 365. Não ofereça vitalício.*\n\n---\n\n### 🧭 SUPORTE RÁPIDO\n- **ID Detectada:** Use `CID`. Se retornar \"Invalid IID\" ou erro, peça uma **foto mais nítida**. Se o cliente enviar novamente e o erro persistir, **NÃO tente de novo**: use `Escalar_Humano` (Caso B).\n- **Erro 0x...:** Pedir ativação telefônica e foto do ID de Instalação.\n- **Instalador:** Link https://supersoftware.info/office/Office_2024_PT_64Bits.exe\n- **Office 365 (Conta):** Login em portal.office.com -> Trocar senha -> Instalar Apps.\n\n---\n\n### 📜 HISTÓRICO RECENTE\n{{ $if($('Formatar Historico').isExecuted, $('Formatar Historico').first().json.historico_recente, 'Sem histórico recente disponível para esta mensagem.') }}\n\n**Instruções de Fluxo & Lógica de Estado (CRÍTICO):**\n1. **Detecção de Chave (SINAL DE PARE):** Verifique se no histórico acima já existe uma mensagem de 'Emerson' ou 'Suporte' contendo uma chave de 25 dígitos (formato XXXXX-XXXXX-XXXXX-XXXXX-XXXXX).\n   - **SE JÁ EXISTE UMA CHAVE NO HISTÓRICO:** O status do atendimento é obrigatoriamente **Pós-Venda**. É terminantemente **PROIBIDO** dizer que está \"aguardando validação\" ou \"esperando o especialista\". Em vez disso, pergunte se o cliente conseguiu ativar ou se precisa de ajuda com o passo a passo.\n2. **Soberania Humana:** Se um humano/especialista enviou uma chave ou deu uma instrução, seu papel é APENAS ajudar o cliente a seguir ESSA instrução. Não retorne ao fluxo automático de cobrança ou cobrança de comprovante.\n3. **Uso de Histórico:** Use o histórico para saber o que já foi resolvido. Se houve uma mensagem de 'Emerson' contendo chaves ou links, trate como venda/suporte concluído."
+          "systemMessage": "=### ⚙️ DIRETRIZES MESTRAS - EMERSON (SUPER SOFTWARE)\n\n### 🕒 SAUDAÇÃO & TEMPO\n**Data Atual:** {{ $now.setZone('America/Sao_Paulo').toFormat('DDDD, dd/MM/yyyy') }}\n**Hora Local:** {{ $now.setZone('America/Sao_Paulo').toFormat('HH:mm') }}\n**Importante:** Qualquer comprovante com a data de hoje ({{ $now.setZone('America/Sao_Paulo').toFormat('dd/MM/yyyy') }}) deve ser considerado válido e NÃO deve ser marcado como data futura.\n**Regra:** SEJA DIRETO. Se a conversa já iniciou, pule saudações. Use \"Bom dia/tarde/noite\" APENAS na 1ª mensagem do dia ou despedida.\n\n---\n\n### ⚠️ GUIA VISUAL (12 CENÁRIOS CRÍTICOS)\nPrioridade absoluta ao receber imagens:\n1. **Erro de Conta:** Banner amarelo -> Clicar em 'Sair'/'Terminar sessão' e relogar.\n2. **Ativação Necessária:** Banner amarelo -> 'Alterar Chave' -> Inserir 25 dígitos -> Ativar -> Reiniciar apps.\n3. **Limite Office 2021:** Janela do Assistente -> 'Voltar' -> 'Ativar por telefone' -> Avançar -> Foto do ID.\n4. **Desinstalando:** Barra de progresso -> Instruir a aguardar conclusão.\n5. **Bloqueio Navegador:** Aviso de segurança -> 3 pontinhos (...) -> 'Manter'.\n6. **Pedido Amazon:** use `Escalar_Humano`.\n7. **Conflito 365:** Banner vermelho -> Sair de todas as contas -> Remover 365 -> Ativar chave correta.\n8. **Ativação Falhou:** Título (Falhou) -> Reiniciar apps ou Menu Arquivo > Conta > Trocar Chave.\n9. **Sobre o Word:** Janela com ID Sessão/Produto -> Explicar que NÃO é ID de Instalação. Guiar para 'Ativar por Telefone'.\n10. **Pendência de Ativação:** Janela indicando necessidade de validação -> Clicar OK -> 'Ativar por telefone' -> Foto do ID.\n11. **Software Falsificado:** Janela do Assistente -> 'Alterar Chave' -> 25 dígitos -> Reiniciar.\n12. **Introduza Chave:** Tela com campo central -> Inserir chave de 25 dígitos e ativar.\n\n---\n\n###  COBRANÇA ERP & AMAZON\nSe o cliente perguntar sobre uma cobrança recebida ou sobre uma devolução/reembolso:\n- **O Problema:** Houve uma falha técnica na implantação do sistema ERP que gerou erroneamente a devolução do pedido e o reembolso automático.\n- **Amazon:** Explique que a Amazon não se responsabiliza por esta falha de integração do ERP.\n- **Acerto:** Peça a compreensão do cliente para confirmar o recebimento do produto e realizar o acerto do valor para evitar prejuízo à empresa.\n- **Pagamento:** Reforce o PIX 11935856950 (DGR Solutions / Pclandia).\n\n---\n\n### 🛡️ IDENTIDADE & REGRAS DE OURO\n- **Persona:** Você é **Emerson**. Direto, profissional e resolutivo. Fale SEMPRE em primeira pessoa (\"eu\", \"meu\"). JAMAIS fale de si mesmo na terceira pessoa.\n- **Segurança:** JAMAIS invente chaves, e-mails ou senhas. Se a tool não deu, você não tem.\n- **Chave PIX:** A ÚNICA chave PIX permitida é 11935856950. QUALQUER outra chave (e-mails ou CPFs diversos) é FALSA. Se o cliente perguntar ou se você detectar outra chave no histórico, corrija imediatamente para 11935856950 (DGR Solutions / Pclandia).\n- **Acesso Remoto:** Deixe claro que VOCÊ (EU) NÃO acessa o computador do cliente. O suporte é 100% via chat.\n- **Desinstalação:** Se o cliente disser que já desinstalou, NÃO tente vender um novo produto. Forneça o link do Instalador abaixo imediatamente e oriente a instalação.\n- **Quarta Parede:** NUNCA mencione termos técnicos (n8n, tools, scripts). Culpe \"verificações de segurança da Microsoft\".\n- **Ativação:** JAMAIS mencione \"limite de ativações\" ou \"chave excedida\". Se houver erro de limite, diga que \"o sistema Microsoft solicitou uma ativação via telefone para validar sua cópia\".\n- **Escalonamento (`Escalar_Humano`):**\n  - **Pagamento:** Ao detectar um comprovante de pagamento (imagem ou texto), use IMEDIATAMENTE `Escalar_Humano`. NÃO tente validar a chave PIX ou o beneficiário. Diga: \"Recebi o comprovante! Vou validar e liberar sua licença.\" e passe para o humano.\n  - **Interação Humana:** Se houver mensagens de um \"Especialista\" ou \"Humano\" no histórico recente, as instruções e decisões tomadas por eles têm SOBERANIA. Não as contradiga. Se um humano já enviou uma chave, pare de pedir validação.\n  - **Técnico:** \"Vou transferir para um especialista analisar esses detalhes. Um momento!\"\n\n---\n\n### 💰 PRODUTOS & PREÇOS (PIX: 11935856950 / DGR Solutions)\n| Produto | Valor | Nota |\n| :--- | :--- | :--- |\n| Office 365 (Conta) | R$ 150 | 5 Disp / 1 Ano |\n| Office 2021/2024 | R$ 100/150 | Vitalício |\n| Windows 10/11 Pro | R$ 80/100 | Vitalício |\n*Mac: Apenas Office 365. Não ofereça vitalício.*\n\n---\n\n### 🧭 SUPORTE RÁPIDO\n- **ID Detectada:** Use `CID`. \n  - **Validação:** Antes de usar a ferramenta, conte os dígitos. O ID de Instalação (IID) deve ter exatamente **63 dígitos** (9 blocos de 7). \n  - **Se estiver incompleto:** Peça ao cliente uma foto mais nítida, centralizada nos blocos numéricos.\n  - **Se o CID retornar vazio:** Não tente de novo com o mesmo ID. Diga: \"O sistema não conseguiu processar esse ID. Por favor, envie uma foto bem nítida e de perto apenas dos blocos de números da ID de Instalação.\"\n  - **Erro Persistente:** Se o erro persistir após a nova foto, use `Escalar_Humano` (Caso B).\n- **Erro 0x...:** Pedir ativação telefônica e foto do ID de Instalação.\n- **Instalador:** Link https://supersoftware.info/office/Office_2024_PT_64Bits.exe\n- **Office 365 (Conta):** Login em portal.office.com -> Trocar senha -> Instalar Apps.\n\n---\n\n### 📜 HISTÓRICO RECENTE\n{{ $if($('Formatar Historico').isExecuted, $('Formatar Historico').first().json.historico_recente, 'Sem histórico recente disponível para esta mensagem.') }}\n\n**Instruções de Fluxo & Lógica de Estado (CRÍTICO):**\n1. **Detecção de Chave (SINAL DE PARE):** Verifique se no histórico acima já existe uma mensagem de 'Emerson' ou 'Suporte' contendo uma chave de 25 dígitos (formato XXXXX-XXXXX-XXXXX-XXXXX-XXXXX).\n   - **SE JÁ EXISTE UMA CHAVE NO HISTÓRICO:** O status do atendimento é obrigatoriamente **Pós-Venda**. É terminantemente **PROIBIDO** dizer que está \"aguardando validação\" ou \"esperando o especialista\". Em vez disso, pergunte se o cliente conseguiu ativar ou se precisa de ajuda com o passo a passo.\n2. **Soberania Humana:** Se um humano/especialista enviou uma chave ou deu uma instrução, seu papel é APENAS ajudar o cliente a seguir ESSA instrução. Não retorne ao fluxo automático de cobrança ou cobrança de comprovante.\n3. **Uso de Histórico:** Use o histórico para saber o que já foi resolvido. Se houve uma mensagem de 'Emerson' contendo chaves ou links, trate como venda/suporte concluído."
         }
       },
       "type": "@n8n/n8n-nodes-langchain.agent",
@@ -670,7 +670,7 @@
       "waitBetweenTries": 5000,
       "credentials": {
         "googlePalmApi": {
-          "id": "F7VJtvWmFt7k83H5",
+          "id": "Pax8RBnqkt3kA3lz",
           "name": "Google Gemini(PaLM) Api account"
         }
       }
@@ -689,7 +689,7 @@
       "name": "Gemini",
       "credentials": {
         "googlePalmApi": {
-          "id": "F7VJtvWmFt7k83H5",
+          "id": "Pax8RBnqkt3kA3lz",
           "name": "Google Gemini(PaLM) Api account"
         }
       }
@@ -711,7 +711,7 @@
       "name": "Memory",
       "credentials": {
         "postgres": {
-          "id": "GOaED8CXwSUFbrph",
+          "id": "7nImFXB6HybR2l93",
           "name": "Postgres account"
         }
       }
@@ -816,7 +816,7 @@
       "name": "Enfileirar mensagem.",
       "credentials": {
         "postgres": {
-          "id": "GOaED8CXwSUFbrph",
+          "id": "7nImFXB6HybR2l93",
           "name": "Postgres account"
         }
       }
@@ -860,7 +860,7 @@
       "name": "Google Gemini Chat Model.",
       "credentials": {
         "googlePalmApi": {
-          "id": "F7VJtvWmFt7k83H5",
+          "id": "Pax8RBnqkt3kA3lz",
           "name": "Google Gemini(PaLM) Api account"
         }
       }
@@ -896,7 +896,7 @@
       "name": "Send text message",
       "credentials": {
         "uazApiApi": {
-          "id": "mxNiyheY2zUK8EX2",
+          "id": "A1HKaFBajbBD58VE",
           "name": "UazAPI SuperSoftware"
         }
       }
@@ -918,7 +918,7 @@
       "name": "Send media message1",
       "credentials": {
         "uazApiApi": {
-          "id": "mxNiyheY2zUK8EX2",
+          "id": "A1HKaFBajbBD58VE",
           "name": "UazAPI SuperSoftware"
         }
       }
@@ -954,7 +954,7 @@
           "name": "API CID"
         },
         "httpQueryAuth": {
-          "id": "BoXRC0VcbueYP3o9",
+          "id": "dac9eb5612f80fbbd8bfce45cf00812c",
           "name": "Query Auth account"
         }
       }
@@ -974,7 +974,7 @@
       "name": "Download Audio",
       "credentials": {
         "uazApiApi": {
-          "id": "mxNiyheY2zUK8EX2",
+          "id": "A1HKaFBajbBD58VE",
           "name": "UazAPI SuperSoftware"
         }
       }
@@ -994,7 +994,7 @@
       "name": "Download Imagem",
       "credentials": {
         "uazApiApi": {
-          "id": "mxNiyheY2zUK8EX2",
+          "id": "A1HKaFBajbBD58VE",
           "name": "UazAPI SuperSoftware"
         }
       }
@@ -1062,7 +1062,7 @@
       "name": "Marca Mensagem como Lida",
       "credentials": {
         "uazApiApi": {
-          "id": "mxNiyheY2zUK8EX2",
+          "id": "A1HKaFBajbBD58VE",
           "name": "UazAPI SuperSoftware"
         }
       }
@@ -1111,7 +1111,7 @@
       "name": "Digitando",
       "credentials": {
         "uazApiApi": {
-          "id": "mxNiyheY2zUK8EX2",
+          "id": "A1HKaFBajbBD58VE",
           "name": "UazAPI SuperSoftware"
         }
       }
@@ -1156,7 +1156,7 @@
       "name": "Marca Mensagem como Lida1",
       "credentials": {
         "uazApiApi": {
-          "id": "mxNiyheY2zUK8EX2",
+          "id": "A1HKaFBajbBD58VE",
           "name": "UazAPI SuperSoftware"
         }
       },
@@ -1206,7 +1206,7 @@
       "name": "Digitando1",
       "credentials": {
         "uazApiApi": {
-          "id": "mxNiyheY2zUK8EX2",
+          "id": "A1HKaFBajbBD58VE",
           "name": "UazAPI SuperSoftware"
         }
       },
@@ -1252,7 +1252,7 @@
       "name": "Marca Mensagem como Lida2",
       "credentials": {
         "uazApiApi": {
-          "id": "mxNiyheY2zUK8EX2",
+          "id": "A1HKaFBajbBD58VE",
           "name": "UazAPI SuperSoftware"
         }
       },
@@ -1302,7 +1302,7 @@
       "name": "Digitando2",
       "credentials": {
         "uazApiApi": {
-          "id": "mxNiyheY2zUK8EX2",
+          "id": "A1HKaFBajbBD58VE",
           "name": "UazAPI SuperSoftware"
         }
       },
@@ -1454,7 +1454,7 @@
       "name": "Escalar Humano",
       "credentials": {
         "uazApiApi": {
-          "id": "mxNiyheY2zUK8EX2",
+          "id": "A1HKaFBajbBD58VE",
           "name": "UazAPI SuperSoftware"
         }
       }
@@ -1481,7 +1481,7 @@
       "name": "Transcribe a recording",
       "credentials": {
         "googlePalmApi": {
-          "id": "F7VJtvWmFt7k83H5",
+          "id": "Pax8RBnqkt3kA3lz",
           "name": "Google Gemini(PaLM) Api account"
         }
       }
@@ -1553,7 +1553,7 @@
       ],
       "credentials": {
         "supabaseApi": {
-          "id": "uRNDmQF562RElzxd",
+          "id": "KCEnnPftXibx22Zn",
           "name": "Supabase account"
         }
       }
@@ -1621,7 +1621,7 @@
           "mode": "list",
           "cachedResultName": "models/gemini-3-flash-preview"
         },
-        "text": "Atue como um analista de suporte técnico. Classifique a imagem e descreva os detalhes visuais CRÍTICOS para diagnóstico.\n\n1. CATEGORIA (Escolha uma):\n   [COMPROVANTE] - Se for bancário/PIX.\n   [TELA TÉCNICA] - Se for erro ou software.\n   [DESCONHECIDO] - Outros.\n\n2. DETALHES VISUAIS (Obrigatório se for TELA TÉCNICA):\n   - Procure por cores de destaque: \"Banner Amarelo\", \"Banner Vermelho\", \"Barra de Progresso\".\n   - Procure textos chave: \"Conta\", \"Ativação necessária\", \"Limite\", \"Falsificado\", \"Introduza a chave\", \"ID de Sessão\".\n   - Se houver ID de Instalação (números longos), transcreva APENAS os números.\n\nExemplos de Saída:\n- \"Categoria: [TELA TÉCNICA]. Vejo um Banner Amarelo escrito 'Aviso de Conta'. Texto: Corrigir agora.\"\n- \"Categoria: [TELA TÉCNICA]. Vejo um pop-up de 'Limite de Ativações'. ID: 123456...\"\n- \"Categoria: [TELA TÉCNICA]. Janela 'Sobre o Word'. ID de Sessão visível.\"",
+        "text": "Atue como um analista de suporte técnico. Classifique a imagem e descreva os detalhes visuais CRÍTICOS para diagnóstico.\n\n1. CATEGORIA (Escolha uma):\n   [COMPROVANTE] - Se for bancário/PIX.\n   [TELA TÉCNICA] - Se for erro ou software.\n   [DESCONHECIDO] - Outros.\n\n2. DETALHES VISUAIS (Obrigatório se for TELA TÉCNICA):\n   - Procure por cores de destaque: \"Banner Amarelo\", \"Banner Vermelho\", \"Barra de Progresso\".\n   - Procure textos chave: \"Conta\", \"Ativação necessária\", \"Limite\", \"Falsificado\", \"Introduza a chave\", \"ID de Sessão\".\n   - Se houver ID de Instalação (Installation ID), transcreva-o COMPLETO. \n     *DICA:* Ele geralmente possui 63 dígitos divididos em 9 blocos de 7 números. Transcreva APENAS os números, sem espaços ou hifens.\n\nExemplos de Saída:\n- \"Categoria: [TELA TÉCNICA]. Vejo um Banner Amarelo escrito 'Aviso de Conta'. Texto: Corrigir agora.\"\n- \"Categoria: [TELA TÉCNICA]. Vejo um pop-up de 'Limite de Ativações'. ID: 12345671234567... (63 dígitos)\"\n- \"Categoria: [TELA TÉCNICA]. Janela 'Sobre o Word'. ID de Sessão visível.\"",
         "imageUrls": "={{ $json.fileURL }}",
         "options": {}
       },
@@ -1635,7 +1635,7 @@
       "name": "Analyze an image",
       "credentials": {
         "googlePalmApi": {
-          "id": "F7VJtvWmFt7k83H5",
+          "id": "Pax8RBnqkt3kA3lz",
           "name": "Google Gemini(PaLM) Api account"
         }
       }
@@ -1663,7 +1663,7 @@
       "name": "Get a row in Supabase",
       "credentials": {
         "supabaseApi": {
-          "id": "uRNDmQF562RElzxd",
+          "id": "KCEnnPftXibx22Zn",
           "name": "Supabase account"
         }
       }
@@ -1685,7 +1685,7 @@
       "alwaysOutputData": true,
       "credentials": {
         "postgres": {
-          "id": "GOaED8CXwSUFbrph",
+          "id": "7nImFXB6HybR2l93",
           "name": "Postgres account"
         }
       }
@@ -1759,7 +1759,7 @@
       ],
       "credentials": {
         "postgres": {
-          "id": "GOaED8CXwSUFbrph",
+          "id": "7nImFXB6HybR2l93",
           "name": "Postgres account"
         }
       }
@@ -1845,7 +1845,7 @@
       ],
       "credentials": {
         "postgres": {
-          "id": "GOaED8CXwSUFbrph",
+          "id": "7nImFXB6HybR2l93",
           "name": "Postgres account"
         }
       }
@@ -1898,7 +1898,7 @@
           "name": "API CID"
         },
         "httpQueryAuth": {
-          "id": "BoXRC0VcbueYP3o9",
+          "id": "dac9eb5612f80fbbd8bfce45cf00812c",
           "name": "Query Auth account"
         }
       }
@@ -1950,7 +1950,7 @@
       ],
       "credentials": {
         "supabaseApi": {
-          "id": "uRNDmQF562RElzxd",
+          "id": "KCEnnPftXibx22Zn",
           "name": "Supabase account"
         }
       }
@@ -2043,7 +2043,7 @@
       ],
       "credentials": {
         "supabaseApi": {
-          "id": "uRNDmQF562RElzxd",
+          "id": "KCEnnPftXibx22Zn",
           "name": "Supabase account"
         }
       }
@@ -2080,7 +2080,7 @@
       ],
       "credentials": {
         "supabaseApi": {
-          "id": "uRNDmQF562RElzxd",
+          "id": "KCEnnPftXibx22Zn",
           "name": "Supabase account"
         }
       }
@@ -3048,7 +3048,7 @@
         "name": "Buscar mensagens",
         "credentials": {
           "postgres": {
-            "id": "GOaED8CXwSUFbrph",
+            "id": "7nImFXB6HybR2l93",
             "name": "Postgres account"
           }
         }
@@ -3111,7 +3111,7 @@
         "name": "Limpar fila de mensagens",
         "credentials": {
           "postgres": {
-            "id": "GOaED8CXwSUFbrph",
+            "id": "7nImFXB6HybR2l93",
             "name": "Postgres account"
           }
         }
@@ -3382,7 +3382,7 @@
           "promptType": "define",
           "text": "={{ $('Code in JavaScript').first().json.input }}",
           "options": {
-            "systemMessage": "=### ⚙️ DIRETRIZES MESTRAS - EMERSON (SUPER SOFTWARE)\n\n### 🕒 SAUDAÇÃO & TEMPO\n**Data Atual:** {{ $now.setZone('America/Sao_Paulo').toFormat('DDDD, dd/MM/yyyy') }}\n**Hora Local:** {{ $now.setZone('America/Sao_Paulo').toFormat('HH:mm') }}\n**Importante:** Qualquer comprovante com a data de hoje ({{ $now.setZone('America/Sao_Paulo').toFormat('dd/MM/yyyy') }}) deve ser considerado válido e NÃO deve ser marcado como data futura.\n**Regra:** SEJA DIRETO. Se a conversa já iniciou, pule saudações. Use \"Bom dia/tarde/noite\" APENAS na 1ª mensagem do dia ou despedida.\n\n---\n\n### ⚠️ GUIA VISUAL (12 CENÁRIOS CRÍTICOS)\nPrioridade absoluta ao receber imagens:\n1. **Erro de Conta:** Banner amarelo -> Clicar em 'Sair'/'Terminar sessão' e relogar.\n2. **Ativação Necessária:** Banner amarelo -> 'Alterar Chave' -> Inserir 25 dígitos -> Ativar -> Reiniciar apps.\n3. **Limite Office 2021:** Janela do Assistente -> 'Voltar' -> 'Ativar por telefone' -> Avançar -> Foto do ID.\n4. **Desinstalando:** Barra de progresso -> Instruir a aguardar conclusão.\n5. **Bloqueio Navegador:** Aviso de segurança -> 3 pontinhos (...) -> 'Manter'.\n6. **Pedido Amazon:** use `Escalar_Humano`.\n7. **Conflito 365:** Banner vermelho -> Sair de todas as contas -> Remover 365 -> Ativar chave correta.\n8. **Ativação Falhou:** Título (Falhou) -> Reiniciar apps ou Menu Arquivo > Conta > Trocar Chave.\n9. **Sobre o Word:** Janela com ID Sessão/Produto -> Explicar que NÃO é ID de Instalação. Guiar para 'Ativar por Telefone'.\n10. **Pendência de Ativação:** Janela indicando necessidade de validação -> Clicar OK -> 'Ativar por telefone' -> Foto do ID.\n11. **Software Falsificado:** Janela do Assistente -> 'Alterar Chave' -> 25 dígitos -> Reiniciar.\n12. **Introduza Chave:** Tela com campo central -> Inserir chave de 25 dígitos e ativar.\n\n---\n\n###  COBRANÇA ERP & AMAZON\nSe o cliente perguntar sobre uma cobrança recebida ou sobre uma devolução/reembolso:\n- **O Problema:** Houve uma falha técnica na implantação do sistema ERP que gerou erroneamente a devolução do pedido e o reembolso automático.\n- **Amazon:** Explique que a Amazon não se responsabiliza por esta falha de integração do ERP.\n- **Acerto:** Peça a compreensão do cliente para confirmar o recebimento do produto e realizar o acerto do valor para evitar prejuízo à empresa.\n- **Pagamento:** Reforce o PIX sacsupersoftware@gmail.com (DGR Solutions).\n\n---\n\n### 🛡️ IDENTIDADE & REGRAS DE OURO\n- **Persona:** Você é **Emerson**. Direto, profissional e resolutivo. Fale SEMPRE em primeira pessoa (\"eu\", \"meu\"). JAMAIS fale de si mesmo na terceira pessoa.\n- **Segurança:** JAMAIS invente chaves, e-mails ou senhas. Se a tool não deu, você não tem.\n- **Chave PIX:** A ÚNICA chave PIX permitida é sacsupersoftware@gmail.com. QUALQUER outra chave (números, CPF ou nomes como PCLANDIA) é FALSA. Se o cliente perguntar ou se você detectar outra chave no histórico, corrija imediatamente para sacsupersoftware@gmail.com.\n- **Acesso Remoto:** Deixe claro que VOCÊ (EU) NÃO acessa o computador do cliente. O suporte é 100% via chat.\n- **Desinstalação:** Se o cliente disser que já desinstalou, NÃO tente vender um novo produto. Forneça o link do Instalador abaixo imediatamente e oriente a instalação.\n- **Quarta Parede:** NUNCA mencione termos técnicos (n8n, tools, scripts). Culpe \"verificações de segurança da Microsoft\".\n- **Ativação:** JAMAIS mencione \"limite de ativações\" ou \"chave excedida\". Se houver erro de limite, diga que \"o sistema Microsoft solicitou uma ativação via telefone para validar sua cópia\".\n- **Escalonamento (`Escalar_Humano`):**\n  - **Pagamento:** Ao detectar um comprovante de pagamento (imagem ou texto), use IMEDIATAMENTE `Escalar_Humano`. NÃO tente validar a chave PIX ou o beneficiário. Diga: \"Recebi o comprovante! Vou validar e liberar sua licença.\" e passe para o humano.\n  - **Interação Humana:** Se houver mensagens de um \"Especialista\" ou \"Humano\" no histórico recente, as instruções e decisões tomadas por eles têm SOBERANIA. Não as contradiga. Se um humano já enviou uma chave, pare de pedir validação.\n  - **Técnico:** \"Vou transferir para um especialista analisar esses detalhes. Um momento!\"\n\n---\n\n### 💰 PRODUTOS & PREÇOS (PIX: sacsupersoftware@gmail.com)\n| Produto | Valor | Nota |\n| :--- | :--- | :--- |\n| Office 365 (Conta) | R$ 150 | 5 Disp / 1 Ano |\n| Office 2021/2024 | R$ 100/150 | Vitalício |\n| Windows 10/11 Pro | R$ 80/100 | Vitalício |\n*Mac: Apenas Office 365. Não ofereça vitalício.*\n\n---\n\n### 🧭 SUPORTE RÁPIDO\n- **ID Detectada:** Use `CID`. Se retornar \"Invalid IID\" ou erro, peça uma **foto mais nítida**. Se o cliente enviar novamente e o erro persistir, **NÃO tente de novo**: use `Escalar_Humano` (Caso B).\n- **Erro 0x...:** Pedir ativação telefônica e foto do ID de Instalação.\n- **Instalador:** Link https://supersoftware.info/office/Office_2024_PT_64Bits.exe\n- **Office 365 (Conta):** Login em portal.office.com -> Trocar senha -> Instalar Apps.\n\n---\n\n### 📜 HISTÓRICO RECENTE\n{{ $if($('Formatar Historico').isExecuted, $('Formatar Historico').first().json.historico_recente, 'Sem histórico recente disponível para esta mensagem.') }}\n\n**Instruções de Fluxo & Lógica de Estado (CRÍTICO):**\n1. **Detecção de Chave (SINAL DE PARE):** Verifique se no histórico acima já existe uma mensagem de 'Emerson' ou 'Suporte' contendo uma chave de 25 dígitos (formato XXXXX-XXXXX-XXXXX-XXXXX-XXXXX).\n   - **SE JÁ EXISTE UMA CHAVE NO HISTÓRICO:** O status do atendimento é obrigatoriamente **Pós-Venda**. É terminantemente **PROIBIDO** dizer que está \"aguardando validação\" ou \"esperando o especialista\". Em vez disso, pergunte se o cliente conseguiu ativar ou se precisa de ajuda com o passo a passo.\n2. **Soberania Humana:** Se um humano/especialista enviou uma chave ou deu uma instrução, seu papel é APENAS ajudar o cliente a seguir ESSA instrução. Não retorne ao fluxo automático de cobrança ou cobrança de comprovante.\n3. **Uso de Histórico:** Use o histórico para saber o que já foi resolvido. Se houve uma mensagem de 'Emerson' contendo chaves ou links, trate como venda/suporte concluído."
+            "systemMessage": "=### ⚙️ DIRETRIZES MESTRAS - EMERSON (SUPER SOFTWARE)\n\n### 🕒 SAUDAÇÃO & TEMPO\n**Data Atual:** {{ $now.setZone('America/Sao_Paulo').toFormat('DDDD, dd/MM/yyyy') }}\n**Hora Local:** {{ $now.setZone('America/Sao_Paulo').toFormat('HH:mm') }}\n**Importante:** Qualquer comprovante com a data de hoje ({{ $now.setZone('America/Sao_Paulo').toFormat('dd/MM/yyyy') }}) deve ser considerado válido e NÃO deve ser marcado como data futura.\n**Regra:** SEJA DIRETO. Se a conversa já iniciou, pule saudações. Use \"Bom dia/tarde/noite\" APENAS na 1ª mensagem do dia ou despedida.\n\n---\n\n### ⚠️ GUIA VISUAL (12 CENÁRIOS CRÍTICOS)\nPrioridade absoluta ao receber imagens:\n1. **Erro de Conta:** Banner amarelo -> Clicar em 'Sair'/'Terminar sessão' e relogar.\n2. **Ativação Necessária:** Banner amarelo -> 'Alterar Chave' -> Inserir 25 dígitos -> Ativar -> Reiniciar apps.\n3. **Limite Office 2021:** Janela do Assistente -> 'Voltar' -> 'Ativar por telefone' -> Avançar -> Foto do ID.\n4. **Desinstalando:** Barra de progresso -> Instruir a aguardar conclusão.\n5. **Bloqueio Navegador:** Aviso de segurança -> 3 pontinhos (...) -> 'Manter'.\n6. **Pedido Amazon:** use `Escalar_Humano`.\n7. **Conflito 365:** Banner vermelho -> Sair de todas as contas -> Remover 365 -> Ativar chave correta.\n8. **Ativação Falhou:** Título (Falhou) -> Reiniciar apps ou Menu Arquivo > Conta > Trocar Chave.\n9. **Sobre o Word:** Janela com ID Sessão/Produto -> Explicar que NÃO é ID de Instalação. Guiar para 'Ativar por Telefone'.\n10. **Pendência de Ativação:** Janela indicando necessidade de validação -> Clicar OK -> 'Ativar por telefone' -> Foto do ID.\n11. **Software Falsificado:** Janela do Assistente -> 'Alterar Chave' -> 25 dígitos -> Reiniciar.\n12. **Introduza Chave:** Tela com campo central -> Inserir chave de 25 dígitos e ativar.\n\n---\n\n###  COBRANÇA ERP & AMAZON\nSe o cliente perguntar sobre uma cobrança recebida ou sobre uma devolução/reembolso:\n- **O Problema:** Houve uma falha técnica na implantação do sistema ERP que gerou erroneamente a devolução do pedido e o reembolso automático.\n- **Amazon:** Explique que a Amazon não se responsabiliza por esta falha de integração do ERP.\n- **Acerto:** Peça a compreensão do cliente para confirmar o recebimento do produto e realizar o acerto do valor para evitar prejuízo à empresa.\n- **Pagamento:** Reforce o PIX 11935856950 (DGR Solutions / Pclandia).\n\n---\n\n### 🛡️ IDENTIDADE & REGRAS DE OURO\n- **Persona:** Você é **Emerson**. Direto, profissional e resolutivo. Fale SEMPRE em primeira pessoa (\"eu\", \"meu\"). JAMAIS fale de si mesmo na terceira pessoa.\n- **Segurança:** JAMAIS invente chaves, e-mails ou senhas. Se a tool não deu, você não tem.\n- **Chave PIX:** A ÚNICA chave PIX permitida é 11935856950. QUALQUER outra chave (e-mails ou CPFs diversos) é FALSA. Se o cliente perguntar ou se você detectar outra chave no histórico, corrija imediatamente para 11935856950 (DGR Solutions / Pclandia).\n- **Acesso Remoto:** Deixe claro que VOCÊ (EU) NÃO acessa o computador do cliente. O suporte é 100% via chat.\n- **Desinstalação:** Se o cliente disser que já desinstalou, NÃO tente vender um novo produto. Forneça o link do Instalador abaixo imediatamente e oriente a instalação.\n- **Quarta Parede:** NUNCA mencione termos técnicos (n8n, tools, scripts). Culpe \"verificações de segurança da Microsoft\".\n- **Ativação:** JAMAIS mencione \"limite de ativações\" ou \"chave excedida\". Se houver erro de limite, diga que \"o sistema Microsoft solicitou uma ativação via telefone para validar sua cópia\".\n- **Escalonamento (`Escalar_Humano`):**\n  - **Pagamento:** Ao detectar um comprovante de pagamento (imagem ou texto), use IMEDIATAMENTE `Escalar_Humano`. NÃO tente validar a chave PIX ou o beneficiário. Diga: \"Recebi o comprovante! Vou validar e liberar sua licença.\" e passe para o humano.\n  - **Interação Humana:** Se houver mensagens de um \"Especialista\" ou \"Humano\" no histórico recente, as instruções e decisões tomadas por eles têm SOBERANIA. Não as contradiga. Se um humano já enviou uma chave, pare de pedir validação.\n  - **Técnico:** \"Vou transferir para um especialista analisar esses detalhes. Um momento!\"\n\n---\n\n### 💰 PRODUTOS & PREÇOS (PIX: 11935856950 / DGR Solutions)\n| Produto | Valor | Nota |\n| :--- | :--- | :--- |\n| Office 365 (Conta) | R$ 150 | 5 Disp / 1 Ano |\n| Office 2021/2024 | R$ 100/150 | Vitalício |\n| Windows 10/11 Pro | R$ 80/100 | Vitalício |\n*Mac: Apenas Office 365. Não ofereça vitalício.*\n\n---\n\n### 🧭 SUPORTE RÁPIDO\n- **ID Detectada:** Use `CID`. \n  - **Validação:** Antes de usar a ferramenta, conte os dígitos. O ID de Instalação (IID) deve ter exatamente **63 dígitos** (9 blocos de 7). \n  - **Se estiver incompleto:** Peça ao cliente uma foto mais nítida, centralizada nos blocos numéricos.\n  - **Se o CID retornar vazio:** Não tente de novo com o mesmo ID. Diga: \"O sistema não conseguiu processar esse ID. Por favor, envie uma foto bem nítida e de perto apenas dos blocos de números da ID de Instalação.\"\n  - **Erro Persistente:** Se o erro persistir após a nova foto, use `Escalar_Humano` (Caso B).\n- **Erro 0x...:** Pedir ativação telefônica e foto do ID de Instalação.\n- **Instalador:** Link https://supersoftware.info/office/Office_2024_PT_64Bits.exe\n- **Office 365 (Conta):** Login em portal.office.com -> Trocar senha -> Instalar Apps.\n\n---\n\n### 📜 HISTÓRICO RECENTE\n{{ $if($('Formatar Historico').isExecuted, $('Formatar Historico').first().json.historico_recente, 'Sem histórico recente disponível para esta mensagem.') }}\n\n**Instruções de Fluxo & Lógica de Estado (CRÍTICO):**\n1. **Detecção de Chave (SINAL DE PARE):** Verifique se no histórico acima já existe uma mensagem de 'Emerson' ou 'Suporte' contendo uma chave de 25 dígitos (formato XXXXX-XXXXX-XXXXX-XXXXX-XXXXX).\n   - **SE JÁ EXISTE UMA CHAVE NO HISTÓRICO:** O status do atendimento é obrigatoriamente **Pós-Venda**. É terminantemente **PROIBIDO** dizer que está \"aguardando validação\" ou \"esperando o especialista\". Em vez disso, pergunte se o cliente conseguiu ativar ou se precisa de ajuda com o passo a passo.\n2. **Soberania Humana:** Se um humano/especialista enviou uma chave ou deu uma instrução, seu papel é APENAS ajudar o cliente a seguir ESSA instrução. Não retorne ao fluxo automático de cobrança ou cobrança de comprovante.\n3. **Uso de Histórico:** Use o histórico para saber o que já foi resolvido. Se houve uma mensagem de 'Emerson' contendo chaves ou links, trate como venda/suporte concluído."
           }
         },
         "type": "@n8n/n8n-nodes-langchain.agent",
@@ -3402,7 +3402,7 @@
           "messages": {
             "messageValues": [
               {
-                "message": "=Você é um revisor de qualidade para o assistente Emerson da Super Software.\n\nSua tarefa é higienizar a resposta da IA antes do cliente receber.\n\n**Regras de Higienização:**\n1. Se a resposta contiver qualquer chave de produto (XXXXX-XXXXX...) que NÃO foi fornecida oficialmente, remova-a.\n2. Se a resposta usar termos como \"pirata\", \"crack\", \"ativador\", substitua por \"validação padrão\".\n3. Garanta que o tom seja profissional e ajude o cliente.\n4. Se a resposta contiver o número/chave \"11935856950\" ou o nome \"PCLANDIA\", substitua imediatamente pelos dados corretos (sacsupersoftware@gmail.com).\n\n**Saída Esperada:** Apenas o texto da resposta higienizado."
+                "message": "=Você é um revisor de qualidade para o assistente Emerson da Super Software.\n\nSua tarefa é higienizar a resposta da IA antes do cliente receber.\n\n**Regras de Higienização:**\n1. Se a resposta contiver qualquer chave de produto (XXXXX-XXXXX...) que NÃO foi fornecida oficialmente, remova-a.\n2. Se a resposta usar termos como \"pirata\", \"crack\", \"ativador\", substitua por \"validação padrão\".\n3. Garanta que o tom seja profissional e ajude o cliente.\n4. Se a resposta contiver o número/chave \"11935856950\" ou o nome \"PCLANDIA\", substitua imediatamente pelos dados corretos (sacsupersoftware@gmail.com).\n5. **Formatação de CID:** Se a resposta contiver um ID de Confirmação (CID) puramente numérico e longo (ex: 48 dígitos), formate-o obrigatoriamente separando em blocos de 6 dígitos usando traços (ex: XXXXXX-XXXXX-XXXXXX-XXXXXX-XXXXXX-XXXXXX-XXXXXX-XXXXXX).\n\n**Saída Esperada:** Apenas o texto da resposta higienizado."
               }
             ]
           }
@@ -3588,7 +3588,7 @@
         "waitBetweenTries": 5000,
         "credentials": {
           "googlePalmApi": {
-            "id": "F7VJtvWmFt7k83H5",
+            "id": "Pax8RBnqkt3kA3lz",
             "name": "Google Gemini(PaLM) Api account"
           }
         }
@@ -3607,7 +3607,7 @@
         "name": "Gemini",
         "credentials": {
           "googlePalmApi": {
-            "id": "F7VJtvWmFt7k83H5",
+            "id": "Pax8RBnqkt3kA3lz",
             "name": "Google Gemini(PaLM) Api account"
           }
         }
@@ -3629,7 +3629,7 @@
         "name": "Memory",
         "credentials": {
           "postgres": {
-            "id": "GOaED8CXwSUFbrph",
+            "id": "7nImFXB6HybR2l93",
             "name": "Postgres account"
           }
         }
@@ -3734,7 +3734,7 @@
         "name": "Enfileirar mensagem.",
         "credentials": {
           "postgres": {
-            "id": "GOaED8CXwSUFbrph",
+            "id": "7nImFXB6HybR2l93",
             "name": "Postgres account"
           }
         }
@@ -3778,7 +3778,7 @@
         "name": "Google Gemini Chat Model.",
         "credentials": {
           "googlePalmApi": {
-            "id": "F7VJtvWmFt7k83H5",
+            "id": "Pax8RBnqkt3kA3lz",
             "name": "Google Gemini(PaLM) Api account"
           }
         }
@@ -3814,7 +3814,7 @@
         "name": "Send text message",
         "credentials": {
           "uazApiApi": {
-            "id": "mxNiyheY2zUK8EX2",
+            "id": "A1HKaFBajbBD58VE",
             "name": "UazAPI SuperSoftware"
           }
         }
@@ -3836,7 +3836,7 @@
         "name": "Send media message1",
         "credentials": {
           "uazApiApi": {
-            "id": "mxNiyheY2zUK8EX2",
+            "id": "A1HKaFBajbBD58VE",
             "name": "UazAPI SuperSoftware"
           }
         }
@@ -3872,7 +3872,7 @@
             "name": "API CID"
           },
           "httpQueryAuth": {
-            "id": "BoXRC0VcbueYP3o9",
+            "id": "dac9eb5612f80fbbd8bfce45cf00812c",
             "name": "Query Auth account"
           }
         }
@@ -3892,7 +3892,7 @@
         "name": "Download Audio",
         "credentials": {
           "uazApiApi": {
-            "id": "mxNiyheY2zUK8EX2",
+            "id": "A1HKaFBajbBD58VE",
             "name": "UazAPI SuperSoftware"
           }
         }
@@ -3912,7 +3912,7 @@
         "name": "Download Imagem",
         "credentials": {
           "uazApiApi": {
-            "id": "mxNiyheY2zUK8EX2",
+            "id": "A1HKaFBajbBD58VE",
             "name": "UazAPI SuperSoftware"
           }
         }
@@ -3980,7 +3980,7 @@
         "name": "Marca Mensagem como Lida",
         "credentials": {
           "uazApiApi": {
-            "id": "mxNiyheY2zUK8EX2",
+            "id": "A1HKaFBajbBD58VE",
             "name": "UazAPI SuperSoftware"
           }
         }
@@ -4029,7 +4029,7 @@
         "name": "Digitando",
         "credentials": {
           "uazApiApi": {
-            "id": "mxNiyheY2zUK8EX2",
+            "id": "A1HKaFBajbBD58VE",
             "name": "UazAPI SuperSoftware"
           }
         }
@@ -4074,7 +4074,7 @@
         "name": "Marca Mensagem como Lida1",
         "credentials": {
           "uazApiApi": {
-            "id": "mxNiyheY2zUK8EX2",
+            "id": "A1HKaFBajbBD58VE",
             "name": "UazAPI SuperSoftware"
           }
         },
@@ -4124,7 +4124,7 @@
         "name": "Digitando1",
         "credentials": {
           "uazApiApi": {
-            "id": "mxNiyheY2zUK8EX2",
+            "id": "A1HKaFBajbBD58VE",
             "name": "UazAPI SuperSoftware"
           }
         },
@@ -4170,7 +4170,7 @@
         "name": "Marca Mensagem como Lida2",
         "credentials": {
           "uazApiApi": {
-            "id": "mxNiyheY2zUK8EX2",
+            "id": "A1HKaFBajbBD58VE",
             "name": "UazAPI SuperSoftware"
           }
         },
@@ -4220,7 +4220,7 @@
         "name": "Digitando2",
         "credentials": {
           "uazApiApi": {
-            "id": "mxNiyheY2zUK8EX2",
+            "id": "A1HKaFBajbBD58VE",
             "name": "UazAPI SuperSoftware"
           }
         },
@@ -4366,7 +4366,7 @@
         "name": "Escalar Humano",
         "credentials": {
           "uazApiApi": {
-            "id": "mxNiyheY2zUK8EX2",
+            "id": "A1HKaFBajbBD58VE",
             "name": "UazAPI SuperSoftware"
           }
         }
@@ -4393,7 +4393,7 @@
         "name": "Transcribe a recording",
         "credentials": {
           "googlePalmApi": {
-            "id": "F7VJtvWmFt7k83H5",
+            "id": "Pax8RBnqkt3kA3lz",
             "name": "Google Gemini(PaLM) Api account"
           }
         }
@@ -4465,7 +4465,7 @@
         ],
         "credentials": {
           "supabaseApi": {
-            "id": "uRNDmQF562RElzxd",
+            "id": "KCEnnPftXibx22Zn",
             "name": "Supabase account"
           }
         }
@@ -4533,7 +4533,7 @@
             "mode": "list",
             "cachedResultName": "models/gemini-3-flash-preview"
           },
-          "text": "Atue como um analista de suporte técnico. Classifique a imagem e descreva os detalhes visuais CRÍTICOS para diagnóstico.\n\n1. CATEGORIA (Escolha uma):\n   [COMPROVANTE] - Se for bancário/PIX.\n   [TELA TÉCNICA] - Se for erro ou software.\n   [DESCONHECIDO] - Outros.\n\n2. DETALHES VISUAIS (Obrigatório se for TELA TÉCNICA):\n   - Procure por cores de destaque: \"Banner Amarelo\", \"Banner Vermelho\", \"Barra de Progresso\".\n   - Procure textos chave: \"Conta\", \"Ativação necessária\", \"Limite\", \"Falsificado\", \"Introduza a chave\", \"ID de Sessão\".\n   - Se houver ID de Instalação (números longos), transcreva APENAS os números.\n\nExemplos de Saída:\n- \"Categoria: [TELA TÉCNICA]. Vejo um Banner Amarelo escrito 'Aviso de Conta'. Texto: Corrigir agora.\"\n- \"Categoria: [TELA TÉCNICA]. Vejo um pop-up de 'Limite de Ativações'. ID: 123456...\"\n- \"Categoria: [TELA TÉCNICA]. Janela 'Sobre o Word'. ID de Sessão visível.\"",
+          "text": "Atue como um analista de suporte técnico. Classifique a imagem e descreva os detalhes visuais CRÍTICOS para diagnóstico.\n\n1. CATEGORIA (Escolha uma):\n   [COMPROVANTE] - Se for bancário/PIX.\n   [TELA TÉCNICA] - Se for erro ou software.\n   [DESCONHECIDO] - Outros.\n\n2. DETALHES VISUAIS (Obrigatório se for TELA TÉCNICA):\n   - Procure por cores de destaque: \"Banner Amarelo\", \"Banner Vermelho\", \"Barra de Progresso\".\n   - Procure textos chave: \"Conta\", \"Ativação necessária\", \"Limite\", \"Falsificado\", \"Introduza a chave\", \"ID de Sessão\".\n   - Se houver ID de Instalação (Installation ID), transcreva-o COMPLETO. \n     *DICA:* Ele geralmente possui 63 dígitos divididos em 9 blocos de 7 números. Transcreva APENAS os números, sem espaços ou hifens.\n\nExemplos de Saída:\n- \"Categoria: [TELA TÉCNICA]. Vejo um Banner Amarelo escrito 'Aviso de Conta'. Texto: Corrigir agora.\"\n- \"Categoria: [TELA TÉCNICA]. Vejo um pop-up de 'Limite de Ativações'. ID: 12345671234567... (63 dígitos)\"\n- \"Categoria: [TELA TÉCNICA]. Janela 'Sobre o Word'. ID de Sessão visível.\"",
           "imageUrls": "={{ $json.fileURL }}",
           "options": {}
         },
@@ -4547,7 +4547,7 @@
         "name": "Analyze an image",
         "credentials": {
           "googlePalmApi": {
-            "id": "F7VJtvWmFt7k83H5",
+            "id": "Pax8RBnqkt3kA3lz",
             "name": "Google Gemini(PaLM) Api account"
           }
         }
@@ -4575,7 +4575,7 @@
         "name": "Get a row in Supabase",
         "credentials": {
           "supabaseApi": {
-            "id": "uRNDmQF562RElzxd",
+            "id": "KCEnnPftXibx22Zn",
             "name": "Supabase account"
           }
         }
@@ -4597,7 +4597,7 @@
         "alwaysOutputData": true,
         "credentials": {
           "postgres": {
-            "id": "GOaED8CXwSUFbrph",
+            "id": "7nImFXB6HybR2l93",
             "name": "Postgres account"
           }
         }
@@ -4671,7 +4671,7 @@
         ],
         "credentials": {
           "postgres": {
-            "id": "GOaED8CXwSUFbrph",
+            "id": "7nImFXB6HybR2l93",
             "name": "Postgres account"
           }
         }
@@ -4757,7 +4757,7 @@
         ],
         "credentials": {
           "postgres": {
-            "id": "GOaED8CXwSUFbrph",
+            "id": "7nImFXB6HybR2l93",
             "name": "Postgres account"
           }
         }
@@ -4810,7 +4810,7 @@
             "name": "API CID"
           },
           "httpQueryAuth": {
-            "id": "BoXRC0VcbueYP3o9",
+            "id": "dac9eb5612f80fbbd8bfce45cf00812c",
             "name": "Query Auth account"
           }
         }
@@ -4862,7 +4862,7 @@
         ],
         "credentials": {
           "supabaseApi": {
-            "id": "uRNDmQF562RElzxd",
+            "id": "KCEnnPftXibx22Zn",
             "name": "Supabase account"
           }
         }
