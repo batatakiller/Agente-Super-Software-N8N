@@ -99,7 +99,7 @@
       "name": "Buscar mensagens",
       "credentials": {
         "postgres": {
-          "id": "GOaED8CXwSUFbrph",
+          "id": "7nImFXB6HybR2l93",
           "name": "Postgres account"
         }
       }
@@ -162,7 +162,7 @@
       "name": "Limpar fila de mensagens",
       "credentials": {
         "postgres": {
-          "id": "GOaED8CXwSUFbrph",
+          "id": "7nImFXB6HybR2l93",
           "name": "Postgres account"
         }
       }
@@ -664,7 +664,7 @@
       "waitBetweenTries": 5000,
       "credentials": {
         "googlePalmApi": {
-          "id": "F7VJtvWmFt7k83H5",
+          "id": "Pax8RBnqkt3kA3lz",
           "name": "Google Gemini(PaLM) Api account"
         }
       }
@@ -683,7 +683,7 @@
       "name": "Gemini",
       "credentials": {
         "googlePalmApi": {
-          "id": "F7VJtvWmFt7k83H5",
+          "id": "Pax8RBnqkt3kA3lz",
           "name": "Google Gemini(PaLM) Api account"
         }
       }
@@ -705,7 +705,7 @@
       "name": "Memory",
       "credentials": {
         "postgres": {
-          "id": "GOaED8CXwSUFbrph",
+          "id": "7nImFXB6HybR2l93",
           "name": "Postgres account"
         }
       }
@@ -740,7 +740,7 @@
           "value": {
             "telefone": "={{ $('Info').first().json.telefone }}",
             "mensagem": "={{ $('Info').first().json.mensagem }}",
-            "timestamp": "={{ $now }}",
+            "timestamp": "={{ $('Info').first().json.timestamp.toDateTime('s') }}",
             "id_mensagem": "={{ $('Info').first().json.id_mensagem }}"
           },
           "matchingColumns": [
@@ -810,7 +810,7 @@
       "name": "Enfileirar mensagem.",
       "credentials": {
         "postgres": {
-          "id": "GOaED8CXwSUFbrph",
+          "id": "7nImFXB6HybR2l93",
           "name": "Postgres account"
         }
       }
@@ -854,7 +854,7 @@
       "name": "Google Gemini Chat Model.",
       "credentials": {
         "googlePalmApi": {
-          "id": "F7VJtvWmFt7k83H5",
+          "id": "Pax8RBnqkt3kA3lz",
           "name": "Google Gemini(PaLM) Api account"
         }
       }
@@ -890,7 +890,7 @@
       "name": "Send text message",
       "credentials": {
         "uazApiApi": {
-          "id": "mxNiyheY2zUK8EX2",
+          "id": "A1HKaFBajbBD58VE",
           "name": "UazAPI SuperSoftware"
         }
       }
@@ -912,7 +912,7 @@
       "name": "Send media message1",
       "credentials": {
         "uazApiApi": {
-          "id": "mxNiyheY2zUK8EX2",
+          "id": "A1HKaFBajbBD58VE",
           "name": "UazAPI SuperSoftware"
         }
       }
@@ -928,7 +928,7 @@
           "parameters": [
             {
               "name": "iid",
-              "value": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('parameters1_Value', ``, 'string').replace(/[^0-9]/g, '') }}"
+              "value": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('parameters1_Value', ``, 'string') }}"
             }
           ]
         },
@@ -948,7 +948,7 @@
           "name": "API CID"
         },
         "httpQueryAuth": {
-          "id": "BoXRC0VcbueYP3o9",
+          "id": "dac9eb5612f80fbbd8bfce45cf00812c",
           "name": "Query Auth account"
         }
       }
@@ -968,7 +968,7 @@
       "name": "Download Audio",
       "credentials": {
         "uazApiApi": {
-          "id": "mxNiyheY2zUK8EX2",
+          "id": "A1HKaFBajbBD58VE",
           "name": "UazAPI SuperSoftware"
         }
       }
@@ -988,7 +988,7 @@
       "name": "Download Imagem",
       "credentials": {
         "uazApiApi": {
-          "id": "mxNiyheY2zUK8EX2",
+          "id": "A1HKaFBajbBD58VE",
           "name": "UazAPI SuperSoftware"
         }
       }
@@ -1056,7 +1056,7 @@
       "name": "Marca Mensagem como Lida",
       "credentials": {
         "uazApiApi": {
-          "id": "mxNiyheY2zUK8EX2",
+          "id": "A1HKaFBajbBD58VE",
           "name": "UazAPI SuperSoftware"
         }
       }
@@ -1105,7 +1105,7 @@
       "name": "Digitando",
       "credentials": {
         "uazApiApi": {
-          "id": "mxNiyheY2zUK8EX2",
+          "id": "A1HKaFBajbBD58VE",
           "name": "UazAPI SuperSoftware"
         }
       }
@@ -1150,7 +1150,7 @@
       "name": "Marca Mensagem como Lida1",
       "credentials": {
         "uazApiApi": {
-          "id": "mxNiyheY2zUK8EX2",
+          "id": "A1HKaFBajbBD58VE",
           "name": "UazAPI SuperSoftware"
         }
       },
@@ -1200,7 +1200,7 @@
       "name": "Digitando1",
       "credentials": {
         "uazApiApi": {
-          "id": "mxNiyheY2zUK8EX2",
+          "id": "A1HKaFBajbBD58VE",
           "name": "UazAPI SuperSoftware"
         }
       },
@@ -1246,7 +1246,7 @@
       "name": "Marca Mensagem como Lida2",
       "credentials": {
         "uazApiApi": {
-          "id": "mxNiyheY2zUK8EX2",
+          "id": "A1HKaFBajbBD58VE",
           "name": "UazAPI SuperSoftware"
         }
       },
@@ -1296,7 +1296,7 @@
       "name": "Digitando2",
       "credentials": {
         "uazApiApi": {
-          "id": "mxNiyheY2zUK8EX2",
+          "id": "A1HKaFBajbBD58VE",
           "name": "UazAPI SuperSoftware"
         }
       },
@@ -1448,7 +1448,7 @@
       "name": "Escalar Humano",
       "credentials": {
         "uazApiApi": {
-          "id": "mxNiyheY2zUK8EX2",
+          "id": "A1HKaFBajbBD58VE",
           "name": "UazAPI SuperSoftware"
         }
       }
@@ -1475,7 +1475,7 @@
       "name": "Transcribe a recording",
       "credentials": {
         "googlePalmApi": {
-          "id": "F7VJtvWmFt7k83H5",
+          "id": "Pax8RBnqkt3kA3lz",
           "name": "Google Gemini(PaLM) Api account"
         }
       }
@@ -1547,7 +1547,7 @@
       ],
       "credentials": {
         "supabaseApi": {
-          "id": "uRNDmQF562RElzxd",
+          "id": "KCEnnPftXibx22Zn",
           "name": "Supabase account"
         }
       }
@@ -1629,7 +1629,7 @@
       "name": "Analyze an image",
       "credentials": {
         "googlePalmApi": {
-          "id": "F7VJtvWmFt7k83H5",
+          "id": "Pax8RBnqkt3kA3lz",
           "name": "Google Gemini(PaLM) Api account"
         }
       }
@@ -1657,7 +1657,7 @@
       "name": "Get a row in Supabase",
       "credentials": {
         "supabaseApi": {
-          "id": "uRNDmQF562RElzxd",
+          "id": "KCEnnPftXibx22Zn",
           "name": "Supabase account"
         }
       }
@@ -1679,7 +1679,7 @@
       "alwaysOutputData": true,
       "credentials": {
         "postgres": {
-          "id": "GOaED8CXwSUFbrph",
+          "id": "7nImFXB6HybR2l93",
           "name": "Postgres account"
         }
       }
@@ -1753,7 +1753,7 @@
       ],
       "credentials": {
         "postgres": {
-          "id": "GOaED8CXwSUFbrph",
+          "id": "7nImFXB6HybR2l93",
           "name": "Postgres account"
         }
       }
@@ -1839,7 +1839,7 @@
       ],
       "credentials": {
         "postgres": {
-          "id": "GOaED8CXwSUFbrph",
+          "id": "7nImFXB6HybR2l93",
           "name": "Postgres account"
         }
       }
@@ -1872,7 +1872,7 @@
             },
             {
               "name": "iids",
-              "value": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('parameters1_Value', ``, 'string').replace(/[^0-9]/g, '') }}"
+              "value": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('parameters1_Value', ``, 'string') }}"
             }
           ]
         },
@@ -1892,7 +1892,7 @@
           "name": "API CID"
         },
         "httpQueryAuth": {
-          "id": "BoXRC0VcbueYP3o9",
+          "id": "dac9eb5612f80fbbd8bfce45cf00812c",
           "name": "Query Auth account"
         }
       }
@@ -1944,7 +1944,7 @@
       ],
       "credentials": {
         "supabaseApi": {
-          "id": "uRNDmQF562RElzxd",
+          "id": "KCEnnPftXibx22Zn",
           "name": "Supabase account"
         }
       }
@@ -2037,7 +2037,7 @@
       ],
       "credentials": {
         "supabaseApi": {
-          "id": "uRNDmQF562RElzxd",
+          "id": "KCEnnPftXibx22Zn",
           "name": "Supabase account"
         }
       }
@@ -2074,7 +2074,7 @@
       ],
       "credentials": {
         "supabaseApi": {
-          "id": "uRNDmQF562RElzxd",
+          "id": "KCEnnPftXibx22Zn",
           "name": "Supabase account"
         }
       }

@@ -639,7 +639,7 @@
         "messages": {
           "messageValues": [
             {
-              "message": "=Você é especialista em formatação de mensagem para WhatsApp, trabalhando somente na formatação e não alterando o conteúdo da menssagem.\n\n- Substitua ** por *\n- Remova #\n- Remova emojis"
+              "message": "=Você é um motor de formatação de texto para WhatsApp. Sua única função é processar o texto recebido e retornar APENAS o resultado formatado.\n\n### REGRAS DE FORMATAÇÃO:\n1. Substitua '**' por '*' (negrito do WhatsApp).\n2. Remova todos os caracteres '#'.\n3. Remova todos os emojis.\n\n### REGRAS CRÍTICAS:\n- Retorne EXCLUSIVAMENTE o texto formatado.\n- JAMAIS inclua saudações, confirmações (como \"Compreendido\"), explicações ou qualquer texto adicional.\n- Não altere o sentido ou as palavras do texto original.\n- Se não houver texto para formatar, retorne uma string vazia."
             }
           ]
         }
